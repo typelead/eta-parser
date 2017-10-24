@@ -1,0 +1,12 @@
+name: eta-parser
+version: '0.0.1-SNAPSHOT'
+category: Language
+author: Cary Robbins
+maintainer: carymrobbins@gmail.com
+license: AllRightsReserved
+dependencies:
+- base >=4.7 && <5
+library:
+  source-dirs:
+    - src
+    - gen

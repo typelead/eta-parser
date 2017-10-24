@@ -1,0 +1,12 @@
+5c5
+< module ETA.Parser.ApiAnnotation (
+---
+> module Language.Eta.Parser.ApiAnnotation (
+15,17c15,17
+< import ETA.BasicTypes.RdrName
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.SrcLoc
+---
+> import Language.Eta.Parser.BasicTypes.RdrName
+> import Language.Eta.Parser.Utils.Outputable
+> import Language.Eta.Parser.BasicTypes.SrcLoc
