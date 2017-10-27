@@ -1,0 +1,18 @@
+9c9
+< module ETA.Main.PackageConfig (
+---
+> module Language.Eta.Main.PackageConfig (
+33c33
+< import Eta.PackageDb
+---
+> -- import Eta.PackageDb
+36,39c36,39
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Module as Module
+< import ETA.BasicTypes.Unique
+---
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Module as Module
+> import Language.Eta.BasicTypes.Unique

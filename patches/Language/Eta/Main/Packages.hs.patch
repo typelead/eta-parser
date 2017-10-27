@@ -1,0 +1,42 @@
+6,7c6,7
+< module ETA.Main.Packages (
+<         module ETA.Main.PackageConfig,
+---
+> module Language.Eta.Main.Packages (
+>         module Language.Eta.Main.PackageConfig,
+66,78c66,78
+< import Eta.PackageDb
+< import ETA.Main.PackageConfig
+< import ETA.Main.DynFlags
+< import ETA.BasicTypes.Name             ( Name, nameModule_maybe )
+< import ETA.Utils.UniqFM
+< import ETA.Utils.UniqDFM
+< import ETA.Utils.UniqSet
+< import ETA.BasicTypes.Module
+< import ETA.Utils.Util
+< import ETA.Utils.Panic
+< import ETA.Utils.Outputable
+< import qualified ETA.Utils.Outputable as Outputable
+< import ETA.Utils.Maybes
+---
+> -- import Eta.PackageDb
+> import Language.Eta.Main.PackageConfig
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.BasicTypes.Name             ( Name, nameModule_maybe )
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.UniqDFM
+> import Language.Eta.Utils.UniqSet
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Panic
+> import Language.Eta.Utils.Outputable
+> import qualified Language.Eta.Utils.Outputable as Outputable
+> import Language.Eta.Utils.Maybes
+81,83c81,83
+< import ETA.Utils.FastString
+< import ETA.Main.ErrUtils         ( debugTraceMsg, MsgDoc, printInfoForUser )
+< import ETA.Utils.Exception
+---
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Main.ErrUtils         ( debugTraceMsg, MsgDoc, printInfoForUser )
+> import Language.Eta.Utils.Exception

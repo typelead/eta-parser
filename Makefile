@@ -1,43 +1,29 @@
-.PHONY: all clean hpack lexers sources build
+.PHONY: all clean sources hpack deps build
 
-all: lexers sources hpack build
+# Allow providing an etlas script instead of requiring it to
+# be on the PATH
+ifneq ($(wildcard ./etlas),)
+ETLAS = ./etlas
+else
+ETLAS = etlas
+endif
+
+all: sources hpack deps build
 
 clean:
 	rm -rf \
 	  eta-parse.cabal \
 	  dist \
-	  gen \
-	  resources/lexers/*.patched.x
+	  gen
+
+sources:
+	./tools/generate-sources
 
 hpack:
 	hpack
 
-lexers:
-	patch \
-	  resources/lexers/Lexer.x \
-	  resources/lexers/Lexer.patch \
-	  -o resources/lexers/Lexer.patched.x
-	mkdir -p gen/Language/Eta/Parser
-	alex \
-	  -o gen/Language/Eta/Parser/Lexer.hs \
-	  resources/lexers/Lexer.patched.x
-
-sources:
-	mkdir -p gen/Language/Eta/Parser
-	patch \
-		resources/sources/compiler/ETA/Parser/ApiAnnotation.hs \
-		resources/sources/compiler/ETA/Parser/ApiAnnotation.hs.patch \
-		-o gen/Language/Eta/Parser/ApiAnnotation.hs
-	mkdir -p gen/Language/Eta/Parser/BasicTypes
-	patch \
-		resources/sources/compiler/ETA/BasicTypes/RdrName.hs \
-		resources/sources/compiler/ETA/BasicTypes/RdrName.hs.patch \
-		-o gen/Language/Eta/Parser/BasicTypes/RdrName.hs
-	mkdir -p gen/Language/Eta/Parser/Utils
-	patch \
-		resources/sources/compiler/ETA/Utils/Outputable.hs \
-		resources/sources/compiler/ETA/Utils/Outputable.hs.patch \
-		-o gen/Language/Eta/Parser/Utils/Outputable.hs
+deps:
+	$(ETLAS) install --dependencies-only
 
 build:
-	./etlas build
+	$(ETLAS) build

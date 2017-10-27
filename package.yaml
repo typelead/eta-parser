@@ -5,7 +5,21 @@ author: Cary Robbins
 maintainer: carymrobbins@gmail.com
 license: AllRightsReserved
 dependencies:
+# eta deps
 - base >=4.7 && <5
+- array
+- bytestring
+- containers
+- deepseq
+- directory
+- filepath
+- text
+- time
+- transformers
+# codec-jvm deps
+- binary
+- mtl
+- stringsearch
 library:
   source-dirs:
     - src

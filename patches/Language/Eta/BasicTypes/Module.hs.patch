@@ -1,0 +1,38 @@
+15c15
+< module ETA.BasicTypes.Module
+---
+> module Language.Eta.BasicTypes.Module
+137c137
+< import Eta.PackageDb (BinaryStringRep(..), DbUnitIdModuleRep(..), DbModule(..), DbUnitId(..))
+---
+> -- import Eta.PackageDb (BinaryStringRep(..), DbUnitIdModuleRep(..), DbModule(..), DbUnitId(..))
+139,148c139,148
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.UniqFM
+< import ETA.Utils.UniqDFM
+< import ETA.Utils.UniqDSet
+< import ETA.Utils.FastString
+< import ETA.Utils.Binary
+< import ETA.Utils.Util
+< import {-# SOURCE #-} ETA.Main.Packages
+< import qualified ETA.Utils.FiniteMap as Map
+---
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.UniqDFM
+> import Language.Eta.Utils.UniqDSet
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Utils.Util
+> import {-# SOURCE #-} Language.Eta.Main.Packages
+> import qualified Language.Eta.Utils.FiniteMap as Map
+164c164
+< import ETA.Utils.Encoding
+---
+> import Language.Eta.Utils.Encoding
+175c175
+< import {-# SOURCE #-} ETA.Main.DynFlags (DynFlags)
+---
+> import {-# SOURCE #-} Language.Eta.Main.DynFlags (DynFlags)

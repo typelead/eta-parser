@@ -1,0 +1,58 @@
+17c17
+< module ETA.Main.DynFlags (
+---
+> module Language.Eta.Main.DynFlags (
+159,178c159,178
+< import ETA.Utils.Platform
+< import ETA.Utils.Metrics
+< import ETA.BasicTypes.Module
+< import ETA.Main.PackageConfig
+< import {-# SOURCE #-} ETA.Main.Hooks
+< import {-# SOURCE #-} ETA.Prelude.PrelNames ( mAIN )
+< import {-# SOURCE #-} ETA.Main.Packages (PackageState, emptyPackageState)
+< import ETA.Main.DriverPhases     ( Phase(..), phaseInputExt )
+< import ETA.Main.CmdLineParser
+< import ETA.Main.Constants
+< import ETA.Utils.Panic
+< import ETA.Utils.Util
+< import qualified ETA.Utils.Util as Util
+< import ETA.Utils.Maybes
+< import ETA.Utils.MonadUtils
+< import qualified ETA.Utils.Pretty as Pretty
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+< import ETA.Utils.JAR
+---
+> import Language.Eta.Utils.Platform
+> import Language.Eta.Utils.Metrics
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.Main.PackageConfig
+> import {-# SOURCE #-} Language.Eta.Main.Hooks
+> import {-# SOURCE #-} Language.Eta.Prelude.PrelNames ( mAIN )
+> import {-# SOURCE #-} Language.Eta.Main.Packages (PackageState, emptyPackageState)
+> import Language.Eta.Main.DriverPhases     ( Phase(..), phaseInputExt )
+> import Language.Eta.Main.CmdLineParser
+> import Language.Eta.Main.Constants
+> import Language.Eta.Utils.Panic
+> import Language.Eta.Utils.Util
+> import qualified Language.Eta.Utils.Util as Util
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.Utils.MonadUtils
+> import qualified Language.Eta.Utils.Pretty as Pretty
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+> -- import Language.Eta.Utils.JAR
+183c183
+< import {-# SOURCE #-} ETA.Main.ErrUtils ( Severity(..), MsgDoc, mkLocMessage )
+---
+> import {-# SOURCE #-} Language.Eta.Main.ErrUtils ( Severity(..), MsgDoc, mkLocMessage )
+3941c3941
+<       mvar <- liftMaybeT $ try $ getEnv "ETA_ENVIRONMENT"
+---
+>       mvar <- liftMaybeT $ try $ getEnv "Language.Eta_ENVIRONMENT"
+3985c3985
+<       ++ " (specified in ETA_ENVIRONMENT) not found"
+---
+>       ++ " (specified in Language.Eta_ENVIRONMENT) not found"
