@@ -28,6 +28,16 @@ sources:
 		resources/sources/compiler/ETA/Parser/ApiAnnotation.hs \
 		resources/sources/compiler/ETA/Parser/ApiAnnotation.hs.patch \
 		-o gen/Language/Eta/Parser/ApiAnnotation.hs
+	mkdir -p gen/Language/Eta/Parser/BasicTypes
+	patch \
+		resources/sources/compiler/ETA/BasicTypes/RdrName.hs \
+		resources/sources/compiler/ETA/BasicTypes/RdrName.hs.patch \
+		-o gen/Language/Eta/Parser/BasicTypes/RdrName.hs
+	mkdir -p gen/Language/Eta/Parser/Utils
+	patch \
+		resources/sources/compiler/ETA/Utils/Outputable.hs \
+		resources/sources/compiler/ETA/Utils/Outputable.hs.patch \
+		-o gen/Language/Eta/Parser/Utils/Outputable.hs
 
 build:
 	./etlas build
