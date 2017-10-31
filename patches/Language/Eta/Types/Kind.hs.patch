@@ -26,3 +26,11 @@
 > import Language.Eta.Utils.Maybes( orElse )
 > import Language.Eta.Utils.Util
 > import Language.Eta.Utils.FastString
+224c224
+<   = ASSERT2( null k1s && null k2s, ppr k1 <+> ppr k2 )
+---
+>   = {-ASSERT2( null k1s && null k2s, ppr k1 <+> ppr k2 )-}
+291c291
+<   | isOpenTypeKindCon kc = ASSERT( null _args ) Just liftedTypeKind
+---
+>   | isOpenTypeKindCon kc = {-ASSERT( null _args )-} Just liftedTypeKind

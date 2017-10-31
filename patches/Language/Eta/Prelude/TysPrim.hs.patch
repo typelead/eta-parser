@@ -33,7 +33,7 @@
 133c133
 < import ETA.CodeGen.Rts
 ---
-> -- import Language.Eta.CodeGen.Rts
+> import Language.Eta.CodeGen.Rts
 188c188
 <     -- ETA-specific TyCons start here
 ---

@@ -23,3 +23,7 @@ dependencies:
 library:
   source-dirs:
     - gen/src
+  include-dirs:
+    - gen/include
+  install-includes:
+    - HsVersions.h

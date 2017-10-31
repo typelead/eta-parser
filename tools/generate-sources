@@ -24,6 +24,10 @@ patch_source() {
   fi
 }
 
+# Copy CPP directives
+mkdir -p gen/include
+cp eta/include/HsVersions.h gen/include
+
 # Generate lexer
 x_file="gen/lexer/Lexer.x"
 patch_source \

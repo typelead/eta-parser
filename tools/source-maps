@@ -22,6 +22,7 @@ sources=(
   BasicTypes/Var
   BasicTypes/VarEnv
   BasicTypes/VarSet
+  CodeGen/Rts
   Core/CoreArity
   Core/CoreFVs
   Core/CoreSeq

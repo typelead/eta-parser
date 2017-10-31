@@ -56,3 +56,77 @@
 > import Language.Eta.Utils.Outputable
 > import Language.Eta.Utils.FastString
 > import Language.Eta.Utils.Maybes           ( orElse )
+434c434
+<     split _       (FunTy ty1 ty2)       args = ASSERT( null args )
+---
+>     split _       (FunTy ty1 ty2)       args = {-ASSERT( null args )-}
+500c500
+< splitFunTysN n ty = ASSERT2( isFunTy ty, int n <+> ppr ty )
+---
+> splitFunTysN n ty = {-ASSERT2( isFunTy ty, int n <+> ppr ty )-}
+600c600
+<       Just tys -> ASSERT2( n < length tys, ppr n <+> ppr tys ) tys !! n
+---
+>       Just tys -> {-ASSERT2( n < length tys, ppr n <+> ppr tys )-} tys !! n
+638c638
+<     = ASSERT2( tvs `leLength` tys, ppr tycon $$ ppr tys $$ ppr tvs )
+---
+>     = {-ASSERT2( tvs `leLength` tys, ppr tycon $$ ppr tys $$ ppr tvs )-}
+923c923
+<   = ASSERT2( n_tvs > 0, doc $$ ppr orig_fun_ty $$ ppr arg_tys )        -- Zero case gives infinite loop!
+---
+>   = {-ASSERT2( n_tvs > 0, doc $$ ppr orig_fun_ty $$ ppr arg_tys )-}        -- Zero case gives infinite loop!
+934c934
+<   = ASSERT2( length arg_tys >= n_tvs, ppr tvs $$ ppr body_ty $$ ppr arg_tys )
+---
+>   = {-ASSERT2( length arg_tys >= n_tvs, ppr tvs $$ ppr body_ty $$ ppr arg_tys )-}
+1130,1131c1130,1131
+<         ASSERT( null tys && (tc `hasKey` eqTyConKey
+<                              || tc `hasKey` coercibleTyConKey) )
+---
+>         {-ASSERT( null tys && (tc `hasKey` eqTyConKey
+>                              || tc `hasKey` coercibleTyConKey) )-}
+1197c1197
+<         fam_subst = ASSERT2( length tvs == length tys, ppr tc <+> ppr tys )
+---
+>         fam_subst = {-ASSERT2( length tvs == length tys, ppr tc <+> ppr tys )-}
+1254c1254
+<       Just (tc, ty_args) -> ASSERT( ty_args `lengthIs` tyConArity tc )
+---
+>       Just (tc, ty_args) -> {-ASSERT( ty_args `lengthIs` tyConArity tc )-}
+1266c1266
+<              -> ASSERT2( ty_args `lengthIs` tyConArity tc, ppr ty ) True
+---
+>              -> {-ASSERT2( ty_args `lengthIs` tyConArity tc, ppr ty )-} True
+1279c1279
+<                         Just (tc, ty_args) -> ASSERT( ty_args `lengthIs` tyConArity tc )
+---
+>                         Just (tc, ty_args) -> {-ASSERT( ty_args `lengthIs` tyConArity tc )-}
+1538c1538
+<   = ASSERT( not (tenv1 `intersectsVarEnv` tenv2) )
+---
+>   = {-ASSERT( not (tenv1 `intersectsVarEnv` tenv2) )-}
+1629c1629
+< substTyWith tvs tys = ASSERT( length tvs == length tys )
+---
+> substTyWith tvs tys = {-ASSERT( length tvs == length tys )-}
+1638c1638
+< substTysWith tvs tys = ASSERT( length tvs == length tys )
+---
+> substTysWith tvs tys = {-ASSERT( length tvs == length tys )-}
+1692c1692
+<   | otherwise = ASSERT( isTyVar tv ) TyVarTy tv --     in TypeRep
+---
+>   | otherwise = {-ASSERT( isTyVar tv )-} TyVarTy tv --     in TypeRep
+1708c1708
+<   = ASSERT2( _no_capture, ppr old_var $$ ppr subst )
+---
+>   = {-ASSERT2( _no_capture, ppr old_var $$ ppr subst )-}
+1773c1773
+<       = ASSERT( tyConArity tc == length tys ) superKind
+---
+>       = {-ASSERT( tyConArity tc == length tys )-} superKind
+1790c1790
+<         | otherwise             = ASSERT2( isSubOpenTypeKind k, ppr _ty $$ ppr k ) liftedTypeKind
+---
+>         | otherwise             = {-ASSERT2( isSubOpenTypeKind k, ppr _ty $$ ppr k )-} liftedTypeKind

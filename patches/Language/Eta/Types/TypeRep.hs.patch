@@ -40,3 +40,7 @@
 > import Language.Eta.Utils.FastString
 > import Language.Eta.Utils.Util
 > import Language.Eta.Main.DynFlags
+771c771
+<   = ASSERT( null tys ) ppr tc   -- Do not wrap *, # in parens
+---
+>   = {-ASSERT( null tys )-} ppr tc   -- Do not wrap *, # in parens
