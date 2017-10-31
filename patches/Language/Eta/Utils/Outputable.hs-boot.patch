@@ -1,0 +1,4 @@
+1c1
+< module ETA.Utils.Outputable where
+---
+> module Language.Eta.Utils.Outputable where

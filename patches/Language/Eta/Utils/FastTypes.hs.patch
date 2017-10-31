@@ -1,0 +1,8 @@
+15c15
+< module ETA.Utils.FastTypes (
+---
+> module Language.Eta.Utils.FastTypes (
+65c65
+< import ETA.Utils.ExtsCompat46
+---
+> import Language.Eta.Utils.ExtsCompat46

@@ -1,0 +1,12 @@
+11c11
+< module ETA.Utils.UniqDSet (
+---
+> module Language.Eta.Utils.UniqDSet (
+35,37c35,37
+< import ETA.Utils.UniqDFM
+< import ETA.Utils.UniqSet
+< import ETA.BasicTypes.Unique
+---
+> import Language.Eta.Utils.UniqDFM
+> import Language.Eta.Utils.UniqSet
+> import Language.Eta.BasicTypes.Unique

@@ -1,0 +1,4 @@
+1c1
+< module ETA.Main.Hooks where
+---
+> module Language.Eta.Main.Hooks where

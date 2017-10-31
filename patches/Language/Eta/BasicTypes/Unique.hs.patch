@@ -1,0 +1,22 @@
+21c21
+< module ETA.BasicTypes.Unique (
+---
+> module Language.Eta.BasicTypes.Unique (
+71,74c71,74
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+< import ETA.Utils.Util
+---
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Util
+100c100
+< uNIQUE_BITS = finiteBitSize (0 :: Int) - UNIQUE_TAG_BITS
+---
+> uNIQUE_BITS = finiteBitSize (0 :: Int) - {-UNIQUE_TAG_BITS-} 8
+335c335
+<   = ASSERT(n_ >= 0) go n_ ""
+---
+>   = {-ASSERT(n_ >= 0)-} go n_ ""

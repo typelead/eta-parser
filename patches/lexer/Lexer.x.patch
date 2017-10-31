@@ -1,0 +1,40 @@
+59c59
+< module ETA.Parser.Lexer (
+---
+> module Language.Eta.Parser.Lexer (
+102,107c102,107
+< import ETA.Utils.Bag
+< import ETA.Utils.Outputable
+< import ETA.Utils.StringBuffer
+< import ETA.Utils.FastString
+< import ETA.Utils.UniqFM
+< import ETA.Utils.Util             ( readRational )
+---
+> import Language.Eta.Utils.Bag
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.StringBuffer
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.Util             ( readRational )
+110,111c110,111
+< import ETA.Main.ErrUtils
+< import ETA.Main.DynFlags
+---
+> import Language.Eta.Main.ErrUtils
+> import Language.Eta.Main.DynFlags
+114,116c114,116
+< import ETA.BasicTypes.SrcLoc
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.BasicTypes     ( InlineSpec(..), RuleMatchInfo(..), FractionalLit(..),
+---
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.BasicTypes     ( InlineSpec(..), RuleMatchInfo(..), FractionalLit(..),
+120c120
+< import ETA.Parser.Ctype
+---
+> import Language.Eta.Parser.Ctype
+122c122
+< import ETA.Parser.ApiAnnotation
+---
+> import Language.Eta.Parser.ApiAnnotation

@@ -1,0 +1,116 @@
+10c10
+< module ETA.Main.HscTypes (
+---
+> module Language.Eta.Main.HscTypes (
+134,135c134,135
+< import ETA.Interactive.ByteCodeAsm      ( CompiledByteCode )
+< import ETA.Main.InteractiveEvalTypes ( Resume )
+---
+> import Language.Eta.Interactive.ByteCodeAsm      ( CompiledByteCode )
+> import Language.Eta.Main.InteractiveEvalTypes ( Resume )
+138,187c138,187
+< import ETA.HsSyn.HsSyn
+< import ETA.BasicTypes.RdrName
+< import ETA.BasicTypes.Avail
+< import ETA.BasicTypes.Module
+< import ETA.Types.InstEnv          ( InstEnv, ClsInst, identicalClsInstHead )
+< import ETA.Types.FamInstEnv
+< import ETA.Specialise.Rules            ( RuleBase )
+< import ETA.Core.CoreSyn          ( CoreProgram )
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.NameEnv
+< import ETA.BasicTypes.NameSet
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.IdInfo           ( IdDetails(..) )
+< import ETA.Types.Type
+< 
+< import ETA.Parser.ApiAnnotation    ( ApiAnns )
+< import ETA.Main.Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
+< import ETA.Types.Class
+< import ETA.Types.TyCon
+< import ETA.Types.CoAxiom
+< import ETA.BasicTypes.ConLike
+< import ETA.BasicTypes.DataCon
+< import ETA.BasicTypes.PatSyn
+< import ETA.Prelude.PrelNames        ( gHC_PRIM, ioTyConName, printName, mkInteractiveModule )
+< import ETA.Main.Packages hiding  ( Version(..) )
+< import ETA.Main.DynFlags
+< import ETA.Main.DriverPhases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Iface.IfaceSyn
+< import ETA.Core.CoreSyn          ( CoreRule, CoreVect )
+< import ETA.Utils.Maybes
+< import ETA.Utils.Outputable
+< import ETA.Main.BreakArray
+< import ETA.BasicTypes.SrcLoc
+< -- import ETA.BasicTypes.Unique
+< import ETA.Utils.UniqFM
+< import ETA.BasicTypes.UniqSupply
+< import ETA.Utils.FastString
+< import ETA.Utils.StringBuffer     ( StringBuffer )
+< import ETA.Utils.Fingerprint
+< import ETA.Utils.MonadUtils
+< import ETA.Utils.Bag
+< import ETA.Utils.Binary
+< import ETA.Main.ErrUtils
+< import ETA.Utils.Platform
+< import ETA.Utils.Util
+< import ETA.Utils.Serialized       ( Serialized )
+---
+> import Language.Eta.HsSyn.HsSyn
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.BasicTypes.Avail
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.Types.InstEnv          ( InstEnv, ClsInst, identicalClsInstHead )
+> import Language.Eta.Types.FamInstEnv
+> import Language.Eta.Specialise.Rules            ( RuleBase )
+> import Language.Eta.Core.CoreSyn          ( CoreProgram )
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.NameEnv
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.IdInfo           ( IdDetails(..) )
+> import Language.Eta.Types.Type
+> 
+> import Language.Eta.Parser.ApiAnnotation    ( ApiAnns )
+> import Language.Eta.Main.Annotations      ( Annotation, AnnEnv, mkAnnEnv, plusAnnEnv )
+> import Language.Eta.Types.Class
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.CoAxiom
+> import Language.Eta.BasicTypes.ConLike
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.BasicTypes.PatSyn
+> import Language.Eta.Prelude.PrelNames        ( gHC_PRIM, ioTyConName, printName, mkInteractiveModule )
+> import Language.Eta.Main.Packages hiding  ( Version(..) )
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Main.DriverPhases     ( Phase, HscSource(..), isHsBootOrSig, hscSourceString )
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Iface.IfaceSyn
+> import Language.Eta.Core.CoreSyn          ( CoreRule, CoreVect )
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Main.BreakArray
+> import Language.Eta.BasicTypes.SrcLoc
+> -- import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.BasicTypes.UniqSupply
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.StringBuffer     ( StringBuffer )
+> import Language.Eta.Utils.Fingerprint
+> import Language.Eta.Utils.MonadUtils
+> import Language.Eta.Utils.Bag
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Main.ErrUtils
+> import Language.Eta.Utils.Platform
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Serialized       ( Serialized )
+199c199
+< import ETA.Utils.Exception
+---
+> import Language.Eta.Utils.Exception

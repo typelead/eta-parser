@@ -1,0 +1,40 @@
+19c19
+< module ETA.HsSyn.HsTypes (
+---
+> module Language.Eta.HsSyn.HsTypes (
+56c56
+< import {-# SOURCE #-} ETA.HsSyn.HsExpr ( HsSplice, pprUntypedSplice )
+---
+> import {-# SOURCE #-} Language.Eta.HsSyn.HsExpr ( HsSplice, pprUntypedSplice )
+58c58
+< import ETA.HsSyn.PlaceHolder ( PostTc,PostRn,DataId,PlaceHolder(..) )
+---
+> import Language.Eta.HsSyn.PlaceHolder ( PostTc,PostRn,DataId,PlaceHolder(..) )
+60,72c60,72
+< import ETA.BasicTypes.Name( Name )
+< import ETA.BasicTypes.RdrName( RdrName )
+< import ETA.BasicTypes.DataCon( HsBang(..), HsSrcBang, HsImplBang )
+< import ETA.Prelude.TysPrim( funTyConName )
+< import ETA.Types.Type
+< import ETA.HsSyn.HsDoc
+< import ETA.BasicTypes.BasicTypes
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Main.StaticFlags
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Parser.Lexer ( AddAnn, mkParensApiAnn )
+< import ETA.Utils.Maybes( isJust )
+---
+> import Language.Eta.BasicTypes.Name( Name )
+> import Language.Eta.BasicTypes.RdrName( RdrName )
+> import Language.Eta.BasicTypes.DataCon( HsBang(..), HsSrcBang, HsImplBang )
+> import Language.Eta.Prelude.TysPrim( funTyConName )
+> import Language.Eta.Types.Type
+> import Language.Eta.HsSyn.HsDoc
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.BasicTypes.SrcLoc
+> -- import Language.Eta.Main.StaticFlags
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Parser.Lexer ( AddAnn, mkParensApiAnn )
+> import Language.Eta.Utils.Maybes( isJust )

@@ -1,0 +1,8 @@
+2c2
+< module ETA.Utils.Exception
+---
+> module Language.Eta.Utils.Exception
+5c5
+<     module ETA.Utils.Exception
+---
+>     module Language.Eta.Utils.Exception

@@ -1,0 +1,10 @@
+1c1
+< module ETA.Prelude.TysWiredIn where
+---
+> module Language.Eta.Prelude.TysWiredIn where
+3,4c3,4
+< import {-# SOURCE #-} ETA.Types.TyCon      (TyCon)
+< import {-# SOURCE #-} ETA.Types.TypeRep    (Type)
+---
+> import {-# SOURCE #-} Language.Eta.Types.TyCon      (TyCon)
+> import {-# SOURCE #-} Language.Eta.Types.TypeRep    (Type)

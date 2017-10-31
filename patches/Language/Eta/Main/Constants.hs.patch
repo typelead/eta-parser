@@ -1,0 +1,4 @@
+7c7
+< module ETA.Main.Constants where
+---
+> module Language.Eta.Main.Constants where

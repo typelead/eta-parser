@@ -1,0 +1,8 @@
+8c8
+< module ETA.Utils.Pair ( Pair(..), unPair, toPair, swap ) where
+---
+> module Language.Eta.Utils.Pair ( Pair(..), unPair, toPair, swap ) where
+12c12
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.Utils.Outputable

@@ -1,0 +1,48 @@
+5c5
+< module ETA.TypeCheck.TcEvidence (
+---
+> module Language.Eta.TypeCheck.TcEvidence (
+37,57c37,57
+< import ETA.BasicTypes.Var
+< import ETA.Types.Coercion
+< import ETA.Core.PprCore ()   -- Instance OutputableBndr TyVar
+< import ETA.Types.TypeRep      -- Knows type representation
+< import ETA.TypeCheck.TcType
+< import ETA.Types.Type
+< import ETA.Types.TyCon
+< import ETA.Types.Class( Class )
+< import ETA.Types.CoAxiom
+< import ETA.Prelude.PrelNames
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.Name
+< 
+< import ETA.Utils.Util
+< import ETA.Utils.Bag
+< import ETA.Utils.Pair
+< import ETA.Utils.Outputable
+< import qualified ETA.Utils.Outputable as Outputable
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.SrcLoc
+---
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Types.Coercion
+> import Language.Eta.Core.PprCore ()   -- Instance OutputableBndr TyVar
+> import Language.Eta.Types.TypeRep      -- Knows type representation
+> import Language.Eta.TypeCheck.TcType
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.Class( Class )
+> import Language.Eta.Types.CoAxiom
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.Name
+> 
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Bag
+> import Language.Eta.Utils.Pair
+> import Language.Eta.Utils.Outputable
+> import qualified Language.Eta.Utils.Outputable as Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.SrcLoc

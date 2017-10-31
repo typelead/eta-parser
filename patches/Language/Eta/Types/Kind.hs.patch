@@ -1,0 +1,28 @@
+4c4
+< module ETA.Types.Kind (
+---
+> module Language.Eta.Types.Kind (
+46c46
+< import {-# SOURCE #-} ETA.Types.Type      ( typeKind, substKiWith, eqKind )
+---
+> import {-# SOURCE #-} Language.Eta.Types.Type      ( typeKind, substKiWith, eqKind )
+48,56c48,56
+< import ETA.Types.TypeRep
+< import ETA.Prelude.TysPrim
+< import ETA.Types.TyCon
+< import ETA.BasicTypes.VarSet
+< import ETA.Prelude.PrelNames
+< import ETA.Utils.Outputable
+< import ETA.Utils.Maybes( orElse )
+< import ETA.Utils.Util
+< import ETA.Utils.FastString
+---
+> import Language.Eta.Types.TypeRep
+> import Language.Eta.Prelude.TysPrim
+> import Language.Eta.Types.TyCon
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Maybes( orElse )
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.FastString

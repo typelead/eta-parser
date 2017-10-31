@@ -1,0 +1,18 @@
+10c10
+< module ETA.BasicTypes.ConLike (
+---
+> module Language.Eta.BasicTypes.ConLike (
+14,19c14,19
+< import {-# SOURCE #-} ETA.BasicTypes.DataCon (DataCon)
+< import {-# SOURCE #-} ETA.BasicTypes.PatSyn (PatSyn)
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Util
+< import ETA.BasicTypes.Name
+---
+> import {-# SOURCE #-} Language.Eta.BasicTypes.DataCon (DataCon)
+> import {-# SOURCE #-} Language.Eta.BasicTypes.PatSyn (PatSyn)
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.Name

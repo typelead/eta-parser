@@ -1,0 +1,52 @@
+12c12
+< module ETA.Utils.Outputable (
+---
+> module Language.Eta.Utils.Outputable (
+76c76
+< import {-# SOURCE #-}   ETA.Main.DynFlags( DynFlags,
+---
+> import {-# SOURCE #-}   Language.Eta.Main.DynFlags( DynFlags,
+80,90c80,90
+< import {-# SOURCE #-}   ETA.BasicTypes.Module( UnitId, Module, ModuleName, moduleName )
+< import {-# SOURCE #-}   ETA.BasicTypes.OccName( OccName )
+< import {-# SOURCE #-}   ETA.Main.StaticFlags( opt_PprStyle_Debug, opt_NoDebugOutput )
+< 
+< import ETA.Utils.FastString
+< import ETA.Utils.FastTypes
+< import qualified ETA.Utils.Pretty as Pretty
+< import ETA.Utils.Util
+< import ETA.Utils.Platform
+< import ETA.Utils.Pretty           ( Doc, Mode(..) )
+< import ETA.Utils.Panic
+---
+> import {-# SOURCE #-}   Language.Eta.BasicTypes.Module( UnitId, Module, ModuleName, moduleName )
+> import {-# SOURCE #-}   Language.Eta.BasicTypes.OccName( OccName )
+> -- import {-# SOURCE #-}   Language.Eta.Main.StaticFlags( opt_PprStyle_Debug, opt_NoDebugOutput )
+> 
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.FastTypes
+> import qualified Language.Eta.Utils.Pretty as Pretty
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Platform
+> import Language.Eta.Utils.Pretty           ( Doc, Mode(..) )
+> import Language.Eta.Utils.Panic
+220c220
+< defaultDumpStyle |  opt_PprStyle_Debug = PprDebug
+---
+> defaultDumpStyle {-|  opt_PprStyle_Debug = PprDebug-}
+224c224
+< mkDumpStyle print_unqual | opt_PprStyle_Debug = PprDebug
+---
+> mkDumpStyle print_unqual {-| opt_PprStyle_Debug = PprDebug-}
+243c243
+<    | opt_PprStyle_Debug = PprDebug
+---
+>    {-| opt_PprStyle_Debug = PprDebug-}
+1001c1001
+<    | opt_NoDebugOutput = x
+---
+>    {-| opt_NoDebugOutput = x-}
+1012c1012
+< warnPprTrace _     _file _line _msg x | opt_NoDebugOutput = x
+---
+> -- warnPprTrace _     _file _line _msg x | opt_NoDebugOutput = x

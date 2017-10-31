@@ -1,0 +1,14 @@
+9c9
+< module ETA.BasicTypes.NameEnv (
+---
+> module Language.Eta.BasicTypes.NameEnv (
+29,32c29,32
+< import ETA.Utils.Digraph
+< import ETA.BasicTypes.Name
+< import ETA.Utils.UniqFM
+< import ETA.Utils.Maybes
+---
+> import Language.Eta.Utils.Digraph
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.Maybes

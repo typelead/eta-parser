@@ -1,0 +1,10 @@
+28c28
+< module ETA.Utils.UniqFM (
+---
+> module Language.Eta.Utils.UniqFM (
+73,74c73,74
+< import ETA.BasicTypes.Unique           ( Uniquable(..), Unique, getKey )
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.BasicTypes.Unique           ( Uniquable(..), Unique, getKey )
+> import Language.Eta.Utils.Outputable

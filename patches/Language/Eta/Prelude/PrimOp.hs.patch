@@ -1,0 +1,54 @@
+9c9
+< module ETA.Prelude.PrimOp (
+---
+> module Language.Eta.Prelude.PrimOp (
+27,28c27,28
+< import ETA.Prelude.TysPrim
+< import ETA.Prelude.TysWiredIn
+---
+> import Language.Eta.Prelude.TysPrim
+> import Language.Eta.Prelude.TysWiredIn
+30,34c30,34
+< import ETA.BasicTypes.Demand
+< import ETA.BasicTypes.Var              ( TyVar )
+< import ETA.BasicTypes.OccName          ( OccName, pprOccName, mkVarOccFS )
+< import ETA.Types.TyCon            ( TyCon, isPrimTyCon, tyConPrimRep, PrimRep(..) )
+< import ETA.Types.Type             ( Type, mkForAllTys, mkFunTy, mkFunTys, tyConAppTyCon,
+---
+> import Language.Eta.BasicTypes.Demand
+> import Language.Eta.BasicTypes.Var              ( TyVar )
+> import Language.Eta.BasicTypes.OccName          ( OccName, pprOccName, mkVarOccFS )
+> import Language.Eta.Types.TyCon            ( TyCon, isPrimTyCon, tyConPrimRep, PrimRep(..) )
+> import Language.Eta.Types.Type             ( Type, mkForAllTys, mkFunTy, mkFunTys, tyConAppTyCon,
+36,42c36,42
+< import ETA.BasicTypes.BasicTypes       ( Arity, Fixity(..), FixityDirection(..), TupleSort(..) )
+< import ETA.Prelude.ForeignCall      ( CLabelString )
+< import ETA.BasicTypes.Unique           ( Unique, mkPrimOpIdUnique )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastTypes
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.Module           ( UnitId )
+---
+> import Language.Eta.BasicTypes.BasicTypes       ( Arity, Fixity(..), FixityDirection(..), TupleSort(..) )
+> import Language.Eta.Prelude.ForeignCall      ( CLabelString )
+> import Language.Eta.BasicTypes.Unique           ( Unique, mkPrimOpIdUnique )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastTypes
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.Module           ( UnitId )
+493c493
+<    -- ETA-specific
+---
+>    -- Language.Eta-specific
+1643c1643
+< --ETA-specific
+---
+> --Language.Eta-specific
+2812c2812
+<    -- ETA-Specific
+---
+>    -- Language.Eta-Specific
+5049c5049
+< -- ETA-specific
+---
+> -- Language.Eta-specific

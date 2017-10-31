@@ -1,0 +1,4 @@
+1c1
+< module ETA.Prelude.PrimOp where
+---
+> module Language.Eta.Prelude.PrimOp where

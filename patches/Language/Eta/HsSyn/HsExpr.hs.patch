@@ -1,0 +1,46 @@
+14c14
+< module ETA.HsSyn.HsExpr where
+---
+> module Language.Eta.HsSyn.HsExpr where
+19,24c19,24
+< import ETA.HsSyn.HsDecls
+< import ETA.HsSyn.HsPat
+< import ETA.HsSyn.HsLit
+< import ETA.HsSyn.PlaceHolder ( PostTc,PostRn,DataId )
+< import ETA.HsSyn.HsTypes
+< import ETA.HsSyn.HsBinds
+---
+> import Language.Eta.HsSyn.HsDecls
+> import Language.Eta.HsSyn.HsPat
+> import Language.Eta.HsSyn.HsLit
+> import Language.Eta.HsSyn.PlaceHolder ( PostTc,PostRn,DataId )
+> import Language.Eta.HsSyn.HsTypes
+> import Language.Eta.HsSyn.HsBinds
+27,39c27,39
+< import ETA.TypeCheck.TcEvidence
+< import ETA.Core.CoreSyn
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.RdrName
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.BasicTypes
+< import ETA.BasicTypes.DataCon
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.Util
+< import ETA.Main.StaticFlags( opt_PprStyle_Debug )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Types.Type
+---
+> import Language.Eta.TypeCheck.TcEvidence
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.Util
+> -- import Language.Eta.Main.StaticFlags( opt_PprStyle_Debug )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Types.Type

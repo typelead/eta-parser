@@ -5,7 +5,7 @@
 137c137
 < import Eta.PackageDb (BinaryStringRep(..), DbUnitIdModuleRep(..), DbModule(..), DbUnitId(..))
 ---
-> -- import Eta.PackageDb (BinaryStringRep(..), DbUnitIdModuleRep(..), DbModule(..), DbUnitId(..))
+> import Language.Eta.PackageDb (BinaryStringRep(..), DbUnitIdModuleRep(..), DbModule(..), DbUnitId(..))
 139,148c139,148
 < import ETA.Utils.Outputable
 < import ETA.BasicTypes.Unique

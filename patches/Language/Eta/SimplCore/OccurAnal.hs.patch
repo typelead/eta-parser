@@ -1,0 +1,50 @@
+16c16
+< module ETA.SimplCore.OccurAnal (
+---
+> module Language.Eta.SimplCore.OccurAnal (
+22,24c22,24
+< import ETA.Core.CoreSyn
+< import ETA.Core.CoreFVs
+< import ETA.Core.CoreUtils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Core.CoreFVs
+> import Language.Eta.Core.CoreUtils        ( exprIsTrivial, isDefaultAlt, isExpandableApp,
+26,30c26,30
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.Name( localiseName )
+< import ETA.BasicTypes.BasicTypes
+< import ETA.BasicTypes.Module( Module )
+< import ETA.Types.Coercion
+---
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.Name( localiseName )
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.BasicTypes.Module( Module )
+> import Language.Eta.Types.Coercion
+32,43c32,43
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.Demand           ( argOneShots, argsOneShots )
+< import ETA.Utils.Maybes           ( orElse )
+< import ETA.Utils.Digraph          ( SCC(..), stronglyConnCompFromEdgedVerticesR )
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.UniqFM
+< import ETA.Utils.UniqSet
+< import ETA.Utils.Util
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+---
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.Demand           ( argOneShots, argsOneShots )
+> import Language.Eta.Utils.Maybes           ( orElse )
+> import Language.Eta.Utils.Digraph          ( SCC(..), stronglyConnCompFromEdgedVerticesR )
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.UniqSet
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString

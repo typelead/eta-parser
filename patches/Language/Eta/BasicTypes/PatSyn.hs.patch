@@ -1,0 +1,26 @@
+10c10
+< module ETA.BasicTypes.PatSyn (
+---
+> module Language.Eta.BasicTypes.PatSyn (
+25,34c25,34
+< import ETA.Types.Type
+< import ETA.TypeCheck.TcType( mkSigmaTy )
+< import ETA.BasicTypes.Name
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Util
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.Var
+< import ETA.HsSyn.HsBinds( HsPatSynDetails(..) )
+---
+> import Language.Eta.Types.Type
+> import Language.Eta.TypeCheck.TcType( mkSigmaTy )
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.HsSyn.HsBinds( HsPatSynDetails(..) )

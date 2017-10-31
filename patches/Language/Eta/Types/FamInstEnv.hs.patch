@@ -1,0 +1,52 @@
+7c7
+< module ETA.Types.FamInstEnv (
+---
+> module Language.Eta.Types.FamInstEnv (
+36,58c36,58
+< import ETA.Types.InstEnv
+< import ETA.Types.Unify
+< import ETA.Types.Type
+< import qualified ETA.Types.Type as Type
+< import ETA.TypeCheck.TcType ( orphNamesOfTypes )
+< import ETA.Types.TypeRep
+< import ETA.Types.TyCon
+< import ETA.Types.Coercion
+< import ETA.Types.CoAxiom
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.Name
+< import ETA.Utils.UniqFM
+< import ETA.Utils.Outputable
+< import ETA.Utils.Maybes
+< import ETA.Core.TrieMap
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Util
+< import ETA.BasicTypes.Var
+< import ETA.Utils.Pair
+< import ETA.BasicTypes.SrcLoc
+< import ETA.BasicTypes.NameSet
+< import ETA.Utils.FastString
+---
+> import Language.Eta.Types.InstEnv
+> import Language.Eta.Types.Unify
+> import Language.Eta.Types.Type
+> import qualified Language.Eta.Types.Type as Type
+> import Language.Eta.TypeCheck.TcType ( orphNamesOfTypes )
+> import Language.Eta.Types.TypeRep
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.Coercion
+> import Language.Eta.Types.CoAxiom
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.Core.TrieMap
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Utils.Pair
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.Utils.FastString

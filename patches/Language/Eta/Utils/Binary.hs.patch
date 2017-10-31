@@ -1,0 +1,26 @@
+19c19
+< module ETA.Utils.Binary
+---
+> module Language.Eta.Utils.Binary
+62,69c62,69
+< import {-# SOURCE #-} ETA.BasicTypes.Name (Name)
+< import ETA.Utils.FastString
+< import ETA.Utils.Panic
+< import ETA.Utils.UniqFM
+< import ETA.Utils.FastMutInt
+< import ETA.Utils.Fingerprint
+< import ETA.BasicTypes.BasicTypes
+< import ETA.BasicTypes.SrcLoc
+---
+> import {-# SOURCE #-} Language.Eta.BasicTypes.Name (Name)
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Panic
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.FastMutInt
+> import Language.Eta.Utils.Fingerprint
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.BasicTypes.SrcLoc
+86c86
+< import ETA.Utils.ExtsCompat46
+---
+> import Language.Eta.Utils.ExtsCompat46

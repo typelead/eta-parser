@@ -1,0 +1,10 @@
+1c1
+< module ETA.Main.ErrUtils where
+---
+> module Language.Eta.Main.ErrUtils where
+3,4c3,4
+< import ETA.Utils.Outputable (SDoc)
+< import ETA.BasicTypes.SrcLoc (SrcSpan)
+---
+> import Language.Eta.Utils.Outputable (SDoc)
+> import Language.Eta.BasicTypes.SrcLoc (SrcSpan)

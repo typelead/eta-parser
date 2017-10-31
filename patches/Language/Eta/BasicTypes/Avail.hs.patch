@@ -1,0 +1,20 @@
+5c5
+< module ETA.BasicTypes.Avail (
+---
+> module Language.Eta.BasicTypes.Avail (
+18,20c18,20
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.NameEnv
+< import ETA.BasicTypes.NameSet
+---
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.NameEnv
+> import Language.Eta.BasicTypes.NameSet
+22,24c22,24
+< import ETA.Utils.Binary
+< import ETA.Utils.Outputable
+< import ETA.Utils.Util
+---
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Util

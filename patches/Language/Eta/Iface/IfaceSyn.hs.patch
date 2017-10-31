@@ -1,0 +1,62 @@
+8,9c8,9
+< module ETA.Iface.IfaceSyn (
+<         module ETA.Iface.IfaceType,
+---
+> module Language.Eta.Iface.IfaceSyn (
+>         module Language.Eta.Iface.IfaceType,
+36,60c36,60
+< import ETA.Iface.IfaceType
+< import ETA.Core.PprCore()            -- Printing DFunArgs
+< import ETA.BasicTypes.Demand
+< import ETA.Types.Class
+< import ETA.BasicTypes.NameSet
+< import ETA.Types.CoAxiom ( BranchIndex, Role )
+< import ETA.BasicTypes.Name
+< import ETA.Profiling.CostCentre
+< import ETA.BasicTypes.Literal
+< import ETA.Prelude.ForeignCall
+< import ETA.Main.Annotations( AnnPayload, AnnTarget )
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.Outputable
+< import qualified ETA.Utils.Outputable as Outputable
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.Fingerprint
+< import ETA.Utils.Binary
+< import ETA.Utils.BooleanFormula ( BooleanFormula )
+< import ETA.HsSyn.HsBinds
+< import ETA.Types.TyCon (Role (..))
+< import ETA.Main.StaticFlags (opt_PprStyle_Debug)
+< import ETA.Utils.Util( filterOut )
+< import ETA.Types.InstEnv
+---
+> import Language.Eta.Iface.IfaceType
+> import Language.Eta.Core.PprCore()            -- Printing DFunArgs
+> import Language.Eta.BasicTypes.Demand
+> import Language.Eta.Types.Class
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.Types.CoAxiom ( BranchIndex, Role )
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Profiling.CostCentre
+> import Language.Eta.BasicTypes.Literal
+> import Language.Eta.Prelude.ForeignCall
+> import Language.Eta.Main.Annotations( AnnPayload, AnnTarget )
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.Outputable
+> import qualified Language.Eta.Utils.Outputable as Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.Fingerprint
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Utils.BooleanFormula ( BooleanFormula )
+> import Language.Eta.HsSyn.HsBinds
+> import Language.Eta.Types.TyCon (Role (..))
+> -- import Language.Eta.Main.StaticFlags (opt_PprStyle_Debug)
+> import Language.Eta.Utils.Util( filterOut )
+> import Language.Eta.Types.InstEnv
+1289c1289
+<      import ETA.Main.DynFlags
+---
+>      import Language.Eta.Main.DynFlags

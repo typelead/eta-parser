@@ -1,0 +1,22 @@
+14c14
+< module ETA.Utils.IOEnv (
+---
+> module Language.Eta.Utils.IOEnv (
+18c18
+<         module ETA.Utils.MonadUtils,
+---
+>         module Language.Eta.Utils.MonadUtils,
+35,38c35,38
+< import ETA.Main.DynFlags
+< import ETA.Utils.Exception
+< import ETA.BasicTypes.Module
+< import ETA.Utils.Panic
+---
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Utils.Exception
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.Utils.Panic
+46c46
+< import ETA.Utils.MonadUtils
+---
+> import Language.Eta.Utils.MonadUtils

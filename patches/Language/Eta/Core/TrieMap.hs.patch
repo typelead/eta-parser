@@ -1,0 +1,38 @@
+7c7
+< module ETA.Core.TrieMap(
+---
+> module Language.Eta.Core.TrieMap(
+17,28c17,28
+< import ETA.Core.CoreSyn
+< import ETA.Types.Coercion
+< import ETA.BasicTypes.Literal
+< import ETA.BasicTypes.Name
+< import ETA.Types.Type
+< import ETA.Types.TypeRep
+< import ETA.Types.TyCon(TyCon)
+< import ETA.BasicTypes.Var
+< import ETA.Utils.UniqFM
+< import ETA.BasicTypes.Unique( Unique )
+< import ETA.Utils.FastString(FastString)
+< import ETA.Types.CoAxiom(CoAxiomRule(coaxrName))
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Types.Coercion
+> import Language.Eta.BasicTypes.Literal
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.TypeRep
+> import Language.Eta.Types.TyCon(TyCon)
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.BasicTypes.Unique( Unique )
+> import Language.Eta.Utils.FastString(FastString)
+> import Language.Eta.Types.CoAxiom(CoAxiomRule(coaxrName))
+32,34c32,34
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.NameEnv
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.NameEnv
+> import Language.Eta.Utils.Outputable

@@ -1,0 +1,14 @@
+15c15
+< module ETA.Utils.UniqSet (
+---
+> module Language.Eta.Utils.UniqSet (
+54,55c54,55
+< import ETA.Utils.UniqFM
+< import ETA.BasicTypes.Unique
+---
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.BasicTypes.Unique
+57c57
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.Utils.Outputable

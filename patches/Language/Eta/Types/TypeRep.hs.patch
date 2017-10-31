@@ -1,0 +1,42 @@
+22c22
+< module ETA.Types.TypeRep (
+---
+> module Language.Eta.Types.TypeRep (
+61,63c61,63
+< import {-# SOURCE #-} ETA.BasicTypes.DataCon( dataConTyCon )
+< import ETA.BasicTypes.ConLike ( ConLike(..) )
+< import {-# SOURCE #-} ETA.Types.Type( isPredTy ) -- Transitively pulls in a LOT of stuff, better to break the loop
+---
+> import {-# SOURCE #-} Language.Eta.BasicTypes.DataCon( dataConTyCon )
+> import Language.Eta.BasicTypes.ConLike ( ConLike(..) )
+> import {-# SOURCE #-} Language.Eta.Types.Type( isPredTy ) -- Transitively pulls in a LOT of stuff, better to break the loop
+66,73c66,73
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Types.TyCon
+< import ETA.Types.Class
+< import ETA.Types.CoAxiom
+---
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.Class
+> import Language.Eta.Types.CoAxiom
+76,80c76,80
+< import ETA.Prelude.PrelNames
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Utils.Util
+< import ETA.Main.DynFlags
+---
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Util
+> import Language.Eta.Main.DynFlags

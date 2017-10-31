@@ -1,0 +1,52 @@
+20c20
+< module ETA.HsSyn.HsUtils(
+---
+> module Language.Eta.HsSyn.HsUtils(
+79,101c79,101
+< import ETA.HsSyn.HsDecls
+< import ETA.HsSyn.HsBinds
+< import ETA.HsSyn.HsExpr
+< import ETA.HsSyn.HsPat
+< import ETA.HsSyn.HsTypes
+< import ETA.HsSyn.HsLit
+< import ETA.HsSyn.PlaceHolder
+< 
+< import ETA.TypeCheck.TcEvidence
+< import ETA.BasicTypes.RdrName
+< import ETA.BasicTypes.Var
+< import ETA.Types.TypeRep
+< import ETA.TypeCheck.TcType
+< import ETA.Types.Kind
+< import ETA.BasicTypes.DataCon
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.NameSet
+< import ETA.BasicTypes.BasicTypes
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.FastString
+< import ETA.Utils.Util
+< import ETA.Utils.Bag
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.HsSyn.HsDecls
+> import Language.Eta.HsSyn.HsBinds
+> import Language.Eta.HsSyn.HsExpr
+> import Language.Eta.HsSyn.HsPat
+> import Language.Eta.HsSyn.HsTypes
+> import Language.Eta.HsSyn.HsLit
+> import Language.Eta.HsSyn.PlaceHolder
+> 
+> import Language.Eta.TypeCheck.TcEvidence
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Types.TypeRep
+> import Language.Eta.TypeCheck.TcType
+> import Language.Eta.Types.Kind
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Bag
+> import Language.Eta.Utils.Outputable

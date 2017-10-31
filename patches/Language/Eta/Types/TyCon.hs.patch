@@ -1,0 +1,46 @@
+11c11
+< module ETA.Types.TyCon(
+---
+> module Language.Eta.Types.TyCon(
+57c57
+<         -- ETA-specific
+---
+>         -- Language.Eta-specific
+99,100c99,100
+< import {-# SOURCE #-} ETA.Types.TypeRep ( Kind, Type, PredType )
+< import {-# SOURCE #-} ETA.BasicTypes.DataCon ( DataCon, isVanillaDataCon )
+---
+> import {-# SOURCE #-} Language.Eta.Types.TypeRep ( Kind, Type, PredType )
+> import {-# SOURCE #-} Language.Eta.BasicTypes.DataCon ( DataCon, isVanillaDataCon )
+102,114c102,114
+< import ETA.BasicTypes.Var
+< import ETA.Types.Class
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Main.DynFlags
+< import ETA.Prelude.ForeignCall
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.NameSet
+< import ETA.Types.CoAxiom
+< import ETA.Prelude.PrelNames
+< import ETA.Utils.Maybes
+< import ETA.Utils.Outputable
+< -- import ETA.Main.Constants
+< import ETA.Utils.Util
+---
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Types.Class
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Prelude.ForeignCall
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.Types.CoAxiom
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.Utils.Outputable
+> -- import Language.Eta.Main.Constants
+> import Language.Eta.Utils.Util
+943c943
+<   -- ETA-specific
+---
+>   -- Language.Eta-specific

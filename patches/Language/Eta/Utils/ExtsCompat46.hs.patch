@@ -1,0 +1,4 @@
+26c26
+< module ETA.Utils.ExtsCompat46 (
+---
+> module Language.Eta.Utils.ExtsCompat46 (

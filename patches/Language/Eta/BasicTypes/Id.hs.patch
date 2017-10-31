@@ -1,0 +1,64 @@
+26c26
+< module ETA.BasicTypes.Id (
+---
+> module Language.Eta.BasicTypes.Id (
+43c43
+<         setIdName, setIdUnique, ETA.BasicTypes.Id.setIdType,
+---
+>         setIdName, setIdUnique, Language.Eta.BasicTypes.Id.setIdType,
+111c111
+< import ETA.Core.CoreSyn ( CoreRule, Unfolding( NoUnfolding ) )
+---
+> import Language.Eta.Core.CoreSyn ( CoreRule, Unfolding( NoUnfolding ) )
+113,114c113,114
+< import ETA.BasicTypes.IdInfo
+< import ETA.BasicTypes.BasicTypes
+---
+> import Language.Eta.BasicTypes.IdInfo
+> import Language.Eta.BasicTypes.BasicTypes
+117c117
+< import ETA.BasicTypes.Var( Id, DictId,
+---
+> import Language.Eta.BasicTypes.Var( Id, DictId,
+120c120
+< import qualified ETA.BasicTypes.Var as Var
+---
+> import qualified Language.Eta.BasicTypes.Var as Var
+122,139c122,139
+< import ETA.Types.TyCon
+< import ETA.Types.Type
+< import ETA.Prelude.TysPrim
+< import ETA.BasicTypes.DataCon
+< import ETA.BasicTypes.Demand
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.Module
+< import ETA.Types.Class
+< import {-# SOURCE #-} ETA.Prelude.PrimOp (PrimOp)
+< import ETA.Prelude.ForeignCall
+< import ETA.Utils.Maybes
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Unique
+< import ETA.BasicTypes.UniqSupply
+< import ETA.Utils.FastString
+< import ETA.Utils.Util
+< import ETA.Main.StaticFlags
+---
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.Type
+> import Language.Eta.Prelude.TysPrim
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.BasicTypes.Demand
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.Types.Class
+> import {-# SOURCE #-} Language.Eta.Prelude.PrimOp (PrimOp)
+> import Language.Eta.Prelude.ForeignCall
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.BasicTypes.UniqSupply
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Util
+> -- import Language.Eta.Main.StaticFlags

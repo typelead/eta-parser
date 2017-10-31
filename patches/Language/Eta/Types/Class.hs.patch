@@ -1,0 +1,32 @@
+8c8
+< module ETA.Types.Class (
+---
+> module Language.Eta.Types.Class (
+25,35c25,35
+< import {-# SOURCE #-} ETA.Types.TyCon     ( TyCon, tyConName, tyConUnique )
+< import {-# SOURCE #-} ETA.Types.TypeRep   ( Type, PredType )
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.BasicTypes
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Util
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Utils.BooleanFormula (BooleanFormula)
+---
+> import {-# SOURCE #-} Language.Eta.Types.TyCon     ( TyCon, tyConName, tyConUnique )
+> import {-# SOURCE #-} Language.Eta.Types.TypeRep   ( Type, PredType )
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.BooleanFormula (BooleanFormula)
+221c221
+<   = ASSERT( n >= 0 && n < length sc_sels )
+---
+>   = {-ASSERT( n >= 0 && n < length sc_sels )-}

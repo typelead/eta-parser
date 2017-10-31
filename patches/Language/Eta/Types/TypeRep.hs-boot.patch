@@ -1,0 +1,8 @@
+1c1
+< module ETA.Types.TypeRep where
+---
+> module Language.Eta.Types.TypeRep where
+3c3
+< import ETA.Utils.Outputable (Outputable)
+---
+> import Language.Eta.Utils.Outputable (Outputable)

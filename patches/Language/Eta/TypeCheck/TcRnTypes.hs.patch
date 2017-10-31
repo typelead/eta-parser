@@ -1,0 +1,82 @@
+21c21
+< module ETA.TypeCheck.TcRnTypes(
+---
+> module Language.Eta.TypeCheck.TcRnTypes(
+99,134c99,134
+< import ETA.HsSyn.HsSyn
+< import ETA.Core.CoreSyn
+< import ETA.Main.HscTypes
+< import ETA.TypeCheck.TcEvidence
+< import ETA.Types.Type
+< import ETA.Types.CoAxiom  ( Role )
+< import ETA.Types.Class    ( Class )
+< import ETA.Types.TyCon    ( TyCon )
+< import ETA.BasicTypes.ConLike  ( ConLike(..) )
+< import ETA.BasicTypes.DataCon  ( DataCon, dataConUserType, dataConOrigArgTys )
+< import ETA.BasicTypes.PatSyn   ( PatSyn, patSynType )
+< import ETA.Prelude.TysWiredIn ( coercibleClass )
+< import ETA.TypeCheck.TcType
+< import ETA.Main.Annotations
+< import ETA.Types.InstEnv
+< import ETA.Types.FamInstEnv
+< import ETA.Utils.IOEnv
+< import ETA.BasicTypes.RdrName
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.NameEnv
+< import ETA.BasicTypes.NameSet
+< import ETA.BasicTypes.Avail
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.SrcLoc
+< import ETA.BasicTypes.VarSet
+< import ETA.Main.ErrUtils
+< import ETA.Utils.UniqFM
+< import ETA.BasicTypes.UniqSupply
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.Bag
+< import ETA.Main.DynFlags
+< import ETA.Utils.Outputable
+< import ETA.Utils.ListSetOps
+< import ETA.Utils.FastString
+---
+> import Language.Eta.HsSyn.HsSyn
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Main.HscTypes
+> import Language.Eta.TypeCheck.TcEvidence
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.CoAxiom  ( Role )
+> import Language.Eta.Types.Class    ( Class )
+> import Language.Eta.Types.TyCon    ( TyCon )
+> import Language.Eta.BasicTypes.ConLike  ( ConLike(..) )
+> import Language.Eta.BasicTypes.DataCon  ( DataCon, dataConUserType, dataConOrigArgTys )
+> import Language.Eta.BasicTypes.PatSyn   ( PatSyn, patSynType )
+> import Language.Eta.Prelude.TysWiredIn ( coercibleClass )
+> import Language.Eta.TypeCheck.TcType
+> import Language.Eta.Main.Annotations
+> import Language.Eta.Types.InstEnv
+> import Language.Eta.Types.FamInstEnv
+> import Language.Eta.Utils.IOEnv
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.NameEnv
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.BasicTypes.Avail
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.Main.ErrUtils
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.BasicTypes.UniqSupply
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.Bag
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.ListSetOps
+> import Language.Eta.Utils.FastString
+2142c2142
+<     -- TODO: WRITE MORE DETAILS ON HOW THIS WORKS.
+---
+>     -- TODO: WRITE MORE DLanguage.EtaILS ON HOW THIS WORKS.

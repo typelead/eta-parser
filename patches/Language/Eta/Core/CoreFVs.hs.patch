@@ -1,0 +1,36 @@
+11c11
+< module ETA.Core.CoreFVs (
+---
+> module Language.Eta.Core.CoreFVs (
+39,53c39,53
+< import ETA.Core.CoreSyn
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.IdInfo
+< import ETA.BasicTypes.NameSet
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.UniqSet
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.Var
+< import ETA.TypeCheck.TcType
+< import ETA.Types.Coercion
+< import ETA.Utils.Maybes( orElse )
+< import ETA.Utils.Util
+< import ETA.BasicTypes.BasicTypes( Activation )
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.IdInfo
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.UniqSet
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.TypeCheck.TcType
+> import Language.Eta.Types.Coercion
+> import Language.Eta.Utils.Maybes( orElse )
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.BasicTypes( Activation )
+> import Language.Eta.Utils.Outputable

@@ -1,0 +1,8 @@
+14c14
+< module ETA.Utils.Encoding (
+---
+> module Language.Eta.Utils.Encoding (
+39c39
+< import ETA.Utils.ExtsCompat46
+---
+> import Language.Eta.Utils.ExtsCompat46

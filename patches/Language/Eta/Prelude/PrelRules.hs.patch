@@ -1,0 +1,62 @@
+18c18
+< module ETA.Prelude.PrelRules
+---
+> module Language.Eta.Prelude.PrelRules
+26c26
+< import {-# SOURCE #-} ETA.BasicTypes.MkId ( mkPrimOpId, magicDictId )
+---
+> import {-# SOURCE #-} Language.Eta.BasicTypes.MkId ( mkPrimOpId, magicDictId )
+28,36c28,36
+< import ETA.Core.CoreSyn
+< import ETA.Core.MkCore
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.Literal
+< import ETA.Core.CoreSubst   ( exprIsLiteral_maybe )
+< import ETA.Prelude.PrimOp      ( PrimOp(..), tagToEnumKey )
+< import ETA.Prelude.TysWiredIn
+< import ETA.Prelude.TysPrim
+< import ETA.Types.TyCon      ( tyConDataCons_maybe, isEnumerationTyCon, isNewTyCon
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Core.MkCore
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.Literal
+> import Language.Eta.Core.CoreSubst   ( exprIsLiteral_maybe )
+> import Language.Eta.Prelude.PrimOp      ( PrimOp(..), tagToEnumKey )
+> import Language.Eta.Prelude.TysWiredIn
+> import Language.Eta.Prelude.TysPrim
+> import Language.Eta.Types.TyCon      ( tyConDataCons_maybe, isEnumerationTyCon, isNewTyCon
+38,53c38,53
+< import ETA.BasicTypes.DataCon     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
+< import ETA.Core.CoreUtils   ( cheapEqExpr, exprIsHNF )
+< import ETA.Core.CoreUnfold  ( exprIsConApp_maybe )
+< import ETA.Types.Type
+< import ETA.Types.TypeRep
+< import ETA.BasicTypes.OccName     ( occNameFS )
+< import ETA.Prelude.PrelNames
+< import ETA.Utils.Maybes      ( orElse )
+< import ETA.BasicTypes.Name        ( Name, nameOccName )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Main.DynFlags
+< import ETA.Utils.Platform
+< import ETA.Utils.Util
+< import ETA.Types.Coercion     (mkUnbranchedAxInstCo,mkSymCo,Role(..))
+---
+> import Language.Eta.BasicTypes.DataCon     ( DataCon, dataConTagZ, dataConTyCon, dataConWorkId )
+> import Language.Eta.Core.CoreUtils   ( cheapEqExpr, exprIsHNF )
+> import Language.Eta.Core.CoreUnfold  ( exprIsConApp_maybe )
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.TypeRep
+> import Language.Eta.BasicTypes.OccName     ( occNameFS )
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.Utils.Maybes      ( orElse )
+> import Language.Eta.BasicTypes.Name        ( Name, nameOccName )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Utils.Platform
+> import Language.Eta.Utils.Util
+> import Language.Eta.Types.Coercion     (mkUnbranchedAxInstCo,mkSymCo,Role(..))

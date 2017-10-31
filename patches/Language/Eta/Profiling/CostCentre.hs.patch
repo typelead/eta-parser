@@ -1,0 +1,26 @@
+2c2
+< module ETA.Profiling.CostCentre (
+---
+> module Language.Eta.Profiling.CostCentre (
+23,32c23,32
+< import ETA.Utils.Binary
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastTypes
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.FastString
+< import ETA.Utils.Util
+---
+> import Language.Eta.Utils.Binary
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastTypes
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Util

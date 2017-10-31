@@ -1,0 +1,24 @@
+6c6
+< module ETA.HsSyn.PlaceHolder where
+---
+> module Language.Eta.HsSyn.PlaceHolder where
+8,14c8,14
+< import ETA.Types.Type       ( Type )
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.NameSet
+< import ETA.BasicTypes.RdrName
+< import ETA.BasicTypes.Var
+< import ETA.Types.Coercion
+---
+> import Language.Eta.Types.Type       ( Type )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Types.Coercion
+17c17
+< import ETA.BasicTypes.BasicTypes       (Fixity)
+---
+> import Language.Eta.BasicTypes.BasicTypes       (Fixity)

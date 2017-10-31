@@ -1,0 +1,46 @@
+25c25
+< module ETA.BasicTypes.RdrName (
+---
+> module Language.Eta.BasicTypes.RdrName (
+65,75c65,75
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.Avail
+< import ETA.BasicTypes.NameSet
+< import ETA.Utils.Maybes
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Util
+< import ETA.Main.StaticFlags( opt_PprStyle_Debug )
+---
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.Avail
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Util
+> -- import Language.Eta.Main.StaticFlags( opt_PprStyle_Debug )
+366c366
+<   = WARN( isExternalName name, ppr name )
+---
+>   = {-WARN( isExternalName name, ppr name )-}
+372c372
+<   = WARN( any isExternalName names, ppr names )
+---
+>   = {-WARN( any isExternalName names, ppr names )-}
+620c620
+<   = ASSERT2( isSrcRdrName rdr_name, ppr rdr_name )
+---
+>   = {-ASSERT2( isSrcRdrName rdr_name, ppr rdr_name )-}
+917,918c917,918
+<         (why:_) | opt_PprStyle_Debug -> vcat (map pp_why whys)
+<                 | otherwise          -> pp_why why
+---
+>         (why:_) {-| opt_PprStyle_Debug -> vcat (map pp_why whys)-}
+>                 {-| otherwise-}          -> pp_why why

@@ -1,0 +1,8 @@
+1c1
+< module ETA.BasicTypes.Name where
+---
+> module Language.Eta.BasicTypes.Name where
+3c3
+< import {-# SOURCE #-} ETA.BasicTypes.Module
+---
+> import {-# SOURCE #-} Language.Eta.BasicTypes.Module

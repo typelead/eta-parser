@@ -1,0 +1,8 @@
+2c2
+< module ETA.Utils.Json where
+---
+> module Language.Eta.Utils.Json where
+4c4
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.Utils.Outputable

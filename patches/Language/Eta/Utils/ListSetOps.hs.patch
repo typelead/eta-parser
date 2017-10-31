@@ -1,0 +1,18 @@
+9c9
+< module ETA.Utils.ListSetOps (
+---
+> module Language.Eta.Utils.ListSetOps (
+23,26c23,26
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.UniqFM
+< import ETA.Utils.Util
+---
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.Util
+46c46
+< getNth xs n = ASSERT2( xs `lengthExceeds` n, ppr n $$ ppr xs )
+---
+> getNth xs n = {-ASSERT2( xs `lengthExceeds` n, ppr n $$ ppr xs )-}

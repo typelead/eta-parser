@@ -1,0 +1,12 @@
+1,5c1,5
+< module ETA.BasicTypes.MkId where
+< import ETA.BasicTypes.Name( Name )
+< import ETA.BasicTypes.Var( Id )
+< import {-# SOURCE #-} ETA.BasicTypes.DataCon( DataCon )
+< import {-# SOURCE #-} ETA.Prelude.PrimOp( PrimOp )
+---
+> module Language.Eta.BasicTypes.MkId where
+> import Language.Eta.BasicTypes.Name( Name )
+> import Language.Eta.BasicTypes.Var( Id )
+> import {-# SOURCE #-} Language.Eta.BasicTypes.DataCon( DataCon )
+> import {-# SOURCE #-} Language.Eta.Prelude.PrimOp( PrimOp )

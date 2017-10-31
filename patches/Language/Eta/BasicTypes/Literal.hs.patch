@@ -1,0 +1,34 @@
+10c10
+< module ETA.BasicTypes.Literal
+---
+> module Language.Eta.BasicTypes.Literal
+49,62c49,62
+< import ETA.Prelude.TysPrim
+< import ETA.Prelude.TysWiredIn (jstringTy)
+< import ETA.Prelude.PrelNames
+< import ETA.Types.Type
+< import ETA.Types.TyCon
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastTypes
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.Binary
+< import ETA.Main.Constants
+< import ETA.Main.DynFlags
+< import ETA.Utils.UniqFM
+< import ETA.Utils.Util
+---
+> import Language.Eta.Prelude.TysPrim
+> import Language.Eta.Prelude.TysWiredIn (jstringTy)
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastTypes
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Main.Constants
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.Util

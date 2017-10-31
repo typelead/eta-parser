@@ -1,0 +1,12 @@
+10,11c10,11
+< module ETA.HsSyn.HsPat where
+< import ETA.BasicTypes.SrcLoc( Located )
+---
+> module Language.Eta.HsSyn.HsPat where
+> import Language.Eta.BasicTypes.SrcLoc( Located )
+14,15c14,15
+< import ETA.Utils.Outputable
+< import ETA.HsSyn.PlaceHolder      ( DataId )
+---
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.HsSyn.PlaceHolder      ( DataId )

@@ -1,0 +1,60 @@
+19,29c19,29
+< module ETA.HsSyn.HsSyn (
+<         module ETA.HsSyn.HsBinds,
+<         module ETA.HsSyn.HsDecls,
+<         module ETA.HsSyn.HsExpr,
+<         module ETA.HsSyn.HsImpExp,
+<         module ETA.HsSyn.HsLit,
+<         module ETA.HsSyn.HsPat,
+<         module ETA.HsSyn.HsTypes,
+<         module ETA.HsSyn.HsUtils,
+<         module ETA.HsSyn.HsDoc,
+<         module ETA.HsSyn.PlaceHolder,
+---
+> module Language.Eta.HsSyn.HsSyn (
+>         module Language.Eta.HsSyn.HsBinds,
+>         module Language.Eta.HsSyn.HsDecls,
+>         module Language.Eta.HsSyn.HsExpr,
+>         module Language.Eta.HsSyn.HsImpExp,
+>         module Language.Eta.HsSyn.HsLit,
+>         module Language.Eta.HsSyn.HsPat,
+>         module Language.Eta.HsSyn.HsTypes,
+>         module Language.Eta.HsSyn.HsUtils,
+>         module Language.Eta.HsSyn.HsDoc,
+>         module Language.Eta.HsSyn.PlaceHolder,
+36,46c36,46
+< import ETA.HsSyn.HsDecls
+< import ETA.HsSyn.HsBinds
+< import ETA.HsSyn.HsExpr
+< import ETA.HsSyn.HsImpExp
+< import ETA.HsSyn.HsLit
+< import ETA.HsSyn.PlaceHolder
+< import ETA.HsSyn.HsPat
+< import ETA.HsSyn.HsTypes  hiding  ( mkHsForAllTy )
+< import ETA.BasicTypes.BasicTypes       ( Fixity, WarningTxt )
+< import ETA.HsSyn.HsUtils
+< import ETA.HsSyn.HsDoc
+---
+> import Language.Eta.HsSyn.HsDecls
+> import Language.Eta.HsSyn.HsBinds
+> import Language.Eta.HsSyn.HsExpr
+> import Language.Eta.HsSyn.HsImpExp
+> import Language.Eta.HsSyn.HsLit
+> import Language.Eta.HsSyn.PlaceHolder
+> import Language.Eta.HsSyn.HsPat
+> import Language.Eta.HsSyn.HsTypes  hiding  ( mkHsForAllTy )
+> import Language.Eta.BasicTypes.BasicTypes       ( Fixity, WarningTxt )
+> import Language.Eta.HsSyn.HsUtils
+> import Language.Eta.HsSyn.HsDoc
+49,53c49,53
+< import ETA.BasicTypes.OccName          ( HasOccName )
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.SrcLoc
+< import ETA.BasicTypes.Module           ( ModuleName )
+< import ETA.Utils.FastString
+---
+> import Language.Eta.BasicTypes.OccName          ( HasOccName )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.BasicTypes.Module           ( ModuleName )
+> import Language.Eta.Utils.FastString

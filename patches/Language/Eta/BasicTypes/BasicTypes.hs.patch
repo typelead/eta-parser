@@ -1,0 +1,12 @@
+19c19
+< module ETA.BasicTypes.BasicTypes(
+---
+> module Language.Eta.BasicTypes.BasicTypes(
+92,94c92,94
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.SrcLoc ( Located,unLoc )
+---
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.SrcLoc ( Located,unLoc )

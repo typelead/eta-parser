@@ -1,0 +1,92 @@
+10c10
+< module ETA.Core.CoreSubst (
+---
+> module Language.Eta.Core.CoreSubst (
+42,46c42,46
+< import ETA.Core.CoreSyn
+< import ETA.Core.CoreSeq
+< import ETA.Core.CoreFVs
+< import ETA.Core.CoreUtils
+< import ETA.BasicTypes.Literal  ( Literal(MachStr) )
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Core.CoreSeq
+> import Language.Eta.Core.CoreFVs
+> import Language.Eta.Core.CoreUtils
+> import Language.Eta.BasicTypes.Literal  ( Literal(MachStr) )
+48c48
+< import ETA.SimplCore.OccurAnal( occurAnalyseExpr, occurAnalysePgm )
+---
+> import Language.Eta.SimplCore.OccurAnal( occurAnalyseExpr, occurAnalysePgm )
+50,51c50,51
+< import qualified ETA.Types.Type as Type
+< import qualified ETA.Types.Coercion as Coercion
+---
+> import qualified Language.Eta.Types.Type as Type
+> import qualified Language.Eta.Types.Coercion as Coercion
+54c54
+< import ETA.Types.Type     hiding ( substTy, extendTvSubst, extendTvSubstList
+---
+> import Language.Eta.Types.Type     hiding ( substTy, extendTvSubst, extendTvSubstList
+56c56
+< import ETA.Types.Coercion hiding ( substTy, substCo, extendTvSubst, substTyVarBndr, substCoVarBndr )
+---
+> import Language.Eta.Types.Coercion hiding ( substTy, substCo, extendTvSubst, substTyVarBndr, substCoVarBndr )
+58,60c58,60
+< import ETA.Types.TyCon       ( tyConArity )
+< import ETA.BasicTypes.DataCon
+< import ETA.Prelude.PrelNames   ( eqBoxDataConKey, coercibleDataConKey, unpackCStringIdKey
+---
+> import Language.Eta.Types.TyCon       ( tyConArity )
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.Prelude.PrelNames   ( eqBoxDataConKey, coercibleDataConKey, unpackCStringIdKey
+62,81c62,81
+< import ETA.Types.OptCoercion ( optCoercion )
+< import ETA.Core.PprCore     ( pprCoreBindings, pprRules )
+< import ETA.BasicTypes.Module      ( Module )
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.Name     ( Name )
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.IdInfo
+< import ETA.BasicTypes.Unique
+< import ETA.BasicTypes.UniqSupply
+< import ETA.Utils.Maybes
+< import ETA.Main.ErrUtils
+< import ETA.Main.DynFlags
+< import ETA.BasicTypes.BasicTypes ( isAlwaysActive )
+< import ETA.Utils.Util
+< import ETA.Utils.Pair
+< import ETA.Utils.Outputable
+< import ETA.Core.PprCore          ()              -- Instances
+< import ETA.Utils.FastString
+---
+> import Language.Eta.Types.OptCoercion ( optCoercion )
+> import Language.Eta.Core.PprCore     ( pprCoreBindings, pprRules )
+> import Language.Eta.BasicTypes.Module      ( Module )
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.Name     ( Name )
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.IdInfo
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.BasicTypes.UniqSupply
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.Main.ErrUtils
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.BasicTypes.BasicTypes ( isAlwaysActive )
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Pair
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Core.PprCore          ()              -- Instances
+> import Language.Eta.Utils.FastString
+85c85
+< import ETA.Prelude.TysWiredIn
+---
+> import Language.Eta.Prelude.TysWiredIn
+1324c1324
+<     subst_co (Right s) co = ETA.Core.CoreSubst.substCo s co
+---
+>     subst_co (Right s) co = Language.Eta.Core.CoreSubst.substCo s co

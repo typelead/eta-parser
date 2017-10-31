@@ -1,0 +1,18 @@
+3c3
+< module ETA.Parser.ApiAnnotation (
+---
+> module Language.Eta.Parser.ApiAnnotation (
+13,15c13,15
+< import ETA.BasicTypes.RdrName
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.SrcLoc
+---
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.SrcLoc
+265,266c265,266
+<     | AnnLarrowtail -- ^ '-<<'
+<     | AnnRarrowtail -- ^ '>>-'
+---
+>     | AnnLLarrowtail -- ^ '-<<'
+>     | AnnRRarrowtail -- ^ '>>-'

@@ -1,0 +1,46 @@
+12c12
+< module ETA.Core.CoreArity (
+---
+> module Language.Eta.Core.CoreArity (
+19,38c19,38
+< import ETA.Core.CoreSyn
+< import ETA.Core.CoreFVs
+< import ETA.Core.CoreUtils
+< import ETA.Core.CoreSubst
+< import qualified ETA.Core.CoreSubst as CoreSubst
+< import ETA.BasicTypes.Demand
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.Id
+< import ETA.Types.Type
+< import qualified ETA.Types.Type as Type
+< import ETA.Types.TyCon    ( initRecTc, checkRecTc )
+< import ETA.Types.Coercion
+< import ETA.BasicTypes.BasicTypes
+< import ETA.BasicTypes.Unique
+< import ETA.Main.DynFlags ( DynFlags, GeneralFlag(..), gopt )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Utils.Pair
+< import ETA.Utils.Util     ( debugIsOn )
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Core.CoreFVs
+> import Language.Eta.Core.CoreUtils
+> import Language.Eta.Core.CoreSubst
+> import qualified Language.Eta.Core.CoreSubst as CoreSubst
+> import Language.Eta.BasicTypes.Demand
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.Types.Type
+> import qualified Language.Eta.Types.Type as Type
+> import Language.Eta.Types.TyCon    ( initRecTc, checkRecTc )
+> import Language.Eta.Types.Coercion
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Main.DynFlags ( DynFlags, GeneralFlag(..), gopt )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Pair
+> import Language.Eta.Utils.Util     ( debugIsOn )

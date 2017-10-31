@@ -1,0 +1,8 @@
+1c1
+< module ETA.Main.DynFlags where
+---
+> module Language.Eta.Main.DynFlags where
+3c3
+< import ETA.Utils.Platform
+---
+> import Language.Eta.Utils.Platform

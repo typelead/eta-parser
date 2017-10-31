@@ -1,0 +1,10 @@
+6c6
+< module ETA.BasicTypes.NameSet (
+---
+> module Language.Eta.BasicTypes.NameSet (
+31,32c31,32
+< import ETA.BasicTypes.Name
+< import ETA.Utils.UniqSet
+---
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Utils.UniqSet

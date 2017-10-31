@@ -1,0 +1,8 @@
+13c13
+< module ETA.Utils.OrdList (
+---
+> module Language.Eta.Utils.OrdList (
+19c19
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.Utils.Outputable

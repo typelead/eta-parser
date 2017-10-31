@@ -1,0 +1,44 @@
+19c19
+< module ETA.HsSyn.HsBinds where
+---
+> module Language.Eta.HsSyn.HsBinds where
+21c21
+< import {-# SOURCE #-} ETA.HsSyn.HsExpr ( pprExpr, LHsExpr,
+---
+> import {-# SOURCE #-} Language.Eta.HsSyn.HsExpr ( pprExpr, LHsExpr,
+24c24
+< import {-# SOURCE #-} ETA.HsSyn.HsPat  ( LPat )
+---
+> import {-# SOURCE #-} Language.Eta.HsSyn.HsPat  ( LPat )
+26,40c26,40
+< import ETA.HsSyn.PlaceHolder ( PostTc,PostRn,DataId )
+< import ETA.HsSyn.HsTypes
+< import ETA.Core.PprCore ()
+< import ETA.Core.CoreSyn
+< import ETA.TypeCheck.TcEvidence
+< import ETA.Types.Type
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.NameSet
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.SrcLoc
+< import ETA.BasicTypes.Var
+< import ETA.Utils.Bag
+< import ETA.Utils.FastString
+< import ETA.Utils.BooleanFormula (BooleanFormula)
+---
+> import Language.Eta.HsSyn.PlaceHolder ( PostTc,PostRn,DataId )
+> import Language.Eta.HsSyn.HsTypes
+> import Language.Eta.Core.PprCore ()
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.TypeCheck.TcEvidence
+> import Language.Eta.Types.Type
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Utils.Bag
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.BooleanFormula (BooleanFormula)

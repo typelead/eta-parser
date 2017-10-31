@@ -1,0 +1,12 @@
+16c16
+< module ETA.BasicTypes.SrcLoc (
+---
+> module Language.Eta.BasicTypes.SrcLoc (
+81,83c81,83
+< import ETA.Utils.Util
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+---
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString

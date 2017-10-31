@@ -1,0 +1,18 @@
+17c17
+< module ETA.HsSyn.HsLit where
+---
+> module Language.Eta.HsSyn.HsLit where
+21,26c21,26
+< import {-# SOURCE #-} ETA.HsSyn.HsExpr( SyntaxExpr, pprExpr )
+< import ETA.BasicTypes.BasicTypes ( FractionalLit(..),SourceText )
+< import ETA.Types.Type       ( Type )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.HsSyn.PlaceHolder ( PostTc,PostRn,DataId )
+---
+> import {-# SOURCE #-} Language.Eta.HsSyn.HsExpr( SyntaxExpr, pprExpr )
+> import Language.Eta.BasicTypes.BasicTypes ( FractionalLit(..),SourceText )
+> import Language.Eta.Types.Type       ( Type )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.HsSyn.PlaceHolder ( PostTc,PostRn,DataId )

@@ -1,0 +1,12 @@
+12c12
+< module ETA.Main.DriverPhases (
+---
+> module Language.Eta.Main.DriverPhases (
+44,46c44,46
+< import {-# SOURCE #-} ETA.Main.DynFlags
+< import ETA.Utils.Outputable
+< import ETA.Utils.Platform
+---
+> import {-# SOURCE #-} Language.Eta.Main.DynFlags
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Platform

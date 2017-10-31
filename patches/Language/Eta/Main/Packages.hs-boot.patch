@@ -1,0 +1,8 @@
+1,3c1,3
+< module ETA.Main.Packages where
+< import {-# SOURCE #-} ETA.Main.DynFlags(DynFlags)
+< import {-# SOURCE #-} ETA.BasicTypes.Module(ComponentId, UnitId, InstalledUnitId)
+---
+> module Language.Eta.Main.Packages where
+> import {-# SOURCE #-} Language.Eta.Main.DynFlags(DynFlags)
+> import {-# SOURCE #-} Language.Eta.BasicTypes.Module(ComponentId, UnitId, InstalledUnitId)

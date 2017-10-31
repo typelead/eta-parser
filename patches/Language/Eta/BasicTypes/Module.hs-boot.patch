@@ -1,0 +1,6 @@
+1,2c1,2
+< module ETA.BasicTypes.Module where
+< import ETA.Utils.FastString
+---
+> module Language.Eta.BasicTypes.Module where
+> import Language.Eta.Utils.FastString

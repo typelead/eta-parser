@@ -7,58 +7,43 @@ cd $(dirname "$0")/..
 
 source tools/source-maps
 
-# Clear existing generated sources
-rm -rf gen
-
-patch_source() {
+make_patch() {
   if [ $# -ne 3 ]; then
-    >&2 echo "Usage: $0 <src> <target> <patch_file>"
+    >&2 echo "Usage: $0 <file1> <file2> <patch_file>"
     exit 1
   fi
-  local target=$2
-  mkdir -p $(dirname "$target")
-  cp "$1" "$target"
-  local patch_file=$3
-  if [ -f "$patch_file" ]; then
-    patch -s "$target" "$patch_file"
+  if ! cmp -s "$1" "$2"; then
+    mkdir -p "$(dirname "$3")"
+    diff "$1" "$2" > "$3" || true
   fi
 }
 
-# Generate lexer
-x_file="gen/lexer/Lexer.x"
-patch_source \
+make_patch \
   "eta/compiler/ETA/Parser/Lexer.x" \
   "gen/lexer/Lexer.x" \
   "patches/lexer/Lexer.x.patch"
-target=gen/src/Language/Eta/Parser/Lexer.hs
-mkdir -p $(dirname "$target")
-alex -o "$target" "$x_file"
 
-# Copy/patch Eta.PackageDb
-patch_source \
+make_patch \
   "eta/libraries/eta-boot/Eta/PackageDb.hs" \
   "gen/src/Language/Eta/PackageDb.hs" \
   "patches/Language/Eta/PackageDb.hs.patch"
 
-# Copy/patch modules
 for src in "${sources[@]}"; do
-  patch_source \
+  make_patch \
     "eta/compiler/ETA/$src.hs" \
     "gen/src/Language/Eta/$src.hs" \
     "patches/Language/Eta/$src.hs.patch"
 done
 
-# Copy/patch boot sources
 for src in "${boot_sources[@]}"; do
-  patch_source \
+  make_patch \
     "eta/compiler/ETA/$src.hs-boot" \
     "gen/src/Language/Eta/$src.hs-boot" \
     "patches/Language/Eta/$src.hs-boot.patch"
 done
 
-# Copy codec-jvm sources
 for src in "${codec_jvm[@]}"; do
-  patch_source \
+  make_patch \
     "eta/codec-jvm/src/$src.hs" \
     "gen/src/$src.hs" \
     "patches/$src.hs.patch"

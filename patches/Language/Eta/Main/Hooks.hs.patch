@@ -1,0 +1,40 @@
+8c8
+< module ETA.Main.Hooks ( Hooks
+---
+> module Language.Eta.Main.Hooks ( Hooks
+28,44c28,44
+< import ETA.Main.DynFlags
+< import ETA.HsSyn.HsTypes
+< import ETA.BasicTypes.Name
+< import ETA.Main.PipelineMonad
+< import ETA.Main.HscTypes
+< import ETA.HsSyn.HsDecls
+< import ETA.HsSyn.HsBinds
+< import ETA.HsSyn.HsExpr
+< import ETA.Utils.OrdList
+< import ETA.BasicTypes.Id
+< import ETA.TypeCheck.TcRnTypes
+< import ETA.Utils.Bag
+< import ETA.BasicTypes.RdrName
+< import ETA.Core.CoreSyn
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Types.Type
+< import ETA.BasicTypes.SrcLoc
+---
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.HsSyn.HsTypes
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Main.PipelineMonad
+> import Language.Eta.Main.HscTypes
+> import Language.Eta.HsSyn.HsDecls
+> import Language.Eta.HsSyn.HsBinds
+> import Language.Eta.HsSyn.HsExpr
+> import Language.Eta.Utils.OrdList
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.TypeCheck.TcRnTypes
+> import Language.Eta.Utils.Bag
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Types.Type
+> import Language.Eta.BasicTypes.SrcLoc

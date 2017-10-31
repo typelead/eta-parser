@@ -1,0 +1,22 @@
+14c14
+< module ETA.Utils.StringBuffer
+---
+> module Language.Eta.Utils.StringBuffer
+46,51c46,51
+< import ETA.Utils.Encoding
+< import ETA.Utils.FastString
+< import ETA.Utils.FastTypes
+< import ETA.Utils.FastFunctions
+< import ETA.Utils.Outputable
+< import ETA.Utils.Util
+---
+> import Language.Eta.Utils.Encoding
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.FastTypes
+> import Language.Eta.Utils.FastFunctions
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Util
+134c134
+<       ASSERTM( hGetEncoding h >>= return . isNothing )
+---
+>       -- ASSERTM( hGetEncoding h >>= return . isNothing )

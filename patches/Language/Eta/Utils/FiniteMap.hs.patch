@@ -1,0 +1,4 @@
+3c3
+< module ETA.Utils.FiniteMap (
+---
+> module Language.Eta.Utils.FiniteMap (

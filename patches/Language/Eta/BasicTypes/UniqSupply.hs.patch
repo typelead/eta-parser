@@ -1,0 +1,20 @@
+8c8
+< module ETA.BasicTypes.UniqSupply (
+---
+> module Language.Eta.BasicTypes.UniqSupply (
+27,28c27,28
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.FastTypes
+---
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.FastTypes
+32c32
+< import ETA.Utils.MonadUtils
+---
+> import Language.Eta.Utils.MonadUtils
+86c86,88
+< foreign import ccall unsafe "genSym" genSym :: IO Int
+---
+> -- foreign import ccall unsafe "genSym" genSym :: IO Int
+> genSym :: IO Int
+> genSym = error "genSym: ffi ccall"

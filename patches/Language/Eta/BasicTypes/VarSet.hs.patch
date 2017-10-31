@@ -1,0 +1,22 @@
+8c8
+< module ETA.BasicTypes.VarSet (
+---
+> module Language.Eta.BasicTypes.VarSet (
+48,55c48,55
+< import ETA.BasicTypes.Var      ( Var, TyVar, CoVar, TyCoVar, Id )
+< import ETA.BasicTypes.Unique
+< import ETA.BasicTypes.Name     ( Name )
+< import ETA.Utils.UniqSet
+< import ETA.Utils.UniqDSet
+< import ETA.Utils.UniqFM( disjointUFM, pluralUFM, pprUFM )
+< import ETA.Utils.UniqDFM( disjointUDFM, udfmToUfm, anyUDFM, allUDFM )
+< import ETA.Utils.Outputable (SDoc)
+---
+> import Language.Eta.BasicTypes.Var      ( Var, TyVar, CoVar, TyCoVar, Id )
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.BasicTypes.Name     ( Name )
+> import Language.Eta.Utils.UniqSet
+> import Language.Eta.Utils.UniqDSet
+> import Language.Eta.Utils.UniqFM( disjointUFM, pluralUFM, pprUFM )
+> import Language.Eta.Utils.UniqDFM( disjointUDFM, udfmToUfm, anyUDFM, allUDFM )
+> import Language.Eta.Utils.Outputable (SDoc)

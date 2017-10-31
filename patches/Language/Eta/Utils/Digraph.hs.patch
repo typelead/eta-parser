@@ -1,0 +1,14 @@
+4c4
+< module ETA.Utils.Digraph(
+---
+> module Language.Eta.Utils.Digraph(
+41,44c41,44
+< import ETA.Utils.Util        ( minWith, count )
+< import ETA.Utils.Outputable
+< import ETA.Utils.Maybes      ( expectJust )
+< import ETA.Utils.MonadUtils  ( allM )
+---
+> import Language.Eta.Utils.Util        ( minWith, count )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Maybes      ( expectJust )
+> import Language.Eta.Utils.MonadUtils  ( allM )

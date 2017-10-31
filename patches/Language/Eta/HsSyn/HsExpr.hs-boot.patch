@@ -1,0 +1,14 @@
+10c10
+< module ETA.HsSyn.HsExpr where
+---
+> module Language.Eta.HsSyn.HsExpr where
+12,15c12,15
+< import ETA.BasicTypes.SrcLoc     ( Located )
+< import ETA.Utils.Outputable ( SDoc, OutputableBndr, Outputable )
+< import {-# SOURCE #-} ETA.HsSyn.HsPat  ( LPat )
+< import ETA.HsSyn.PlaceHolder ( DataId )
+---
+> import Language.Eta.BasicTypes.SrcLoc     ( Located )
+> import Language.Eta.Utils.Outputable ( SDoc, OutputableBndr, Outputable )
+> import {-# SOURCE #-} Language.Eta.HsSyn.HsPat  ( LPat )
+> import Language.Eta.HsSyn.PlaceHolder ( DataId )

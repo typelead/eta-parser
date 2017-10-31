@@ -1,0 +1,4 @@
+4c4
+< module ETA.Utils.Platform (
+---
+> module Language.Eta.Utils.Platform (

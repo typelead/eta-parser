@@ -1,0 +1,48 @@
+10c10
+< module ETA.Iface.IfaceType (
+---
+> module Language.Eta.Iface.IfaceType (
+46,56c46,56
+< import ETA.Types.Coercion
+< import ETA.BasicTypes.DataCon ( dataConTyCon )
+< import ETA.TypeCheck.TcType
+< import ETA.Main.DynFlags
+< import ETA.Types.TypeRep
+< import ETA.BasicTypes.Unique( hasKey )
+< import ETA.Utils.Util ( filterOut, lengthIs, zipWithEqual )
+< import ETA.Types.TyCon hiding ( pprPromotionQuote )
+< import ETA.Types.CoAxiom
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.Var
+---
+> import Language.Eta.Types.Coercion
+> import Language.Eta.BasicTypes.DataCon ( dataConTyCon )
+> import Language.Eta.TypeCheck.TcType
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Types.TypeRep
+> import Language.Eta.BasicTypes.Unique( hasKey )
+> import Language.Eta.Utils.Util ( filterOut, lengthIs, zipWithEqual )
+> import Language.Eta.Types.TyCon hiding ( pprPromotionQuote )
+> import Language.Eta.Types.CoAxiom
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.Var
+58,66c58,66
+< import ETA.Prelude.TysWiredIn
+< import ETA.Prelude.TysPrim
+< import ETA.Prelude.PrelNames( funTyConKey, ipClassName )
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.Binary
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Utils.UniqSet
+---
+> import Language.Eta.Prelude.TysWiredIn
+> import Language.Eta.Prelude.TysPrim
+> import Language.Eta.Prelude.PrelNames( funTyConKey, ipClassName )
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.UniqSet

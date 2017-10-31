@@ -1,0 +1,14 @@
+11c11
+< module ETA.Utils.Bag (
+---
+> module Language.Eta.Utils.Bag (
+26,27c26,27
+< import ETA.Utils.Outputable
+< import ETA.Utils.Util
+---
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Util
+29c29
+< import ETA.Utils.MonadUtils
+---
+> import Language.Eta.Utils.MonadUtils

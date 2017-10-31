@@ -1,0 +1,36 @@
+36c36
+< module ETA.BasicTypes.Name (
+---
+> module Language.Eta.BasicTypes.Name (
+73c73
+<         module ETA.BasicTypes.OccName
+---
+>         module Language.Eta.BasicTypes.OccName
+76,77c76,77
+< import {-# SOURCE #-} ETA.Types.TypeRep( TyThing )
+< import {-# SOURCE #-} ETA.Prelude.PrelNames( liftedTypeKindTyConKey )
+---
+> import {-# SOURCE #-} Language.Eta.Types.TypeRep( TyThing )
+> import {-# SOURCE #-} Language.Eta.Prelude.PrelNames( liftedTypeKindTyConKey )
+79,88c79,88
+< import ETA.BasicTypes.OccName
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.SrcLoc
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Util
+< import ETA.Utils.Maybes
+< import ETA.Utils.Binary
+< import ETA.Main.DynFlags
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.BasicTypes.OccName
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable

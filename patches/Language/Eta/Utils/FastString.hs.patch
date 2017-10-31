@@ -1,0 +1,39 @@
+27c27
+< module ETA.Utils.FastString
+---
+> module Language.Eta.Utils.FastString
+98,102c98,102
+< import ETA.Utils.Encoding
+< import ETA.Utils.FastTypes
+< import ETA.Utils.FastFunctions
+< import ETA.Utils.Panic
+< import ETA.Utils.Util
+---
+> import Language.Eta.Utils.Encoding
+> import Language.Eta.Utils.FastTypes
+> import Language.Eta.Utils.FastFunctions
+> import Language.Eta.Utils.Panic
+> import Language.Eta.Utils.Util
+111,112c111,112
+< import ETA.Utils.ExtsCompat46
+< import qualified ETA.Utils.ExtsCompat46 as ExtsCompat46
+---
+> import Language.Eta.Utils.ExtsCompat46
+> import qualified Language.Eta.Utils.ExtsCompat46 as ExtsCompat46
+215,216c215,218
+< foreign import ccall unsafe "ghc_memcmp"
+<   memcmp :: Ptr a -> Ptr b -> Int -> IO Int
+---
+> -- foreign import ccall unsafe "ghc_memcmp"
+> --   memcmp :: Ptr a -> Ptr b -> Int -> IO Int
+> memcmp :: Ptr a -> Ptr b -> Int -> IO Int
+> memcmp = error "ghc_memcmp: ffi ccall"
+627,628c629,633
+< foreign import ccall unsafe "ghc_strlen"
+<   ptrStrLength :: Ptr Word8 -> Int
+---
+> -- foreign import ccall unsafe "ghc_strlen"
+> --   ptrStrLength :: Ptr Word8 -> Int
+> ptrStrLength :: Ptr Word8 -> Int
+> ptrStrLength = error "ghc_strlen: ffi ccall"
+> 

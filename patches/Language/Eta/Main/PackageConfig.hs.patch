@@ -5,7 +5,7 @@
 33c33
 < import Eta.PackageDb
 ---
-> -- import Eta.PackageDb
+> import Language.Eta.PackageDb
 36,39c36,39
 < import ETA.Utils.FastString
 < import ETA.Utils.Outputable

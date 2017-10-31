@@ -1,0 +1,12 @@
+12c12
+< module ETA.Utils.BooleanFormula (
+---
+> module Language.Eta.Utils.BooleanFormula (
+28,30c28,30
+< import ETA.Utils.MonadUtils
+< import ETA.Utils.Outputable
+< import ETA.Utils.Binary
+---
+> import Language.Eta.Utils.MonadUtils
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Binary

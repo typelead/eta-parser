@@ -1,0 +1,12 @@
+1,5c1,5
+< module ETA.BasicTypes.DataCon where
+< import ETA.BasicTypes.Name( Name, NamedThing )
+< import {-# SOURCE #-} ETA.Types.TyCon( TyCon )
+< import ETA.BasicTypes.Unique ( Uniquable )
+< import ETA.Utils.Outputable ( Outputable, OutputableBndr )
+---
+> module Language.Eta.BasicTypes.DataCon where
+> import Language.Eta.BasicTypes.Name( Name, NamedThing )
+> import {-# SOURCE #-} Language.Eta.Types.TyCon( TyCon )
+> import Language.Eta.BasicTypes.Unique ( Uniquable )
+> import Language.Eta.Utils.Outputable ( Outputable, OutputableBndr )

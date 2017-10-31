@@ -1,0 +1,10 @@
+1c1
+< module ETA.Types.TyCon where
+---
+> module Language.Eta.Types.TyCon where
+3,4c3,4
+< import ETA.BasicTypes.Name (Name)
+< import ETA.BasicTypes.Unique (Unique)
+---
+> import Language.Eta.BasicTypes.Name (Name)
+> import Language.Eta.BasicTypes.Unique (Unique)

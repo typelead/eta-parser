@@ -1,0 +1,10 @@
+1c1
+< module ETA.Prelude.PrelNames where
+---
+> module Language.Eta.Prelude.PrelNames where
+3,4c3,4
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.Unique
+---
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.Unique

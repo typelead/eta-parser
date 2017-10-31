@@ -1,0 +1,50 @@
+20c20
+< module ETA.Core.CoreUnfold (
+---
+> module Language.Eta.Core.CoreUnfold (
+44,65c44,65
+< import ETA.Main.DynFlags
+< import ETA.Core.CoreSyn
+< import ETA.Core.PprCore          ()      -- Instances
+< import ETA.SimplCore.OccurAnal        ( occurAnalyseExpr )
+< import ETA.Core.CoreSubst hiding( substTy )
+< import ETA.Core.CoreArity       ( manifestArity, exprBotStrictness_maybe )
+< import ETA.Core.CoreUtils
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.DataCon
+< import ETA.BasicTypes.Literal
+< import ETA.Prelude.PrimOp
+< import ETA.BasicTypes.IdInfo
+< import ETA.BasicTypes.BasicTypes       ( Arity )
+< import ETA.Types.Type
+< import ETA.Prelude.PrelNames
+< import ETA.Prelude.TysPrim          ( realWorldStatePrimTy )
+< import ETA.Utils.Bag
+< import ETA.Utils.Util
+< import ETA.Utils.FastTypes
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+< import ETA.Prelude.ForeignCall
+---
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Core.PprCore          ()      -- Instances
+> import Language.Eta.SimplCore.OccurAnal        ( occurAnalyseExpr )
+> import Language.Eta.Core.CoreSubst hiding( substTy )
+> import Language.Eta.Core.CoreArity       ( manifestArity, exprBotStrictness_maybe )
+> import Language.Eta.Core.CoreUtils
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.BasicTypes.Literal
+> import Language.Eta.Prelude.PrimOp
+> import Language.Eta.BasicTypes.IdInfo
+> import Language.Eta.BasicTypes.BasicTypes       ( Arity )
+> import Language.Eta.Types.Type
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.Prelude.TysPrim          ( realWorldStatePrimTy )
+> import Language.Eta.Utils.Bag
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.FastTypes
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Prelude.ForeignCall

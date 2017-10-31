@@ -1,0 +1,12 @@
+1,2c1,2
+< module ETA.BasicTypes.PatSyn where
+< import ETA.BasicTypes.Name( NamedThing )
+---
+> module Language.Eta.BasicTypes.PatSyn where
+> import Language.Eta.BasicTypes.Name( NamedThing )
+5,6c5,6
+< import ETA.Utils.Outputable ( Outputable, OutputableBndr )
+< import ETA.BasicTypes.Unique ( Uniquable )
+---
+> import Language.Eta.Utils.Outputable ( Outputable, OutputableBndr )
+> import Language.Eta.BasicTypes.Unique ( Uniquable )

@@ -1,0 +1,28 @@
+6c6
+< module ETA.BasicTypes.VarEnv (
+---
+> module Language.Eta.BasicTypes.VarEnv (
+76,86c76,86
+< import ETA.BasicTypes.OccName
+< import ETA.BasicTypes.Var
+< import qualified ETA.BasicTypes.Var as Var
+< import ETA.BasicTypes.VarSet
+< import ETA.Utils.UniqSet
+< import ETA.Utils.UniqFM
+< import ETA.Utils.UniqDFM
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Util
+< import ETA.Utils.Maybes
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.BasicTypes.OccName
+> import Language.Eta.BasicTypes.Var
+> import qualified Language.Eta.BasicTypes.Var as Var
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.Utils.UniqSet
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.Utils.UniqDFM
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.Utils.Outputable

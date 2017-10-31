@@ -1,0 +1,30 @@
+11c11
+< module ETA.Core.CoreTidy (
+---
+> module Language.Eta.Core.CoreTidy (
+17,28c17,28
+< import ETA.Core.CoreSyn
+< import ETA.Core.CoreArity
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.IdInfo
+< import ETA.Types.Type( tidyType, tidyTyVarBndr )
+< import ETA.Types.Coercion( tidyCo )
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarEnv
+< import ETA.Utils.UniqFM
+< import ETA.BasicTypes.Name hiding (tidyNameOcc)
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.Maybes
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Core.CoreArity
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.IdInfo
+> import Language.Eta.Types.Type( tidyType, tidyTyVarBndr )
+> import Language.Eta.Types.Coercion( tidyCo )
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.BasicTypes.Name hiding (tidyNameOcc)
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.Maybes

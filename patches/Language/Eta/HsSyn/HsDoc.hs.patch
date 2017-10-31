@@ -1,0 +1,12 @@
+3c3
+< module ETA.HsSyn.HsDoc (
+---
+> module Language.Eta.HsSyn.HsDoc (
+11,13c11,13
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.FastString
+---
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.FastString

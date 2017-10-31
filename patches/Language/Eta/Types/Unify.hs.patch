@@ -1,0 +1,22 @@
+5c5
+< module ETA.Types.Unify (
+---
+> module Language.Eta.Types.Unify (
+25,32c25,32
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.VarSet
+< import ETA.Types.Kind
+< import ETA.Types.Type
+< import ETA.Types.TyCon
+< import ETA.Types.TypeRep
+< import ETA.Utils.Util
+---
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.Types.Kind
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.TypeRep
+> import Language.Eta.Utils.Util

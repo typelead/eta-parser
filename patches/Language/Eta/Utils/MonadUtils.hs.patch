@@ -1,0 +1,8 @@
+5c5
+< module ETA.Utils.MonadUtils
+---
+> module Language.Eta.Utils.MonadUtils
+31c31
+< import ETA.Utils.Maybes
+---
+> import Language.Eta.Utils.Maybes

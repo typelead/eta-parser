@@ -1,0 +1,60 @@
+11c11
+< module ETA.Prelude.TysWiredIn (
+---
+> module Language.Eta.Prelude.TysWiredIn (
+88c88
+< import {-# SOURCE #-} ETA.BasicTypes.MkId( mkDataConWorkId )
+---
+> import {-# SOURCE #-} Language.Eta.BasicTypes.MkId( mkDataConWorkId )
+91,92c91,92
+< import ETA.Prelude.PrelNames
+< import ETA.Prelude.TysPrim
+---
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.Prelude.TysPrim
+95,106c95,106
+< import ETA.Main.Constants        ( mAX_TUPLE_SIZE )
+< import ETA.BasicTypes.Module           ( Module )
+< import ETA.Types.Type             ( mkTyConApp )
+< import ETA.BasicTypes.DataCon
+< import ETA.BasicTypes.ConLike
+< import ETA.BasicTypes.Var
+< import ETA.Types.TyCon
+< import ETA.Types.Class            ( Class, mkClass )
+< import ETA.Types.TypeRep
+< import ETA.BasicTypes.RdrName
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.BasicTypes       ( TupleSort(..), tupleSortBoxity,
+---
+> import Language.Eta.Main.Constants        ( mAX_TUPLE_SIZE )
+> import Language.Eta.BasicTypes.Module           ( Module )
+> import Language.Eta.Types.Type             ( mkTyConApp )
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.BasicTypes.ConLike
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.Class            ( Class, mkClass )
+> import Language.Eta.Types.TypeRep
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.BasicTypes       ( TupleSort(..), tupleSortBoxity,
+108,109c108,109
+< import ETA.Prelude.ForeignCall
+< import ETA.BasicTypes.Unique           ( incrUnique, mkTupleTyConUnique,
+---
+> import Language.Eta.Prelude.ForeignCall
+> import Language.Eta.BasicTypes.Unique           ( incrUnique, mkTupleTyConUnique,
+112,115c112,115
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+< import ETA.Utils.Util
+< import ETA.Utils.BooleanFormula   ( mkAnd )
+---
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.BooleanFormula   ( mkAnd )
+223c223
+< -- ETA-specific
+---
+> -- Language.Eta-specific

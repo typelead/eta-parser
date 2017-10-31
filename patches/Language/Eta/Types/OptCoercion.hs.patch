@@ -1,0 +1,42 @@
+5c5
+< module ETA.Types.OptCoercion ( optCoercion, checkAxInstCo ) where
+---
+> module Language.Eta.Types.OptCoercion ( optCoercion, checkAxInstCo ) where
+9,26c9,26
+< import ETA.Types.Coercion
+< import qualified ETA.Types.Type as Type
+< import ETA.Types.Type hiding( substTyVarBndr, substTy, extendTvSubst )
+< import ETA.TypeCheck.TcType       ( exactTyVarsOfType )
+< import ETA.Types.TyCon
+< import ETA.Types.CoAxiom
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarSet
+< import ETA.Types.FamInstEnv   ( flattenTys )
+< import ETA.BasicTypes.VarEnv
+< import ETA.Main.StaticFlags      ( opt_NoOptCoercion )
+< import ETA.Utils.Outputable
+< import ETA.Utils.Pair
+< import ETA.Utils.FastString
+< import ETA.Utils.Util
+< import ETA.Types.Unify
+< import ETA.Utils.ListSetOps
+< import ETA.Types.InstEnv
+---
+> import Language.Eta.Types.Coercion
+> import qualified Language.Eta.Types.Type as Type
+> import Language.Eta.Types.Type hiding( substTyVarBndr, substTy, extendTvSubst )
+> import Language.Eta.TypeCheck.TcType       ( exactTyVarsOfType )
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.CoAxiom
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.Types.FamInstEnv   ( flattenTys )
+> import Language.Eta.BasicTypes.VarEnv
+> -- import Language.Eta.Main.StaticFlags      ( opt_NoOptCoercion )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Pair
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Util
+> import Language.Eta.Types.Unify
+> import Language.Eta.Utils.ListSetOps
+> import Language.Eta.Types.InstEnv

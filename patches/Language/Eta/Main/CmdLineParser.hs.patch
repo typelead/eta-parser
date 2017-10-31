@@ -1,0 +1,20 @@
+14c14
+< module ETA.Main.CmdLineParser
+---
+> module Language.Eta.Main.CmdLineParser
+26,30c26,30
+< import ETA.Utils.Util
+< import ETA.Utils.Outputable
+< import ETA.Utils.Panic
+< import ETA.Utils.Bag
+< import ETA.BasicTypes.SrcLoc
+---
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Panic
+> import Language.Eta.Utils.Bag
+> import Language.Eta.BasicTypes.SrcLoc
+207c207
+<         NoArg  a -> ASSERT(null rest) Right (a, args)
+---
+>         NoArg  a -> {-ASSERT(null rest)-} Right (a, args)

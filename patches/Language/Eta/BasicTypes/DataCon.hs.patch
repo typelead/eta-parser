@@ -1,0 +1,52 @@
+10c10
+< module ETA.BasicTypes.DataCon (
+---
+> module Language.Eta.BasicTypes.DataCon (
+51,70c51,70
+< import {-# SOURCE #-} ETA.BasicTypes.MkId( DataConBoxer )
+< import ETA.Types.Type
+< import ETA.Types.TypeRep( Type(..) )  -- Used in promoteType
+< import ETA.Prelude.PrelNames( liftedTypeKindTyConKey )
+< import ETA.Prelude.ForeignCall( CType )
+< import ETA.Types.Coercion
+< import ETA.Types.Kind
+< import ETA.Types.Unify
+< import ETA.Types.TyCon
+< import ETA.Types.Class
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.Var
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.ListSetOps
+< import ETA.Utils.Util
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.VarEnv
+---
+> import {-# SOURCE #-} Language.Eta.BasicTypes.MkId( DataConBoxer )
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.TypeRep( Type(..) )  -- Used in promoteType
+> import Language.Eta.Prelude.PrelNames( liftedTypeKindTyConKey )
+> import Language.Eta.Prelude.ForeignCall( CType )
+> import Language.Eta.Types.Coercion
+> import Language.Eta.Types.Kind
+> import Language.Eta.Types.Unify
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.Class
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.ListSetOps
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.VarEnv
+1011,1012c1011,1012
+<   = typesCantMatch [(ETA.Types.Type.substTy subst ty1,
+<                      ETA.Types.Type.substTy subst ty2)
+---
+>   = typesCantMatch [(Language.Eta.Types.Type.substTy subst ty1,
+>                      Language.Eta.Types.Type.substTy subst ty2)

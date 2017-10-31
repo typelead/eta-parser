@@ -1,0 +1,8 @@
+10c10
+< module ETA.Utils.FastFunctions (
+---
+> module Language.Eta.Utils.FastFunctions (
+19c19
+< import ETA.Utils.FastTypes
+---
+> import Language.Eta.Utils.FastTypes

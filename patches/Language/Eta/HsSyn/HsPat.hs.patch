@@ -1,0 +1,44 @@
+16c16
+< module ETA.HsSyn.HsPat (
+---
+> module Language.Eta.HsSyn.HsPat (
+32c32
+< import {-# SOURCE #-} ETA.HsSyn.HsExpr (SyntaxExpr, LHsExpr, HsSplice, pprLExpr, pprUntypedSplice)
+---
+> import {-# SOURCE #-} Language.Eta.HsSyn.HsExpr (SyntaxExpr, LHsExpr, HsSplice, pprLExpr, pprUntypedSplice)
+35,40c35,40
+< import ETA.HsSyn.HsBinds
+< import ETA.HsSyn.HsLit
+< import ETA.HsSyn.PlaceHolder ( PostTc,DataId )
+< import ETA.HsSyn.HsTypes
+< import ETA.TypeCheck.TcEvidence
+< import ETA.BasicTypes.BasicTypes
+---
+> import Language.Eta.HsSyn.HsBinds
+> import Language.Eta.HsSyn.HsLit
+> import Language.Eta.HsSyn.PlaceHolder ( PostTc,DataId )
+> import Language.Eta.HsSyn.HsTypes
+> import Language.Eta.TypeCheck.TcEvidence
+> import Language.Eta.BasicTypes.BasicTypes
+42,51c42,51
+< import ETA.Core.PprCore          ( {- instance OutputableBndr TyVar -} )
+< import ETA.Prelude.TysWiredIn
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.ConLike
+< import ETA.BasicTypes.DataCon
+< import ETA.Types.TyCon
+< import ETA.Utils.Outputable
+< import ETA.Types.Type
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.FastString
+---
+> import Language.Eta.Core.PprCore          ( {- instance OutputableBndr TyVar -} )
+> import Language.Eta.Prelude.TysWiredIn
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.ConLike
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Types.Type
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.FastString

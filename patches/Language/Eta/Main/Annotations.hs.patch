@@ -1,0 +1,20 @@
+7c7
+< module ETA.Main.Annotations (
+---
+> module Language.Eta.Main.Annotations (
+19,25c19,25
+< import ETA.Utils.Binary
+< import ETA.BasicTypes.Module           ( Module )
+< import ETA.BasicTypes.Name
+< import ETA.Utils.Outputable
+< import ETA.Utils.Serialized
+< import ETA.Utils.UniqFM
+< import ETA.BasicTypes.Unique
+---
+> import Language.Eta.Utils.Binary
+> import Language.Eta.BasicTypes.Module           ( Module )
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Serialized
+> import Language.Eta.Utils.UniqFM
+> import Language.Eta.BasicTypes.Unique

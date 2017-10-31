@@ -1,0 +1,4 @@
+1c1
+< module ETA.Main.StaticFlags where
+---
+> module Language.Eta.Main.StaticFlags where

@@ -1,0 +1,24 @@
+7c7
+< module ETA.Core.CoreSeq (
+---
+> module Language.Eta.Core.CoreSeq (
+13,21c13,21
+< import ETA.Core.CoreSyn
+< import ETA.BasicTypes.IdInfo
+< import ETA.BasicTypes.Demand ( seqDemand, seqStrictSig )
+< import ETA.BasicTypes.BasicTypes ( seqOccInfo )
+< import ETA.BasicTypes.VarSet ( seqVarSet )
+< import ETA.BasicTypes.Var ( varType, tyVarKind )
+< import ETA.Types.Type ( seqType, isTyVar )
+< import ETA.Types.Coercion ( seqCo )
+< import ETA.BasicTypes.Id ( Id, idInfo )
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.BasicTypes.IdInfo
+> import Language.Eta.BasicTypes.Demand ( seqDemand, seqStrictSig )
+> import Language.Eta.BasicTypes.BasicTypes ( seqOccInfo )
+> import Language.Eta.BasicTypes.VarSet ( seqVarSet )
+> import Language.Eta.BasicTypes.Var ( varType, tyVarKind )
+> import Language.Eta.Types.Type ( seqType, isTyVar )
+> import Language.Eta.Types.Coercion ( seqCo )
+> import Language.Eta.BasicTypes.Id ( Id, idInfo )

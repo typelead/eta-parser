@@ -1,0 +1,10 @@
+7c7
+< module ETA.BasicTypes.Lexeme (
+---
+> module Language.Eta.BasicTypes.Lexeme (
+30,31c30,31
+< import ETA.Utils.FastString
+< import ETA.Utils.Util ((<||>))
+---
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Util ((<||>))

@@ -1,0 +1,8 @@
+3c3
+< module ETA.Parser.Ctype
+---
+> module Language.Eta.Parser.Ctype
+22c22
+< import ETA.Utils.Panic
+---
+> import Language.Eta.Utils.Panic

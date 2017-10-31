@@ -1,0 +1,44 @@
+105c105
+< module ETA.Prelude.PrelNames (
+---
+> module Language.Eta.Prelude.PrelNames (
+109c109
+<         module ETA.Prelude.PrelNames,
+---
+>         module Language.Eta.Prelude.PrelNames,
+117,125c117,125
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.OccName
+< import ETA.BasicTypes.RdrName
+< import ETA.BasicTypes.Unique
+< import ETA.BasicTypes.BasicTypes
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.FastString
+< -- import ETA.Utils.Panic ( panic )
+---
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.OccName
+> import Language.Eta.BasicTypes.RdrName
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.FastString
+> -- import Language.Eta.Utils.Panic ( panic )
+369c369
+<         -- ETA
+---
+>         -- Language.Eta
+1244c1244
+< -- ETA-specific names
+---
+> -- Language.Eta-specific names
+1466c1466
+< -- ETA-specific tycons
+---
+> -- Language.Eta-specific tycons
+2020c2020
+< -- ETA-specific
+---
+> -- Language.Eta-specific

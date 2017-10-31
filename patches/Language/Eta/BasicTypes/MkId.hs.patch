@@ -1,0 +1,82 @@
+17c17
+< module ETA.BasicTypes.MkId (
+---
+> module Language.Eta.BasicTypes.MkId (
+38c38
+<         module ETA.Prelude.PrelRules
+---
+>         module Language.Eta.Prelude.PrelRules
+43,78c43,78
+< import ETA.Specialise.Rules
+< import ETA.Prelude.TysPrim
+< import ETA.Prelude.TysWiredIn
+< import ETA.Prelude.PrelRules
+< import ETA.Types.Type
+< import ETA.Types.FamInstEnv
+< import ETA.Types.Coercion
+< import ETA.TypeCheck.TcType
+< import qualified ETA.TypeCheck.TcType as TcType
+< import ETA.Core.MkCore
+< import ETA.Core.CoreUtils        ( exprType, mkCast )
+< import ETA.Core.CoreUnfold
+< import ETA.BasicTypes.Literal
+< import ETA.Types.TyCon
+< import ETA.Types.CoAxiom
+< import ETA.Types.Class
+< import ETA.BasicTypes.NameSet
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.Name
+< import ETA.Prelude.PrimOp
+< import ETA.Prelude.ForeignCall
+< import ETA.BasicTypes.DataCon
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.IdInfo
+< import ETA.BasicTypes.Demand
+< import ETA.Core.CoreSyn
+< import ETA.BasicTypes.Unique
+< import ETA.BasicTypes.UniqSupply
+< import ETA.Prelude.PrelNames
+< import ETA.BasicTypes.BasicTypes       hiding ( SuccessFlag(..) )
+< import ETA.Utils.Util
+< import ETA.Utils.Pair
+< import ETA.Main.DynFlags
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Utils.ListSetOps
+---
+> import Language.Eta.Specialise.Rules
+> import Language.Eta.Prelude.TysPrim
+> import Language.Eta.Prelude.TysWiredIn
+> import Language.Eta.Prelude.PrelRules
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.FamInstEnv
+> import Language.Eta.Types.Coercion
+> import Language.Eta.TypeCheck.TcType
+> import qualified Language.Eta.TypeCheck.TcType as TcType
+> import Language.Eta.Core.MkCore
+> import Language.Eta.Core.CoreUtils        ( exprType, mkCast )
+> import Language.Eta.Core.CoreUnfold
+> import Language.Eta.BasicTypes.Literal
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.CoAxiom
+> import Language.Eta.Types.Class
+> import Language.Eta.BasicTypes.NameSet
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.Prelude.PrimOp
+> import Language.Eta.Prelude.ForeignCall
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.IdInfo
+> import Language.Eta.BasicTypes.Demand
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.BasicTypes.UniqSupply
+> import Language.Eta.Prelude.PrelNames
+> import Language.Eta.BasicTypes.BasicTypes       hiding ( SuccessFlag(..) )
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Pair
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.ListSetOps

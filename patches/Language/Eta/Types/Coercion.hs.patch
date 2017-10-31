@@ -1,0 +1,60 @@
+9c9
+< module ETA.Types.Coercion (
+---
+> module Language.Eta.Types.Coercion (
+53c53
+<         CvSubst(..), emptyCvSubst, ETA.Types.Coercion.lookupTyVar,
+---
+>         CvSubst(..), emptyCvSubst, Language.Eta.Types.Coercion.lookupTyVar,
+83,105c83,105
+< import ETA.Types.Unify    ( MatchEnv(..), matchList )
+< import ETA.Types.TypeRep
+< import qualified ETA.Types.Type as Type
+< import ETA.Types.Type hiding( substTy, substTyVarBndr, extendTvSubst )
+< import ETA.Types.TyCon
+< import ETA.Types.CoAxiom
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.VarSet
+< import ETA.Utils.Binary
+< import ETA.Utils.Maybes   ( orElse )
+< import ETA.BasicTypes.Name     ( Name, NamedThing(..), nameUnique, nameModule, getSrcSpan )
+< import ETA.BasicTypes.OccName  ( parenSymOcc )
+< import ETA.Utils.Util
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.Outputable
+< import qualified ETA.Utils.Outputable as Outputable
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Pair
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Prelude.PrelNames        ( funTyConKey, eqPrimTyConKey, eqReprPrimTyConKey )
+< import ETA.Utils.FastString
+< import ETA.Utils.ListSetOps
+---
+> import Language.Eta.Types.Unify    ( MatchEnv(..), matchList )
+> import Language.Eta.Types.TypeRep
+> import qualified Language.Eta.Types.Type as Type
+> import Language.Eta.Types.Type hiding( substTy, substTyVarBndr, extendTvSubst )
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Types.CoAxiom
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Utils.Maybes   ( orElse )
+> import Language.Eta.BasicTypes.Name     ( Name, NamedThing(..), nameUnique, nameModule, getSrcSpan )
+> import Language.Eta.BasicTypes.OccName  ( parenSymOcc )
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.Outputable
+> import qualified Language.Eta.Utils.Outputable as Outputable
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Pair
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Prelude.PrelNames        ( funTyConKey, eqPrimTyConKey, eqReprPrimTyConKey )
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.ListSetOps
+1538c1538
+<     go_ty = ETA.Types.Coercion.substTy subst
+---
+>     go_ty = Language.Eta.Types.Coercion.substTy subst

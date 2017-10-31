@@ -1,0 +1,6 @@
+1,2c1,2
+< module ETA.BasicTypes.IdInfo where
+< import ETA.Utils.Outputable
+---
+> module Language.Eta.BasicTypes.IdInfo where
+> import Language.Eta.Utils.Outputable

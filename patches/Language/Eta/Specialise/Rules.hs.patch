@@ -1,0 +1,66 @@
+11c11
+< module ETA.Specialise.Rules (
+---
+> module Language.Eta.Specialise.Rules (
+34,38c34,38
+< import ETA.Core.CoreSyn          -- All of it
+< import ETA.Core.CoreSubst
+< import ETA.SimplCore.OccurAnal        ( occurAnalyseExpr )
+< import ETA.Core.CoreFVs          ( exprFreeVars, exprsFreeVars, bindFreeVars, rulesFreeVars )
+< import ETA.Core.CoreUtils        ( exprType, eqExpr, mkTick, mkTicks,
+---
+> import Language.Eta.Core.CoreSyn          -- All of it
+> import Language.Eta.Core.CoreSubst
+> import Language.Eta.SimplCore.OccurAnal        ( occurAnalyseExpr )
+> import Language.Eta.Core.CoreFVs          ( exprFreeVars, exprsFreeVars, bindFreeVars, rulesFreeVars )
+> import Language.Eta.Core.CoreUtils        ( exprType, eqExpr, mkTick, mkTicks,
+40,63c40,63
+< import ETA.Core.PprCore          ( pprRules )
+< import ETA.Types.Type             ( Type, mkTvSubst )
+< import qualified ETA.Types.Type as Type
+< import ETA.TypeCheck.TcType           ( tcSplitTyConApp_maybe )
+< import ETA.Prelude.TysPrim          ( anyTypeOfKind )
+< import ETA.Types.Coercion
+< import ETA.Core.CoreTidy         ( tidyRules )
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.IdInfo           ( SpecInfo( SpecInfo ) )
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.Name             ( Name, NamedThing(..) )
+< import ETA.BasicTypes.NameEnv
+< import ETA.Types.Unify            ( MatchEnv(..) )
+< import qualified ETA.Types.Unify as Unify
+< import ETA.BasicTypes.BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
+< import ETA.Main.StaticFlags      ( opt_PprStyle_Debug )
+< import ETA.Main.DynFlags         ( DynFlags )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Utils.Maybes
+< import ETA.Utils.Bag
+< import ETA.Utils.Util
+---
+> import Language.Eta.Core.PprCore          ( pprRules )
+> import Language.Eta.Types.Type             ( Type, mkTvSubst )
+> import qualified Language.Eta.Types.Type as Type
+> import Language.Eta.TypeCheck.TcType           ( tcSplitTyConApp_maybe )
+> import Language.Eta.Prelude.TysPrim          ( anyTypeOfKind )
+> import Language.Eta.Types.Coercion
+> import Language.Eta.Core.CoreTidy         ( tidyRules )
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.IdInfo           ( SpecInfo( SpecInfo ) )
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.Name             ( Name, NamedThing(..) )
+> import Language.Eta.BasicTypes.NameEnv
+> import Language.Eta.Types.Unify            ( MatchEnv(..) )
+> import qualified Language.Eta.Types.Unify as Unify
+> import Language.Eta.BasicTypes.BasicTypes       ( Activation, CompilerPhase, isActive, pprRuleName )
+> -- import Language.Eta.Main.StaticFlags      ( opt_PprStyle_Debug )
+> import Language.Eta.Main.DynFlags         ( DynFlags )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Maybes
+> import Language.Eta.Utils.Bag
+> import Language.Eta.Utils.Util

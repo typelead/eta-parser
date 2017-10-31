@@ -1,0 +1,50 @@
+20c20
+< module ETA.HsSyn.HsDecls (
+---
+> module Language.Eta.HsSyn.HsDecls (
+81c81
+< import {-# SOURCE #-}   ETA.HsSyn.HsExpr( LHsExpr, HsExpr, HsSplice, pprExpr, pprUntypedSplice )
+---
+> import {-# SOURCE #-}   Language.Eta.HsSyn.HsExpr( LHsExpr, HsExpr, HsSplice, pprExpr, pprUntypedSplice )
+84,94c84,94
+< import ETA.HsSyn.HsBinds
+< import ETA.HsSyn.HsPat
+< import ETA.HsSyn.HsTypes
+< import ETA.HsSyn.HsDoc
+< import ETA.Types.TyCon
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Types.Coercion
+< import ETA.Prelude.ForeignCall
+< import ETA.HsSyn.PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId )
+< import ETA.BasicTypes.NameSet
+---
+> import Language.Eta.HsSyn.HsBinds
+> import Language.Eta.HsSyn.HsPat
+> import Language.Eta.HsSyn.HsTypes
+> import Language.Eta.HsSyn.HsDoc
+> import Language.Eta.Types.TyCon
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Types.Coercion
+> import Language.Eta.Prelude.ForeignCall
+> import Language.Eta.HsSyn.PlaceHolder ( PostTc,PostRn,PlaceHolder(..),DataId )
+> import Language.Eta.BasicTypes.NameSet
+97,102c97,102
+< import ETA.Types.InstEnv
+< import ETA.Types.Class
+< import ETA.Utils.Outputable
+< import ETA.Utils.Util
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.FastString
+---
+> import Language.Eta.Types.InstEnv
+> import Language.Eta.Types.Class
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.FastString
+104c104
+< import ETA.Utils.Bag
+---
+> import Language.Eta.Utils.Bag

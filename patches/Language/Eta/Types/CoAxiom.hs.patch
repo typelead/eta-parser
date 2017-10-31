@@ -1,0 +1,32 @@
+8c8
+< module ETA.Types.CoAxiom (
+---
+> module Language.Eta.Types.CoAxiom (
+31,41c31,41
+< import {-# SOURCE #-} ETA.Types.TypeRep ( Type )
+< import {-# SOURCE #-} ETA.Types.TyCon ( TyCon )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.Unique
+< import ETA.BasicTypes.Var
+< import ETA.Utils.Util
+< import ETA.Utils.Binary
+< import ETA.Utils.Pair
+< import ETA.BasicTypes.BasicTypes
+---
+> import {-# SOURCE #-} Language.Eta.Types.TypeRep ( Type )
+> import {-# SOURCE #-} Language.Eta.Types.TyCon ( TyCon )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Utils.Pair
+> import Language.Eta.BasicTypes.BasicTypes
+43c43
+< import ETA.BasicTypes.SrcLoc
+---
+> import Language.Eta.BasicTypes.SrcLoc

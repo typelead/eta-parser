@@ -1,0 +1,18 @@
+5c5
+< module ETA.Main.PipelineMonad (
+---
+> module Language.Eta.Main.PipelineMonad (
+12,17c12,17
+< import ETA.Utils.MonadUtils
+< import ETA.Utils.Outputable
+< import ETA.Main.DynFlags
+< import ETA.Main.DriverPhases
+< import ETA.Main.HscTypes
+< import ETA.BasicTypes.Module
+---
+> import Language.Eta.Utils.MonadUtils
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Main.DriverPhases
+> import Language.Eta.Main.HscTypes
+> import Language.Eta.BasicTypes.Module

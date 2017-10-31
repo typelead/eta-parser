@@ -19,7 +19,7 @@
 < import qualified ETA.Utils.Outputable as Outputable
 < import ETA.Utils.Maybes
 ---
-> -- import Eta.PackageDb
+> import Language.Eta.PackageDb
 > import Language.Eta.Main.PackageConfig
 > import Language.Eta.Main.DynFlags
 > import Language.Eta.BasicTypes.Name             ( Name, nameModule_maybe )

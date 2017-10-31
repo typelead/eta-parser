@@ -1,8 +1,24 @@
-17c17
+13a14
+> {-# LANGUAGE NamedFieldPuns #-}
+17c18
 < module ETA.Main.DynFlags (
 ---
 > module Language.Eta.Main.DynFlags (
-159,178c159,178
+74c75
+<         pgm_L, pgm_P, pgm_F, pgm_c, pgm_s, pgm_a, pgm_l, pgm_dll,
+---
+>         pgm_LL, pgm_P, pgm_F, pgm_c, pgm_s, pgm_a, pgm_l, pgm_dll,
+77c78
+<         opt_L, opt_P, opt_F, opt_c, opt_a, opt_l,
+---
+>         opt_LL, opt_P, opt_F, opt_c, opt_a, opt_l,
+153,154c154,155
+<         addJarInputs,
+<         compressionMethod
+---
+>         addJarInputs -- ,
+>         -- compressionMethod
+159,178c160,179
 < import ETA.Utils.Platform
 < import ETA.Utils.Metrics
 < import ETA.BasicTypes.Module
@@ -44,15 +60,76 @@
 > import Language.Eta.Utils.FastString
 > import Language.Eta.Utils.Outputable
 > -- import Language.Eta.Utils.JAR
-183c183
+183c184
 < import {-# SOURCE #-} ETA.Main.ErrUtils ( Severity(..), MsgDoc, mkLocMessage )
 ---
 > import {-# SOURCE #-} Language.Eta.Main.ErrUtils ( Severity(..), MsgDoc, mkLocMessage )
-3941c3941
+954c955,956
+<   sPgm_L                 :: String,
+---
+>   -- Changed from sPgm_L to sPgm_LL so it differs from sPgm_l in more than case.
+>   sPgm_LL                :: String,
+970c972,973
+<   sOpt_L                 :: [String],
+---
+>   -- Changed from sOpt_L to sOpt_LL so it differs from sOpt_l in more than case.
+>   sOpt_LL                :: [String],
+1002,1003c1005,1006
+< pgm_L                 :: DynFlags -> String
+< pgm_L dflags = sPgm_L (settings dflags)
+---
+> pgm_LL                 :: DynFlags -> String
+> pgm_LL dflags = sPgm_LL (settings dflags)
+1033,1034c1036,1038
+< opt_L                 :: DynFlags -> [String]
+< opt_L dflags = sOpt_L (settings dflags)
+---
+> -- Changed from opt_L to opt_LL to make it differ from opt_l in more than case.
+> opt_LL                 :: DynFlags -> [String]
+> opt_LL dflags = sOpt_LL (settings dflags)
+2391c2395
+<       (hasArg (\f -> alterSettings (\s -> s { sPgm_L   = f})))
+---
+>       (hasArg (\f -> alterSettings (\s -> s { sPgm_LL   = f})))
+2421c2425
+<       (hasArg (\f -> alterSettings (\s -> s { sOpt_L   = f : sOpt_L s})))
+---
+>       (hasArg (\f -> alterSettings (\s -> s { sOpt_LL  = f : sOpt_LL s})))
+3941c3945
 <       mvar <- liftMaybeT $ try $ getEnv "ETA_ENVIRONMENT"
 ---
 >       mvar <- liftMaybeT $ try $ getEnv "Language.Eta_ENVIRONMENT"
-3985c3985
+3985c3989
 <       ++ " (specified in ETA_ENVIRONMENT) not found"
 ---
 >       ++ " (specified in Language.Eta_ENVIRONMENT) not found"
+4268c4272,4275
+< GLOBAL_VAR(v_unsafeGlobalDynFlags, panic "v_unsafeGlobalDynFlags: not initialised", DynFlags)
+---
+> -- GLOBAL_VAR(v_unsafeGlobalDynFlags, panic "v_unsafeGlobalDynFlags: not initialised", DynFlags)
+> 
+> v_unsafeGlobalDynFlags :: IORef DynFlags
+> v_unsafeGlobalDynFlags = error "v_unsafeGlobalDynFlags: not initialized"
+4353,4360c4360,4372
+< foreign import ccall unsafe "setHeapSize"       setHeapSize       :: Int -> IO ()
+< foreign import ccall unsafe "enableTimingStats" enableTimingStats :: IO ()
+< 
+< compressionMethod :: DynFlags -> CompressionMethod
+< compressionMethod dflags
+<   | oLevel >= 1 = deflate
+<   | otherwise   = normal
+<   where oLevel = optLevel dflags
+---
+> -- foreign import ccall unsafe "setHeapSize"       setHeapSize       :: Int -> IO ()
+> setHeapSize :: Int -> IO ()
+> setHeapSize = undefined
+> 
+> -- foreign import ccall unsafe "enableTimingStats" enableTimingStats :: IO ()
+> enableTimingStats :: IO ()
+> enableTimingStats = undefined
+> 
+> -- compressionMethod :: DynFlags -> CompressionMethod
+> -- compressionMethod dflags
+> --   | oLevel >= 1 = deflate
+> --   | otherwise   = normal
+> --   where oLevel = optLevel dflags

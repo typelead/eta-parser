@@ -1,0 +1,62 @@
+4c4
+< module ETA.Core.MkCore (
+---
+> module Language.Eta.Core.MkCore (
+56,57c56,57
+< import ETA.BasicTypes.Id
+< import ETA.BasicTypes.Var      ( EvVar, setTyVarUnique )
+---
+> import Language.Eta.BasicTypes.Id
+> import Language.Eta.BasicTypes.Var      ( EvVar, setTyVarUnique )
+59,72c59,72
+< import ETA.Core.CoreSyn
+< import ETA.Core.CoreUtils        ( exprType, needsCaseBinding, bindNonRec )
+< import ETA.BasicTypes.Literal
+< import ETA.Main.HscTypes
+< 
+< import ETA.Prelude.TysWiredIn
+< import ETA.Prelude.PrelNames
+< 
+< import ETA.TypeCheck.TcType           ( mkSigmaTy )
+< import ETA.Types.Type
+< import ETA.Types.Coercion
+< import ETA.Prelude.TysPrim
+< import ETA.BasicTypes.DataCon          ( DataCon, dataConWorkId )
+< import ETA.BasicTypes.IdInfo           ( vanillaIdInfo, setStrictnessInfo,
+---
+> import Language.Eta.Core.CoreSyn
+> import Language.Eta.Core.CoreUtils        ( exprType, needsCaseBinding, bindNonRec )
+> import Language.Eta.BasicTypes.Literal
+> import Language.Eta.Main.HscTypes
+> 
+> import Language.Eta.Prelude.TysWiredIn
+> import Language.Eta.Prelude.PrelNames
+> 
+> import Language.Eta.TypeCheck.TcType           ( mkSigmaTy )
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.Coercion
+> import Language.Eta.Prelude.TysPrim
+> import Language.Eta.BasicTypes.DataCon          ( DataCon, dataConWorkId )
+> import Language.Eta.BasicTypes.IdInfo           ( vanillaIdInfo, setStrictnessInfo,
+74,83c74,83
+< import ETA.BasicTypes.Demand
+< import ETA.BasicTypes.Name      hiding ( varName )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.UniqSupply
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Utils.Util
+< import ETA.Utils.Pair
+< import ETA.Main.Constants
+< import ETA.Main.DynFlags
+---
+> import Language.Eta.BasicTypes.Demand
+> import Language.Eta.BasicTypes.Name      hiding ( varName )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.UniqSupply
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.Pair
+> import Language.Eta.Main.Constants
+> import Language.Eta.Main.DynFlags

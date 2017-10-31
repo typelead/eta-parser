@@ -1,0 +1,12 @@
+15c15
+< module ETA.Utils.BufWrite (
+---
+> module Language.Eta.Utils.BufWrite (
+26,28c26,28
+< import ETA.Utils.FastString
+< import ETA.Utils.FastTypes
+< import ETA.Utils.FastMutInt
+---
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.FastTypes
+> import Language.Eta.Utils.FastMutInt

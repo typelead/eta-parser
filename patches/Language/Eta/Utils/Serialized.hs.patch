@@ -1,0 +1,14 @@
+8c8
+< module ETA.Utils.Serialized (
+---
+> module Language.Eta.Utils.Serialized (
+20,23c20,23
+< import ETA.Utils.Binary
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Utils.Util
+---
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Util

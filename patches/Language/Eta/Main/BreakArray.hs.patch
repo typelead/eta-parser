@@ -1,0 +1,12 @@
+15c15
+< module ETA.Main.BreakArray
+---
+> module Language.Eta.Main.BreakArray
+30c30
+< import ETA.Main.DynFlags
+---
+> import Language.Eta.Main.DynFlags
+35c35
+< import ETA.Utils.ExtsCompat46
+---
+> import Language.Eta.Utils.ExtsCompat46

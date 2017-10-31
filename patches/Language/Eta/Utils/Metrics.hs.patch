@@ -1,0 +1,9 @@
+1c1,2
+< module ETA.Utils.Metrics where
+---
+> {-# LANGUAGE RecordWildCards #-}
+> module Language.Eta.Utils.Metrics where
+3c4
+< import ETA.Utils.Json
+---
+> import Language.Eta.Utils.Json

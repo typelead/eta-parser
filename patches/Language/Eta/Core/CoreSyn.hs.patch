@@ -1,0 +1,38 @@
+9c9
+< module ETA.Core.CoreSyn (
+---
+> module Language.Eta.Core.CoreSyn (
+86,101c86,101
+< import ETA.Profiling.CostCentre
+< import ETA.BasicTypes.VarEnv( InScopeSet )
+< import ETA.BasicTypes.Var
+< import ETA.Types.Type
+< import ETA.Types.Coercion
+< import ETA.BasicTypes.Name
+< import ETA.BasicTypes.Literal
+< import ETA.BasicTypes.DataCon
+< import ETA.BasicTypes.Module
+< import ETA.Types.TyCon
+< import ETA.BasicTypes.BasicTypes
+< import ETA.Main.DynFlags
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+< import ETA.Utils.Util
+< import ETA.BasicTypes.SrcLoc     ( RealSrcSpan, containsSpan )
+---
+> import Language.Eta.Profiling.CostCentre
+> import Language.Eta.BasicTypes.VarEnv( InScopeSet )
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.Types.Type
+> import Language.Eta.Types.Coercion
+> import Language.Eta.BasicTypes.Name
+> import Language.Eta.BasicTypes.Literal
+> import Language.Eta.BasicTypes.DataCon
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.Types.TyCon
+> import Language.Eta.BasicTypes.BasicTypes
+> import Language.Eta.Main.DynFlags
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.Util
+> import Language.Eta.BasicTypes.SrcLoc     ( RealSrcSpan, containsSpan )

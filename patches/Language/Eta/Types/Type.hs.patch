@@ -1,0 +1,58 @@
+10c10
+< module ETA.Types.Type (
+---
+> module Language.Eta.Types.Type (
+72c72
+<         -- ETA-specific
+---
+>         -- Language.Eta-specific
+156,157c156,157
+< import ETA.Types.Kind
+< import ETA.Types.TypeRep
+---
+> import Language.Eta.Types.Kind
+> import Language.Eta.Types.TypeRep
+160,169c160,169
+< import ETA.BasicTypes.Var
+< import ETA.BasicTypes.VarEnv
+< import ETA.BasicTypes.VarSet
+< import ETA.BasicTypes.NameEnv
+< 
+< import ETA.Types.Class
+< import ETA.Types.TyCon
+< import ETA.Prelude.TysPrim
+< import {-# SOURCE #-} ETA.Prelude.TysWiredIn ( eqTyCon, coercibleTyCon, typeNatKind, typeSymbolKind )
+< import ETA.Prelude.PrelNames ( eqTyConKey, coercibleTyConKey,
+---
+> import Language.Eta.BasicTypes.Var
+> import Language.Eta.BasicTypes.VarEnv
+> import Language.Eta.BasicTypes.VarSet
+> import Language.Eta.BasicTypes.NameEnv
+> 
+> import Language.Eta.Types.Class
+> import Language.Eta.Types.TyCon
+> import Language.Eta.Prelude.TysPrim
+> import {-# SOURCE #-} Language.Eta.Prelude.TysWiredIn ( eqTyCon, coercibleTyCon, typeNatKind, typeSymbolKind )
+> import Language.Eta.Prelude.PrelNames ( eqTyConKey, coercibleTyConKey,
+172,173c172,173
+< import ETA.Prelude.ForeignCall
+< import ETA.Types.CoAxiom
+---
+> import Language.Eta.Prelude.ForeignCall
+> import Language.Eta.Types.CoAxiom
+176,182c176,182
+< import ETA.BasicTypes.Unique           ( Unique, hasKey )
+< import ETA.BasicTypes.BasicTypes       ( Arity, RepArity )
+< import ETA.Utils.Util
+< import ETA.Utils.ListSetOps       ( getNth )
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.Utils.Maybes           ( orElse )
+---
+> import Language.Eta.BasicTypes.Unique           ( Unique, hasKey )
+> import Language.Eta.BasicTypes.BasicTypes       ( Arity, RepArity )
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.ListSetOps       ( getNth )
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Maybes           ( orElse )

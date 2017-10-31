@@ -1,0 +1,14 @@
+22c22
+< module ETA.Utils.UniqDFM (
+---
+> module Language.Eta.Utils.UniqDFM (
+62,63c62,63
+< import ETA.BasicTypes.Unique           ( Uniquable(..), Unique, getKey )
+< import ETA.Utils.Outputable
+---
+> import Language.Eta.BasicTypes.Unique           ( Uniquable(..), Unique, getKey )
+> import Language.Eta.Utils.Outputable
+69c69
+< import ETA.Utils.UniqFM (UniqFM, listToUFM_Directly, nonDetUFMToList, ufmToIntMap)
+---
+> import Language.Eta.Utils.UniqFM (UniqFM, listToUFM_Directly, nonDetUFMToList, ufmToIntMap)

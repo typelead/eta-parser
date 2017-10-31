@@ -1,0 +1,16 @@
+9c9
+< module ETA.Prelude.ForeignCall (
+---
+> module Language.Eta.Prelude.ForeignCall (
+21,25c21,25
+< import ETA.Utils.FastString
+< import ETA.Utils.Binary
+< import ETA.Utils.Outputable
+< import ETA.BasicTypes.Module
+< import ETA.BasicTypes.BasicTypes ( SourceText )
+---
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Binary
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.BasicTypes.Module
+> import Language.Eta.BasicTypes.BasicTypes ( SourceText )

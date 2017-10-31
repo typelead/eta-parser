@@ -1,0 +1,22 @@
+11c11
+< module ETA.HsSyn.HsImpExp where
+---
+> module Language.Eta.HsSyn.HsImpExp where
+13,16c13,16
+< import ETA.BasicTypes.Module           ( ModuleName )
+< import ETA.HsSyn.HsDoc            ( HsDocString )
+< import ETA.BasicTypes.OccName          ( HasOccName(..), isTcOcc, isSymOcc )
+< import ETA.BasicTypes.BasicTypes       ( SourceText )
+---
+> import Language.Eta.BasicTypes.Module           ( ModuleName )
+> import Language.Eta.HsSyn.HsDoc            ( HsDocString )
+> import Language.Eta.BasicTypes.OccName          ( HasOccName(..), isTcOcc, isSymOcc )
+> import Language.Eta.BasicTypes.BasicTypes       ( SourceText )
+18,20c18,20
+< import ETA.Utils.Outputable
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.SrcLoc
+---
+> import Language.Eta.Utils.Outputable
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.SrcLoc

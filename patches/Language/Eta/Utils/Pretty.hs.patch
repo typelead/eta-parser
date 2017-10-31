@@ -1,0 +1,18 @@
+156c156
+< module ETA.Utils.Pretty (
+---
+> module Language.Eta.Utils.Pretty (
+179,182c179,182
+< import ETA.Utils.BufWrite
+< import ETA.Utils.FastString
+< import ETA.Utils.FastTypes
+< import ETA.Utils.Panic
+---
+> import Language.Eta.Utils.BufWrite
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.FastTypes
+> import Language.Eta.Utils.Panic
+191c191
+< -- Don't import ETA.Utils.Util( assertPanic ) because it makes a loop in the module structure
+---
+> -- Don't import Language.Eta.Utils.Util( assertPanic ) because it makes a loop in the module structure

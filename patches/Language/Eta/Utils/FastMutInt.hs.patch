@@ -1,0 +1,4 @@
+10c10
+< module ETA.Utils.FastMutInt(
+---
+> module Language.Eta.Utils.FastMutInt(

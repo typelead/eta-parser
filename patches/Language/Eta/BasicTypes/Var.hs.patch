@@ -1,0 +1,28 @@
+34c34
+< module ETA.BasicTypes.Var (
+---
+> module Language.Eta.BasicTypes.Var (
+71,79c71,79
+< import {-# SOURCE #-}   ETA.Types.TypeRep( Type, Kind, SuperKind )
+< import {-# SOURCE #-}   ETA.TypeCheck.TcType( TcTyVarDetails, pprTcTyVarDetails )
+< import {-# SOURCE #-}   ETA.BasicTypes.IdInfo( IdDetails, IdInfo, coVarDetails, vanillaIdInfo, pprIdDetails )
+< 
+< import ETA.BasicTypes.Name hiding (varName)
+< import ETA.BasicTypes.Unique
+< import ETA.Utils.Util
+< import ETA.Utils.FastString
+< import ETA.Utils.Outputable
+---
+> import {-# SOURCE #-}   Language.Eta.Types.TypeRep( Type, Kind, SuperKind )
+> import {-# SOURCE #-}   Language.Eta.TypeCheck.TcType( TcTyVarDetails, pprTcTyVarDetails )
+> import {-# SOURCE #-}   Language.Eta.BasicTypes.IdInfo( IdDetails, IdInfo, coVarDetails, vanillaIdInfo, pprIdDetails )
+> 
+> import Language.Eta.BasicTypes.Name hiding (varName)
+> import Language.Eta.BasicTypes.Unique
+> import Language.Eta.Utils.Util
+> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.Outputable
+398c398
+< setIdNotExported id = ASSERT( isLocalId id )
+---
+> setIdNotExported id = {-ASSERT( isLocalId id )-}
