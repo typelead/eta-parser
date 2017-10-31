@@ -44,3 +44,11 @@
 <   -- ETA-specific
 ---
 >   -- Language.Eta-specific
+1078c1078
+<         algTcParent      = ASSERT2( okParent name parent, ppr name $$ ppr parent ) parent,
+---
+>         algTcParent      = {-ASSERT2( okParent name parent, ppr name $$ ppr parent )-} parent,
+1678c1678
+< tyConPrimRep tc = ASSERT(not (isUnboxedTupleTyCon tc)) PtrRep
+---
+> tyConPrimRep tc = {-ASSERT(not (isUnboxedTupleTyCon tc))-} PtrRep

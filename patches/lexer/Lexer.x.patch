@@ -38,3 +38,21 @@
 < import ETA.Parser.ApiAnnotation
 ---
 > import Language.Eta.Parser.ApiAnnotation
+687,688c687,688
+<   | ITLarrowtail                --  -<<
+<   | ITRarrowtail                --  >>-
+---
+>   | ITLLarrowtail                --  -<<
+>   | ITRRarrowtail                --  >>-
+819,820c819,820
+<        ,("-<<", ITLarrowtail, arrowsEnabled)
+<        ,(">>-", ITRarrowtail, arrowsEnabled)
+---
+>        ,("-<<", ITLLarrowtail, arrowsEnabled)
+>        ,(">>-", ITRRarrowtail, arrowsEnabled)
+830,831c830,831
+<        ,("⤛",   ITLarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
+<        ,("⤜",   ITRarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
+---
+>        ,("⤛",   ITLLarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
+>        ,("⤜",   ITRRarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)

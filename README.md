@@ -22,14 +22,13 @@ You can then build using `make` -
 % make
 ```
 
-## Issues
+## Hacking
 
-Currently we get a compiler panic due to a native call -
+Currently, this project mostly uses patches to make the parser
+compilable with the Eta compiler. The easiest way to modify the patches
+is to 
 
-```
-<no location info>:
-    eta: panic! (the 'impossible' happened)
-  (Eta version 0.0.9b2):
-        tcCheckFIType: Unsupported calling convention.
-  ccall unsafe "value ghc_strlen"
-```
+* Use `make sources` to generate the sources
+* Modify the sources generated in the `gen` directory
+* Run `./tools/generate-patches` to update patches in the `patches` directory
+
