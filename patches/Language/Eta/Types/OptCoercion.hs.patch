@@ -40,3 +40,9 @@
 > import Language.Eta.Types.Unify
 > import Language.Eta.Utils.ListSetOps
 > import Language.Eta.Types.InstEnv
+74,75c74,75
+<   | opt_NoOptCoercion = substCo env co
+<   | otherwise         = opt_co1 env False co
+---
+>   {-| opt_NoOptCoercion = substCo env co
+>   | otherwise-}         = opt_co1 env False co

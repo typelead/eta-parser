@@ -1,13 +1,13 @@
 .PHONY: all versions clean sources hpack deps build
 
 # Allow providing binaries in the bin/ dir (etlas, eta, etc.)
-export PATH := bin:$(PATH)
+export PATH := $(PWD)/bin:$(PATH)
 
 all: sources hpack deps build
 
 versions:
-	eta --version
 	etlas --version
+	etlas exec eta -- --version
 
 clean:
 	rm -rf \

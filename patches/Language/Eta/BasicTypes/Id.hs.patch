@@ -62,3 +62,11 @@
 > import Language.Eta.Utils.FastString
 > import Language.Eta.Utils.Util
 > -- import Language.Eta.Main.StaticFlags
+696c696
+<   | opt_NoStateHack
+---
+>   {-| opt_NoStateHack
+698c698
+<   | otherwise
+---
+>   | otherwise-}

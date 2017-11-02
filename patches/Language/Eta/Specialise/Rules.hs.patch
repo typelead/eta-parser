@@ -64,3 +64,17 @@
 > import Language.Eta.Utils.Maybes
 > import Language.Eta.Utils.Bag
 > import Language.Eta.Utils.Util
+405,406c405,406
+<                         | opt_PprStyle_Debug = ppr rule
+<                         | otherwise          = doubleQuotes (ftext (ru_name rule))
+---
+>                         {-| opt_PprStyle_Debug = ppr rule
+>                         | otherwise-}          = doubleQuotes (ftext (ru_name rule))
+408c408
+<                          (vcat [if opt_PprStyle_Debug then
+---
+>                          (vcat [{-if opt_PprStyle_Debug then
+410c410
+<                                 else empty,
+---
+>                                 else-} empty,

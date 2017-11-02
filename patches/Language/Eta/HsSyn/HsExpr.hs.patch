@@ -44,3 +44,15 @@
 > import Language.Eta.Utils.Outputable
 > import Language.Eta.Utils.FastString
 > import Language.Eta.Types.Type
+1903,1904c1903,1904
+<  | opt_PprStyle_Debug = sep [ptext (sLit "parallel branch of"), pprAStmtContext c]
+<  | otherwise          = pprStmtContext c
+---
+>  {-| opt_PprStyle_Debug = sep [ptext (sLit "parallel branch of"), pprAStmtContext c]
+>  | otherwise-}          = pprStmtContext c
+1906,1907c1906,1907
+<  | opt_PprStyle_Debug = sep [ptext (sLit "transformed branch of"), pprAStmtContext c]
+<  | otherwise          = pprStmtContext c
+---
+>  {-| opt_PprStyle_Debug = sep [ptext (sLit "transformed branch of"), pprAStmtContext c]
+>  | otherwise-}          = pprStmtContext c

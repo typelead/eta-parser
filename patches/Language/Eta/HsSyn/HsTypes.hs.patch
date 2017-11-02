@@ -38,3 +38,9 @@
 > import Language.Eta.Utils.FastString
 > import Language.Eta.Parser.Lexer ( AddAnn, mkParensApiAnn )
 > import Language.Eta.Utils.Maybes( isJust )
+820,821c820,821
+<     show_forall =  opt_PprStyle_Debug
+<                 || (not (null (hsQTvBndrs qtvs)) && is_explicit)
+---
+>     show_forall =  {-opt_PprStyle_Debug
+>                 ||-} (not (null (hsQTvBndrs qtvs)) && is_explicit)

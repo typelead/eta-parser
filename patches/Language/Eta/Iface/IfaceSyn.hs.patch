@@ -56,6 +56,10 @@
 > -- import Language.Eta.Main.StaticFlags (opt_PprStyle_Debug)
 > import Language.Eta.Utils.Util( filterOut )
 > import Language.Eta.Types.InstEnv
+815c815
+<     ppr_bang IfNoBang = ppWhen opt_PprStyle_Debug $ char '_'
+---
+>     ppr_bang IfNoBang = {-ppWhen opt_PprStyle_Debug $-} char '_'
 1289c1289
 <      import ETA.Main.DynFlags
 ---
