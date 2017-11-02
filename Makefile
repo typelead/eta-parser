@@ -1,14 +1,13 @@
-.PHONY: all clean sources hpack deps build
+.PHONY: all versions clean sources hpack deps build
 
-# Allow providing an etlas script instead of requiring it to
-# be on the PATH
-ifneq ($(wildcard ./etlas),)
-ETLAS = ./etlas
-else
-ETLAS = etlas
-endif
+# Allow providing binaries in the bin/ dir (etlas, eta, etc.)
+export PATH := bin:$(PATH)
 
 all: sources hpack deps build
+
+versions:
+	eta --version
+	etlas --version
 
 clean:
 	rm -rf \
@@ -23,7 +22,7 @@ hpack:
 	hpack
 
 deps:
-	$(ETLAS) install --dependencies-only
+	etlas install --dependencies-only
 
 build:
-	$(ETLAS) build
+	etlas build
