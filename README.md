@@ -22,15 +22,41 @@ You can then build using `make` -
 % make
 ```
 
-## Issues
+## Tests
 
-Currently getting the following compiler error -
+You can run a simple test suite with -
 
 ```
-[113 of 159] Compiling Language.Eta.Types.Unify ( gen/src/Language/Eta/Types/Unify.hs, dist/build/Language/Eta/Types/Unify.jar )
+make test
+```
 
-<no location info>:
-    compiler/ETA/CodeGen/Main.hs:(156,31)-(162,56): Non-exhaustive patterns in case
+## Issues
+
+Currently getting the following runtime error during `make test` -
+
+```
+Exception in thread "main" java.lang.ClassFormatError: Invalid method Code length 185470 in class file eta_parser/language/eta/parser/Lexer$$Lr1SA4Elvl4456
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+        at main.Main$main1.applyV(Test.hs:24)
+        at main.Main$DZCmain.applyV(Test.hs)
+        at eta.runtime.stg.Closures$EvalLazyIO.enter(Closures.java:104)
+        at eta.runtime.stg.Capability.schedule(Capability.java:157)
+        at eta.runtime.stg.Capability.scheduleClosure(Capability.java:102)
+        at eta.runtime.Runtime.evalLazyIO(Runtime.java:189)
+        at eta.runtime.Runtime.main(Runtime.java:182)
+        at eta.main.main(Unknown Source)
+Test suite test: FAIL
 ```
 
 ## TODO

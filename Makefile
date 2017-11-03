@@ -1,9 +1,12 @@
-.PHONY: all versions clean sources hpack deps build
+.PHONY: all test versions clean sources hpack deps build
 
 # Allow providing binaries in the bin/ dir (etlas, eta, etc.)
 export PATH := $(PWD)/bin:$(PATH)
 
 all: sources hpack deps build
+
+test: hpack
+	etlas test
 
 versions:
 	etlas --version
@@ -21,8 +24,8 @@ sources:
 hpack:
 	hpack
 
-deps:
+deps: hpack
 	etlas install --dependencies-only
 
-build:
+build: hpack
 	etlas build

@@ -27,3 +27,8 @@ library:
     - gen/include
   install-includes:
     - HsVersions.h
+tests:
+  test:
+    main: test/Test.hs
+    dependencies:
+      - eta-parser
