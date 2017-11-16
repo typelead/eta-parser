@@ -14,7 +14,7 @@ versions:
 
 clean:
 	rm -rf \
-	  eta-parse.cabal \
+	  eta-parser.cabal \
 	  dist \
 	  gen
 
