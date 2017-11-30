@@ -11,18 +11,18 @@ test: hpack
 versions:
 	etlas --version
 	etlas exec eta -- --version
+	eta --version || true
 
 clean:
-	rm -rf \
-	  eta-parser.cabal \
-	  dist \
-	  gen
+	rm -rf dist gen
 
 sources:
 	./tools/generate-sources
 
+# Not going to use hpack for now since it doesn't support
+# the java-sources field necessary for etlas
 hpack:
-	hpack
+	echo "skipping hpack..."
 
 deps: hpack
 	etlas install --dependencies-only
