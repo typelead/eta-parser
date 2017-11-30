@@ -3,6 +3,8 @@
 # Allow providing binaries in the bin/ dir (etlas, eta, etc.)
 export PATH := $(PWD)/bin:$(PATH)
 
+LEXER_HS := gen/src/Language/Eta/Parser/Lexer.hs
+
 all: sources hpack deps build
 
 test: hpack
@@ -18,6 +20,7 @@ clean:
 
 sources:
 	./tools/generate-sources
+	./tools/post-process-alex-tables $(LEXER_HS)
 
 # Not going to use hpack for now since it doesn't support
 # the java-sources field necessary for etlas
