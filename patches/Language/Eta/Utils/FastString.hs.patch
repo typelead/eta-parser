@@ -20,15 +20,14 @@
 ---
 > import Language.Eta.Utils.ExtsCompat46
 > import qualified Language.Eta.Utils.ExtsCompat46 as ExtsCompat46
-215,216c215,218
+215c215,218
 < foreign import ccall unsafe "ghc_memcmp"
-<   memcmp :: Ptr a -> Ptr b -> Int -> IO Int
 ---
 > -- foreign import ccall unsafe "ghc_memcmp"
 > --   memcmp :: Ptr a -> Ptr b -> Int -> IO Int
-> memcmp :: Ptr a -> Ptr b -> Int -> IO Int
-> memcmp = error "ghc_memcmp: ffi ccall"
-627,628c629,633
+> 
+> foreign import java unsafe "@static eta.parser.Utils.memcmp"
+627,628c630,634
 < foreign import ccall unsafe "ghc_strlen"
 <   ptrStrLength :: Ptr Word8 -> Int
 ---
