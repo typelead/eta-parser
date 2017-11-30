@@ -194,7 +194,3 @@
 ---
 >        ,("⤛",   ITLLarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
 >        ,("⤜",   ITRRarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
-2230c2232
-<   --trace ("token: " ++ show tok) $ do
----
->   trace ("token: " ++ show tok) $ do
