@@ -38,21 +38,163 @@
 < import ETA.Parser.ApiAnnotation
 ---
 > import Language.Eta.Parser.ApiAnnotation
-687,688c687,688
+234,235c234,235
+< "-- " ~[$docsym \#] .* { lineCommentToken }
+< "--" [^$symbol \ ] .* { lineCommentToken }
+---
+> -- "-- " ~[$docsym \#] .* { lineCommentToken }
+> -- "--" [^$symbol \ ] .* { lineCommentToken }
+239c239
+< "-- " [$docsym \#] .* / { ifExtension (not . haddockEnabled) } { lineCommentToken }
+---
+> -- "-- " [$docsym \#] .* / { ifExtension (not . haddockEnabled) } { lineCommentToken }
+369,409c369,410
+< <0> {
+<   "[:" / { ifExtension parrEnabled }    { token ITopabrack }
+<   ":]" / { ifExtension parrEnabled }    { token ITcpabrack }
+< }
+< 
+< <0> {
+<   "[|"        / { ifExtension thEnabled } { token ITopenExpQuote }
+<   "[||"       / { ifExtension thEnabled } { token ITopenTExpQuote }
+<   "[e|"       / { ifExtension thEnabled } { token ITopenExpQuote }
+<   "[e||"      / { ifExtension thEnabled } { token ITopenTExpQuote }
+<   "[p|"       / { ifExtension thEnabled } { token ITopenPatQuote }
+<   "[d|"       / { ifExtension thEnabled } { layout_token ITopenDecQuote }
+<   "[t|"       / { ifExtension thEnabled } { token ITopenTypQuote }
+<   "|]"        / { ifExtension thEnabled } { token ITcloseQuote }
+<   "||]"       / { ifExtension thEnabled } { token ITcloseTExpQuote }
+<   \$ @varid   / { ifExtension thEnabled } { skip_one_varid ITidEscape }
+<   "$$" @varid / { ifExtension thEnabled } { skip_two_varid ITidTyEscape }
+<   "$("        / { ifExtension thEnabled } { token ITparenEscape }
+<   "$$("       / { ifExtension thEnabled } { token ITparenTyEscape }
+< 
+< -- For backward compatibility, accept the old dollar syntax
+<   "[$" @varid "|"  / { ifExtension qqEnabled }
+<                      { lex_quasiquote_tok }
+< 
+<   "[" @varid "|"  / { ifExtension qqEnabled }
+<                      { lex_quasiquote_tok }
+< 
+<   -- qualified quasi-quote (#5555)
+<   "[" @qvarid "|"  / { ifExtension qqEnabled }
+<                      { lex_qquasiquote_tok }
+< }
+< 
+< <0> {
+<   "(|" / { ifExtension arrowsEnabled `alexAndPred` notFollowedBySymbol }
+<                                         { special IToparenbar }
+<   "|)" / { ifExtension arrowsEnabled }  { special ITcparenbar }
+< }
+< 
+< <0> {
+<   \? @varid / { ifExtension ipEnabled } { skip_one_varid ITdupipvarid }
+< }
+---
+> -- TODO: DISABLED EXTENSIONS
+> -- <0> {
+> --   "[:" / { ifExtension parrEnabled }    { token ITopabrack }
+> --   ":]" / { ifExtension parrEnabled }    { token ITcpabrack }
+> -- }
+> --
+> -- <0> {
+> --   "[|"        / { ifExtension thEnabled } { token ITopenExpQuote }
+> --   "[||"       / { ifExtension thEnabled } { token ITopenTExpQuote }
+> --   "[e|"       / { ifExtension thEnabled } { token ITopenExpQuote }
+> --   "[e||"      / { ifExtension thEnabled } { token ITopenTExpQuote }
+> --   "[p|"       / { ifExtension thEnabled } { token ITopenPatQuote }
+> --   "[d|"       / { ifExtension thEnabled } { layout_token ITopenDecQuote }
+> --   "[t|"       / { ifExtension thEnabled } { token ITopenTypQuote }
+> --   "|]"        / { ifExtension thEnabled } { token ITcloseQuote }
+> --   "||]"       / { ifExtension thEnabled } { token ITcloseTExpQuote }
+> --   \$ @varid   / { ifExtension thEnabled } { skip_one_varid ITidEscape }
+> --   "$$" @varid / { ifExtension thEnabled } { skip_two_varid ITidTyEscape }
+> --   "$("        / { ifExtension thEnabled } { token ITparenEscape }
+> --   "$$("       / { ifExtension thEnabled } { token ITparenTyEscape }
+> --
+> -- -- For backward compatibility, accept the old dollar syntax
+> --   "[$" @varid "|"  / { ifExtension qqEnabled }
+> --                     { lex_quasiquote_tok }
+> --
+> --   "[" @varid "|"  / { ifExtension qqEnabled }
+> --                     { lex_quasiquote_tok }
+> --
+> --   qualified quasi-quote (#5555)
+> --   "[" @qvarid "|"  / { ifExtension qqEnabled }
+> --                       { lex_qquasiquote_tok }
+> -- }
+> 
+> -- <0> {
+> --   "(|" / { ifExtension arrowsEnabled `alexAndPred` notFollowedBySymbol }
+> --                                         { special IToparenbar }
+> --   "|)" / { ifExtension arrowsEnabled }  { special ITcparenbar }
+> -- }
+> 
+> -- <0> {
+> --   \? @varid / { ifExtension ipEnabled } { skip_one_varid ITdupipvarid }
+> -- }
+477,493c478,495
+<   @decimal                     \# / { ifExtension magicHashEnabled } { tok_primint positive 0 1 decimal }
+<   0[bB] @binary                \# / { ifExtension magicHashEnabled `alexAndPred`
+<                                       ifExtension binaryLiteralsEnabled } { tok_primint positive 2 3 binary }
+<   0[oO] @octal                 \# / { ifExtension magicHashEnabled } { tok_primint positive 2 3 octal }
+<   0[xX] @hexadecimal           \# / { ifExtension magicHashEnabled } { tok_primint positive 2 3 hexadecimal }
+<   @negative @decimal           \# / { ifExtension magicHashEnabled } { tok_primint negative 1 2 decimal }
+<   @negative 0[bB] @binary      \# / { ifExtension magicHashEnabled `alexAndPred`
+<                                       ifExtension binaryLiteralsEnabled } { tok_primint negative 3 4 binary }
+<   @negative 0[oO] @octal       \# / { ifExtension magicHashEnabled } { tok_primint negative 3 4 octal }
+<   @negative 0[xX] @hexadecimal \# / { ifExtension magicHashEnabled } { tok_primint negative 3 4 hexadecimal }
+< 
+<   @decimal                     \# \# / { ifExtension magicHashEnabled } { tok_primword 0 2 decimal }
+<   0[bB] @binary                \# \# / { ifExtension magicHashEnabled `alexAndPred`
+<                                          ifExtension binaryLiteralsEnabled } { tok_primword 2 4 binary }
+<   0[oO] @octal                 \# \# / { ifExtension magicHashEnabled } { tok_primword 2 4 octal }
+<   0[xX] @hexadecimal           \# \# / { ifExtension magicHashEnabled } { tok_primword 2 4 hexadecimal }
+< 
+---
+>   -- TODO: DISABLED EXTENSIONS
+>   -- @decimal                     \# / { ifExtension magicHashEnabled } { tok_primint positive 0 1 decimal }
+>   -- 0[bB] @binary                \# / { ifExtension magicHashEnabled `alexAndPred`
+>   --                                     ifExtension binaryLiteralsEnabled } { tok_primint positive 2 3 binary }
+>   -- 0[oO] @octal                 \# / { ifExtension magicHashEnabled } { tok_primint positive 2 3 octal }
+>   -- 0[xX] @hexadecimal           \# / { ifExtension magicHashEnabled } { tok_primint positive 2 3 hexadecimal }
+>   -- @negative @decimal           \# / { ifExtension magicHashEnabled } { tok_primint negative 1 2 decimal }
+>   -- @negative 0[bB] @binary      \# / { ifExtension magicHashEnabled `alexAndPred`
+>   --                                     ifExtension binaryLiteralsEnabled } { tok_primint negative 3 4 binary }
+>   -- @negative 0[oO] @octal       \# / { ifExtension magicHashEnabled } { tok_primint negative 3 4 octal }
+>   -- @negative 0[xX] @hexadecimal \# / { ifExtension magicHashEnabled } { tok_primint negative 3 4 hexadecimal }
+>   --
+>   -- @decimal                     \# \# / { ifExtension magicHashEnabled } { tok_primword 0 2 decimal }
+>   -- 0[bB] @binary                \# \# / { ifExtension magicHashEnabled `alexAndPred`
+>   --                                        ifExtension binaryLiteralsEnabled } { tok_primword 2 4 binary }
+>   -- 0[oO] @octal                 \# \# / { ifExtension magicHashEnabled } { tok_primword 2 4 octal }
+>   -- 0[xX] @hexadecimal           \# \# / { ifExtension magicHashEnabled } { tok_primword 2 4 hexadecimal }
+>   --
+496,497c498,499
+<   @signed @floating_point \# / { ifExtension magicHashEnabled } { init_strtoken 1 tok_primfloat }
+<   @signed @floating_point \# \# / { ifExtension magicHashEnabled } { init_strtoken 2 tok_primdouble }
+---
+>   -- @signed @floating_point \# / { ifExtension magicHashEnabled } { init_strtoken 1 tok_primfloat }
+>   -- @signed @floating_point \# \# / { ifExtension magicHashEnabled } { init_strtoken 2 tok_primdouble }
+687,688c689,690
 <   | ITLarrowtail                --  -<<
 <   | ITRarrowtail                --  >>-
 ---
 >   | ITLLarrowtail                --  -<<
 >   | ITRRarrowtail                --  >>-
-819,820c819,820
+819,820c821,822
 <        ,("-<<", ITLarrowtail, arrowsEnabled)
 <        ,(">>-", ITRarrowtail, arrowsEnabled)
 ---
 >        ,("-<<", ITLLarrowtail, arrowsEnabled)
 >        ,(">>-", ITRRarrowtail, arrowsEnabled)
-830,831c830,831
+830,831c832,833
 <        ,("⤛",   ITLarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
 <        ,("⤜",   ITRarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
 ---
 >        ,("⤛",   ITLLarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
 >        ,("⤜",   ITRRarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
+2230c2232
+<   --trace ("token: " ++ show tok) $ do
+---
+>   trace ("token: " ++ show tok) $ do
