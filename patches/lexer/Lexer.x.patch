@@ -38,22 +38,7 @@
 < import ETA.Parser.ApiAnnotation
 ---
 > import Language.Eta.Parser.ApiAnnotation
-234,235c234,235
-< "-- " ~[$docsym \#] .* { lineCommentToken }
-< "--" [^$symbol \ ] .* { lineCommentToken }
----
-> -- "-- " ~[$docsym \#] .* { lineCommentToken }
-> -- "--" [^$symbol \ ] .* { lineCommentToken }
-239c239
-< "-- " [$docsym \#] .* / { ifExtension (not . haddockEnabled) } { lineCommentToken }
----
-> -- "-- " [$docsym \#] .* / { ifExtension (not . haddockEnabled) } { lineCommentToken }
-369,409c369,410
-< <0> {
-<   "[:" / { ifExtension parrEnabled }    { token ITopabrack }
-<   ":]" / { ifExtension parrEnabled }    { token ITcpabrack }
-< }
-< 
+374,399c374,400
 < <0> {
 <   "[|"        / { ifExtension thEnabled } { token ITopenExpQuote }
 <   "[||"       / { ifExtension thEnabled } { token ITopenTExpQuote }
@@ -80,23 +65,8 @@
 <   "[" @qvarid "|"  / { ifExtension qqEnabled }
 <                      { lex_qquasiquote_tok }
 < }
-< 
-< <0> {
-<   "(|" / { ifExtension arrowsEnabled `alexAndPred` notFollowedBySymbol }
-<                                         { special IToparenbar }
-<   "|)" / { ifExtension arrowsEnabled }  { special ITcparenbar }
-< }
-< 
-< <0> {
-<   \? @varid / { ifExtension ipEnabled } { skip_one_varid ITdupipvarid }
-< }
 ---
-> -- TODO: DISABLED EXTENSIONS
-> -- <0> {
-> --   "[:" / { ifExtension parrEnabled }    { token ITopabrack }
-> --   ":]" / { ifExtension parrEnabled }    { token ITcpabrack }
-> -- }
-> --
+> -- TODO: DISABLE TEMPLATE HASKELL
 > -- <0> {
 > --   "[|"        / { ifExtension thEnabled } { token ITopenExpQuote }
 > --   "[||"       / { ifExtension thEnabled } { token ITopenTExpQuote }
@@ -119,76 +89,29 @@
 > --   "[" @varid "|"  / { ifExtension qqEnabled }
 > --                     { lex_quasiquote_tok }
 > --
-> --   qualified quasi-quote (#5555)
+> -- -- qualified quasi-quote (#5555)
 > --   "[" @qvarid "|"  / { ifExtension qqEnabled }
 > --                       { lex_qquasiquote_tok }
 > -- }
-> 
-> -- <0> {
-> --   "(|" / { ifExtension arrowsEnabled `alexAndPred` notFollowedBySymbol }
-> --                                         { special IToparenbar }
-> --   "|)" / { ifExtension arrowsEnabled }  { special ITcparenbar }
-> -- }
-> 
-> -- <0> {
-> --   \? @varid / { ifExtension ipEnabled } { skip_one_varid ITdupipvarid }
-> -- }
-477,493c478,495
-<   @decimal                     \# / { ifExtension magicHashEnabled } { tok_primint positive 0 1 decimal }
-<   0[bB] @binary                \# / { ifExtension magicHashEnabled `alexAndPred`
-<                                       ifExtension binaryLiteralsEnabled } { tok_primint positive 2 3 binary }
-<   0[oO] @octal                 \# / { ifExtension magicHashEnabled } { tok_primint positive 2 3 octal }
-<   0[xX] @hexadecimal           \# / { ifExtension magicHashEnabled } { tok_primint positive 2 3 hexadecimal }
-<   @negative @decimal           \# / { ifExtension magicHashEnabled } { tok_primint negative 1 2 decimal }
-<   @negative 0[bB] @binary      \# / { ifExtension magicHashEnabled `alexAndPred`
-<                                       ifExtension binaryLiteralsEnabled } { tok_primint negative 3 4 binary }
-<   @negative 0[oO] @octal       \# / { ifExtension magicHashEnabled } { tok_primint negative 3 4 octal }
-<   @negative 0[xX] @hexadecimal \# / { ifExtension magicHashEnabled } { tok_primint negative 3 4 hexadecimal }
-< 
-<   @decimal                     \# \# / { ifExtension magicHashEnabled } { tok_primword 0 2 decimal }
-<   0[bB] @binary                \# \# / { ifExtension magicHashEnabled `alexAndPred`
-<                                          ifExtension binaryLiteralsEnabled } { tok_primword 2 4 binary }
-<   0[oO] @octal                 \# \# / { ifExtension magicHashEnabled } { tok_primword 2 4 octal }
-<   0[xX] @hexadecimal           \# \# / { ifExtension magicHashEnabled } { tok_primword 2 4 hexadecimal }
-< 
+494,495c495,496
+<   -- Unboxed floats and doubles (:: Float#, :: Double#)
+<   -- prim_{float,double} work with signed literals
 ---
->   -- TODO: DISABLED EXTENSIONS
->   -- @decimal                     \# / { ifExtension magicHashEnabled } { tok_primint positive 0 1 decimal }
->   -- 0[bB] @binary                \# / { ifExtension magicHashEnabled `alexAndPred`
->   --                                     ifExtension binaryLiteralsEnabled } { tok_primint positive 2 3 binary }
->   -- 0[oO] @octal                 \# / { ifExtension magicHashEnabled } { tok_primint positive 2 3 octal }
->   -- 0[xX] @hexadecimal           \# / { ifExtension magicHashEnabled } { tok_primint positive 2 3 hexadecimal }
->   -- @negative @decimal           \# / { ifExtension magicHashEnabled } { tok_primint negative 1 2 decimal }
->   -- @negative 0[bB] @binary      \# / { ifExtension magicHashEnabled `alexAndPred`
->   --                                     ifExtension binaryLiteralsEnabled } { tok_primint negative 3 4 binary }
->   -- @negative 0[oO] @octal       \# / { ifExtension magicHashEnabled } { tok_primint negative 3 4 octal }
->   -- @negative 0[xX] @hexadecimal \# / { ifExtension magicHashEnabled } { tok_primint negative 3 4 hexadecimal }
->   --
->   -- @decimal                     \# \# / { ifExtension magicHashEnabled } { tok_primword 0 2 decimal }
->   -- 0[bB] @binary                \# \# / { ifExtension magicHashEnabled `alexAndPred`
->   --                                        ifExtension binaryLiteralsEnabled } { tok_primword 2 4 binary }
->   -- 0[oO] @octal                 \# \# / { ifExtension magicHashEnabled } { tok_primword 2 4 octal }
->   -- 0[xX] @hexadecimal           \# \# / { ifExtension magicHashEnabled } { tok_primword 2 4 hexadecimal }
->   --
-496,497c498,499
-<   @signed @floating_point \# / { ifExtension magicHashEnabled } { init_strtoken 1 tok_primfloat }
-<   @signed @floating_point \# \# / { ifExtension magicHashEnabled } { init_strtoken 2 tok_primdouble }
----
->   -- @signed @floating_point \# / { ifExtension magicHashEnabled } { init_strtoken 1 tok_primfloat }
->   -- @signed @floating_point \# \# / { ifExtension magicHashEnabled } { init_strtoken 2 tok_primdouble }
-687,688c689,690
+> -- Unboxed floats and doubles (:: Float#, :: Double#)
+> --  prim_{float,double} work with signed literals
+687,688c688,689
 <   | ITLarrowtail                --  -<<
 <   | ITRarrowtail                --  >>-
 ---
 >   | ITLLarrowtail                --  -<<
 >   | ITRRarrowtail                --  >>-
-819,820c821,822
+819,820c820,821
 <        ,("-<<", ITLarrowtail, arrowsEnabled)
 <        ,(">>-", ITRarrowtail, arrowsEnabled)
 ---
 >        ,("-<<", ITLLarrowtail, arrowsEnabled)
 >        ,(">>-", ITRRarrowtail, arrowsEnabled)
-830,831c832,833
+830,831c831,832
 <        ,("⤛",   ITLarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
 <        ,("⤜",   ITRarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
 ---
