@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+# Start in project root
+cd $(dirname "$0")/..
+
+source tools/common.bash
+
+# Generate lexer
+x_file="gen/lexer/Lexer.x"
+patch_source \
+  "eta/compiler/ETA/Parser/Lexer.x" \
+  "gen/lexer/Lexer.x" \
+  "patches/lexer/Lexer.x.patch"
+target=gen/src/Language/Eta/Parser/Lexer.hs
+mkdir -p $(dirname "$target")
+alex -o "$target" "$x_file"

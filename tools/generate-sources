@@ -5,38 +5,8 @@ set -e
 # Start in project root
 cd $(dirname "$0")/..
 
+source tools/common.bash
 source tools/source-maps
-
-# Clear existing generated sources
-rm -rf gen
-
-patch_source() {
-  if [ $# -ne 3 ]; then
-    >&2 echo "Usage: $0 <src> <target> <patch_file>"
-    exit 1
-  fi
-  local target=$2
-  mkdir -p $(dirname "$target")
-  cp "$1" "$target"
-  local patch_file=$3
-  if [ -f "$patch_file" ]; then
-    patch -s "$target" "$patch_file"
-  fi
-}
-
-# Copy CPP directives
-mkdir -p gen/include
-cp eta/include/HsVersions.h gen/include
-
-# Generate lexer
-x_file="gen/lexer/Lexer.x"
-patch_source \
-  "eta/compiler/ETA/Parser/Lexer.x" \
-  "gen/lexer/Lexer.x" \
-  "patches/lexer/Lexer.x.patch"
-target=gen/src/Language/Eta/Parser/Lexer.hs
-mkdir -p $(dirname "$target")
-alex -o "$target" "$x_file"
 
 # Copy/patch Eta.PackageDb
 patch_source \

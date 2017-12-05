@@ -5,9 +5,22 @@ export PATH := $(PWD)/bin:$(PATH)
 
 LEXER_HS := gen/src/Language/Eta/Parser/Lexer.hs
 
-all: sources hpack deps build
+all: sources deps build
 
-test: hpack
+sources: gen/include gen/src gen/lexer
+
+gen/include:
+	mkdir -p gen/include
+	cp eta/include/HsVersions.h gen/include
+
+gen/src:
+	./tools/generate-sources
+
+gen/lexer:
+	./tools/generate-lexer
+	./tools/post-process-alex-tables $(LEXER_HS)
+
+test: all
 	etlas test
 
 versions:
@@ -18,17 +31,13 @@ versions:
 clean:
 	rm -rf dist gen
 
-sources:
-	./tools/generate-sources
-	./tools/post-process-alex-tables $(LEXER_HS)
-
 # Not going to use hpack for now since it doesn't support
 # the java-sources field necessary for etlas
-hpack:
-	echo "skipping hpack..."
+# hpack:
+# 	hpack
 
-deps: hpack
+deps:
 	etlas install --dependencies-only
 
-build: hpack
+build:
 	etlas build
