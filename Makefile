@@ -5,7 +5,7 @@ export PATH := $(PWD)/bin:$(PATH)
 
 LEXER_HS := gen/src/Language/Eta/Parser/Lexer.hs
 
-all: sources deps build
+all: sources hpack deps build
 
 sources: gen/include gen/src gen/lexer
 
@@ -29,15 +29,13 @@ versions:
 	eta --version || true
 
 clean:
-	rm -rf dist gen
+	rm -rf dist gen eta-parser.cabal
 
-# Not going to use hpack for now since it doesn't support
-# the java-sources field necessary for etlas
-# hpack:
-# 	hpack
+hpack:
+	./tools/hpack
 
-deps:
+deps: hpack
 	etlas install --dependencies-only
 
-build:
+build: hpack
 	etlas build

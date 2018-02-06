@@ -1,0 +1,37 @@
+name: eta-parser
+version: '0.0.1-SNAPSHOT'
+category: Language
+author: Cary Robbins
+maintainer: carymrobbins@gmail.com
+license: AllRightsReserved
+dependencies:
+  # eta deps
+  - base >=4.7 && <5
+  - array
+  - bytestring
+  - containers
+  - deepseq
+  - directory
+  - filepath
+  - text
+  - time
+  - transformers
+  # codec-jvm deps
+  - binary
+  - mtl
+  - stringsearch
+library:
+  source-dirs:
+    - gen/src
+  include-dirs:
+    - gen/include
+  install-includes:
+    - HsVersions.h
+  verbatim:
+    java-sources:
+      java/eta/parser/Utils.java
+tests:
+  test:
+    main: test/Test.hs
+    dependencies:
+      - eta-parser

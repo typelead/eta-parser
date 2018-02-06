@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Validates hpack to ensure we have the right version, then executes it.
+
+min_required_version=0.24.0
+
+failed() {
+  >&2 printf "hpack >= 0.24.0 is required"
+  [ -z "$current_version" ] || >&2 printf " but found $current_version"
+  >&2 echo
+  exit 1
+}
+
+command -v hpack > /dev/null || failed
+
+current_version=$(hpack --numeric-version)
+
+if [ "$current_version" != "$min_required_version" ]; then
+  top_version=$(printf "$min_required_version\n$current_version\n" | sort -V | head -n1)
+  [ "$top_version" == "$min_required_version" ] || failed
+fi
+
+exec hpack "$@"

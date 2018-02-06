@@ -5,3 +5,4 @@ dist/
 gen/
 resources/lexers/*.patched.x
 etlas
+eta-parser.cabal
