@@ -5,7 +5,7 @@ export PATH := $(PWD)/bin:$(PATH)
 
 LEXER_HS := gen/src/Language/Eta/Parser/Lexer.hs
 
-all: sources hpack deps build
+all: sources deps build
 
 sources: gen/include gen/src gen/lexer
 
@@ -29,7 +29,10 @@ versions:
 	eta --version || true
 
 clean:
-	rm -rf dist gen eta-parser.cabal
+	rm -rf dist gen
+
+clean-hpack:
+	rm eta-parser.cabal
 
 hpack:
 	./tools/hpack
