@@ -17,7 +17,7 @@ git submodule update --init --recursive
 
 You will need the following tools installed:
 
-* alex
+* alex-3.2.3
 * etlas
 * hpack
 
@@ -39,7 +39,7 @@ make test
 
 Currently, this project mostly uses patches to make the parser
 compilable with the Eta compiler. The easiest way to modify the patches
-is to 
+is to
 
 * Use `make sources` to generate the sources
 * Modify the sources generated in the `gen` directory

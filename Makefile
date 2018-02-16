@@ -18,7 +18,7 @@ gen/src:
 
 gen/lexer:
 	./tools/generate-lexer
-	./tools/post-process-alex-tables $(LEXER_HS)
+	stack runghc -- ./tools/post-process-alex-tables.hs $(LEXER_HS)
 
 test: all
 	etlas test
