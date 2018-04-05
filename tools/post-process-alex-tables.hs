@@ -56,6 +56,9 @@ process strings = loop "" $ addImports strings
   loop acc [] = acc
   loop acc ss =
     case ss of
+      -- Add ifndef guards around #include pragmas
+      x:xs | x `elem` ["#include " ++ show s | s <- ["ghcconfig.h","config.h"]] ->
+        loop (intercalate "\n" [acc, "#ifndef ETA_VERSION", x, "#endif"]) xs
       (x0:x1:xs) | isTableDef x0 ->
         let (res, rem) = transform xs
         in loop (intercalate "\n" [acc, x0, x1, res]) rem

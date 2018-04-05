@@ -1,11 +1,11 @@
--- This file has been generated from package.yaml by hpack version 0.24.0.
+-- This file has been generated from package.yaml by hpack version 0.25.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4caeacbd36488028e084a2548814cd022b6b90efd5295f66b328d854aab22141
+-- hash: 83d303923c1b60d2317956dea73dda6618520f1ea68bcc17027dab2316602a28
 
 name:           eta-parser
-version:        0.0.1-SNAPSHOT
+version:        0.0.1.0
 category:       Language
 author:         Cary Robbins
 maintainer:     carymrobbins@gmail.com
@@ -93,6 +93,7 @@ library
       Language.Eta.Main.PackageConfig
       Language.Eta.Main.Packages
       Language.Eta.Main.PipelineMonad
+      Language.Eta.Main.StaticFlags
       Language.Eta.PackageDb
       Language.Eta.Parser.ApiAnnotation
       Language.Eta.Parser.Ctype
@@ -106,6 +107,7 @@ library
       Language.Eta.Profiling.CostCentre
       Language.Eta.SimplCore.OccurAnal
       Language.Eta.Specialise.Rules
+      Language.Eta.SysTools.Terminal
       Language.Eta.TypeCheck.TcEvidence
       Language.Eta.TypeCheck.TcRnTypes
       Language.Eta.TypeCheck.TcType
@@ -145,6 +147,7 @@ library
       Language.Eta.Utils.Pair
       Language.Eta.Utils.Panic
       Language.Eta.Utils.Platform
+      Language.Eta.Utils.PprColor
       Language.Eta.Utils.Pretty
       Language.Eta.Utils.Serialized
       Language.Eta.Utils.StringBuffer
@@ -157,6 +160,8 @@ library
       Paths_eta_parser
   hs-source-dirs:
       gen/src
+  default-extensions: RecordWildCards
+  cpp-options: -DETA_PARSER
   include-dirs:
       gen/include
   install-includes:
@@ -183,6 +188,8 @@ test-suite test
   main-is: test/Test.hs
   other-modules:
       Paths_eta_parser
+  default-extensions: RecordWildCards
+  cpp-options: -DETA_PARSER
   build-depends:
       array
     , base >=4.7 && <5

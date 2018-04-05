@@ -2,12 +2,14 @@
 < module ETA.Main.ErrUtils (
 ---
 > module Language.Eta.Main.ErrUtils (
-43,49c43,49
+48,56c48,56
 < import ETA.Utils.Bag              ( Bag, bagToList, isEmptyBag, emptyBag )
 < import ETA.Utils.Exception
 < import ETA.Utils.Outputable
 < import ETA.Utils.Panic
-< import ETA.Utils.FastString
+< import ETA.Utils.FastString (unpackFS)
+< import ETA.Utils.StringBuffer (atLine, hGetStringBuffer, len, lexemeToString)
+< import qualified ETA.Utils.PprColor as Col
 < import ETA.BasicTypes.SrcLoc
 < import ETA.Main.DynFlags
 ---
@@ -15,6 +17,8 @@
 > import Language.Eta.Utils.Exception
 > import Language.Eta.Utils.Outputable
 > import Language.Eta.Utils.Panic
-> import Language.Eta.Utils.FastString
+> import Language.Eta.Utils.FastString (unpackFS)
+> import Language.Eta.Utils.StringBuffer (atLine, hGetStringBuffer, len, lexemeToString)
+> import qualified Language.Eta.Utils.PprColor as Col
 > import Language.Eta.BasicTypes.SrcLoc
 > import Language.Eta.Main.DynFlags

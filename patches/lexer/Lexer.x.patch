@@ -38,7 +38,7 @@
 < import ETA.Parser.ApiAnnotation
 ---
 > import Language.Eta.Parser.ApiAnnotation
-374,399c374,400
+376,401c376,402
 < <0> {
 <   "[|"        / { ifExtension thEnabled } { token ITopenExpQuote }
 <   "[||"       / { ifExtension thEnabled } { token ITopenTExpQuote }
@@ -93,25 +93,25 @@
 > --   "[" @qvarid "|"  / { ifExtension qqEnabled }
 > --                       { lex_qquasiquote_tok }
 > -- }
-494,495c495,496
+500,501c501,502
 <   -- Unboxed floats and doubles (:: Float#, :: Double#)
 <   -- prim_{float,double} work with signed literals
 ---
 > -- Unboxed floats and doubles (:: Float#, :: Double#)
 > --  prim_{float,double} work with signed literals
-687,688c688,689
+693,694c694,695
 <   | ITLarrowtail                --  -<<
 <   | ITRarrowtail                --  >>-
 ---
 >   | ITLLarrowtail                --  -<<
 >   | ITRRarrowtail                --  >>-
-819,820c820,821
+828,829c829,830
 <        ,("-<<", ITLarrowtail, arrowsEnabled)
 <        ,(">>-", ITRarrowtail, arrowsEnabled)
 ---
 >        ,("-<<", ITLLarrowtail, arrowsEnabled)
 >        ,(">>-", ITRRarrowtail, arrowsEnabled)
-830,831c831,832
+839,840c840,841
 <        ,("⤛",   ITLarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
 <        ,("⤜",   ITRarrowtail, \i -> unicodeSyntaxEnabled i && arrowsEnabled i)
 ---

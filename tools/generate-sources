@@ -30,7 +30,7 @@ for src in "${boot_sources[@]}"; do
     "patches/Language/Eta/$src.hs-boot.patch"
 done
 
-# Copy codec-jvm sources
+# Copy/patch codec-jvm sources
 for src in "${codec_jvm[@]}"; do
   patch_source \
     "eta/codec-jvm/src/$src.hs" \

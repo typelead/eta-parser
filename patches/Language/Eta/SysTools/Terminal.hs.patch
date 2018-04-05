@@ -1,0 +1,4 @@
+3c3
+< module ETA.SysTools.Terminal (stderrSupportsAnsiColors) where
+---
+> module Language.Eta.SysTools.Terminal (stderrSupportsAnsiColors) where
