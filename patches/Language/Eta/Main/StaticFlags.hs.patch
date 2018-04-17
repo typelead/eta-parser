@@ -1,0 +1,20 @@
+16c16
+< module ETA.Main.StaticFlags (
+---
+> module Language.Eta.Main.StaticFlags (
+42,48c42,48
+< import ETA.Main.CmdLineParser
+< import ETA.Utils.FastString
+< import ETA.BasicTypes.SrcLoc
+< import ETA.Utils.Util
+< import qualified ETA.Utils.Util as Util
+< -- import ETA.Utils.Maybes                ( firstJusts )
+< import ETA.Utils.Panic
+---
+> import Language.Eta.Main.CmdLineParser
+> import Language.Eta.Utils.FastString
+> import Language.Eta.BasicTypes.SrcLoc
+> import Language.Eta.Utils.Util
+> import qualified Language.Eta.Utils.Util as Util
+> -- import Language.Eta.Utils.Maybes                ( firstJusts )
+> import Language.Eta.Utils.Panic

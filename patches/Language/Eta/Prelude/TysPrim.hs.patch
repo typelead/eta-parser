@@ -6,11 +6,11 @@
 <         -- * ETA
 ---
 >         -- * Language.Eta
-88c88
+89c89
 <         -- TODO: Currently vector operations are disabled in ETA
 ---
 >         -- TODO: Currently vector operations are disabled in Language.Eta
-123,131c123,131
+124,132c124,132
 < import ETA.BasicTypes.Var              ( TyVar, KindVar, mkTyVar )
 < import ETA.BasicTypes.Name             ( Name, BuiltInSyntax(..), mkInternalName, mkWiredInName )
 < import ETA.BasicTypes.OccName          ( mkTyVarOccFS, mkTcOccFS )
@@ -30,27 +30,27 @@
 > import Language.Eta.BasicTypes.Unique           ( mkAlphaTyVarUnique )
 > import Language.Eta.Prelude.PrelNames
 > import Language.Eta.Utils.FastString
-133c133
+134c134
 < import ETA.CodeGen.Rts
 ---
 > import Language.Eta.CodeGen.Rts
-188c188
+189c189
 <     -- ETA-specific TyCons start here
 ---
 >     -- Language.Eta-specific TyCons start here
-194c194
+195c195
 <     -- TODO: Vector operations disabled in ETA
 ---
 >     -- TODO: Vector operations disabled in Language.Eta
-283c283
+284c284
 < -- ETA-specific names
 ---
 > -- Language.Eta-specific names
-877c877
+878c878
 < \subsection[TysPrim-ETA]{The ETA-specific types}
 ---
 > \subsection[TysPrim-Language.Eta]{The Language.Eta-specific types}
-902c902
+903c903
 < TODO: Vector operations disabled in ETA
 ---
 > TODO: Vector operations disabled in Language.Eta

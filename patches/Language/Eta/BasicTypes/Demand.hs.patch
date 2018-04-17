@@ -2,8 +2,7 @@
 < module ETA.BasicTypes.Demand (
 ---
 > module Language.Eta.BasicTypes.Demand (
-65,79c65,79
-< import ETA.Main.StaticFlags
+65,77c65,77
 < import ETA.Main.DynFlags
 < import ETA.Utils.Outputable
 < import ETA.BasicTypes.Var ( Var )
@@ -17,9 +16,7 @@
 < import ETA.Types.Type            ( Type, isUnLiftedType )
 < import ETA.Types.TyCon           ( isNewTyCon, isClassTyCon )
 < import ETA.BasicTypes.DataCon         ( splitDataProductType_maybe )
-< import ETA.Utils.FastString
 ---
-> -- import Language.Eta.Main.StaticFlags
 > import Language.Eta.Main.DynFlags
 > import Language.Eta.Utils.Outputable
 > import Language.Eta.BasicTypes.Var ( Var )
@@ -33,4 +30,3 @@
 > import Language.Eta.Types.Type            ( Type, isUnLiftedType )
 > import Language.Eta.Types.TyCon           ( isNewTyCon, isClassTyCon )
 > import Language.Eta.BasicTypes.DataCon         ( splitDataProductType_maybe )
-> import Language.Eta.Utils.FastString

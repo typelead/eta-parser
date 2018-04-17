@@ -30,15 +30,15 @@
 <         -- ETA
 ---
 >         -- Language.Eta
-1244c1244
+1245c1245
 < -- ETA-specific names
 ---
 > -- Language.Eta-specific names
-1466c1466
+1469c1469
 < -- ETA-specific tycons
 ---
 > -- Language.Eta-specific tycons
-2020c2020
+2025c2025
 < -- ETA-specific
 ---
 > -- Language.Eta-specific

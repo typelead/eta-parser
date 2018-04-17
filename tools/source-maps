@@ -59,6 +59,7 @@ sources=(
   Main/PackageConfig
   Main/Packages
   Main/PipelineMonad
+  Main/StaticFlags
   Parser/ApiAnnotation
   Parser/Ctype
   Prelude/ForeignCall
@@ -70,6 +71,7 @@ sources=(
   Profiling/CostCentre
   SimplCore/OccurAnal
   Specialise/Rules
+  SysTools/Terminal
   TypeCheck/TcEvidence
   TypeCheck/TcRnTypes
   TypeCheck/TcType
@@ -109,6 +111,7 @@ sources=(
   Utils/Pair
   Utils/Panic
   Utils/Platform
+  Utils/PprColor
   Utils/Pretty
   Utils/Serialized
   Utils/StringBuffer

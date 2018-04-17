@@ -1,5 +1,5 @@
 name: eta-parser
-version: '0.0.1-SNAPSHOT'
+version: '0.0.1.0'
 category: Language
 author: Cary Robbins
 maintainer: carymrobbins@gmail.com
@@ -20,6 +20,10 @@ dependencies:
   - binary
   - mtl
   - stringsearch
+default-extensions:
+  - RecordWildCards
+cpp-options: -DETA_PARSER
+
 library:
   source-dirs:
     - gen/src
@@ -30,6 +34,7 @@ library:
   verbatim:
     java-sources:
       java/eta/parser/Utils.java
+
 tests:
   test:
     main: test/Test.hs

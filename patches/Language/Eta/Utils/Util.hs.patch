@@ -2,17 +2,17 @@
 < module ETA.Utils.Util (
 ---
 > module Language.Eta.Utils.Util (
-109,110c109,110
+113,114c113,114
 < import ETA.Utils.Exception
 < import ETA.Utils.Panic
 ---
 > import Language.Eta.Utils.Exception
 > import Language.Eta.Utils.Panic
-118c118
+122c122
 < import ETA.Utils.FastTypes
 ---
 > import Language.Eta.Utils.FastTypes
-502,503c502,504
+506,507c506,508
 < minWith get_key xs = ASSERT( not (null xs) )
 <                      head (sortWith get_key xs)
 ---

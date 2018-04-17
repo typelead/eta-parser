@@ -1,17 +1,18 @@
-.PHONY: all test versions clean sources hpack deps build
+.PHONY: all test versions clean sources hpack build
 
 # Allow providing binaries in the bin/ dir (etlas, eta, etc.)
 export PATH := $(PWD)/bin:$(PATH)
 
 LEXER_HS := gen/src/Language/Eta/Parser/Lexer.hs
 
-all: sources deps build
+all: sources build
 
 sources: gen/include gen/src gen/lexer
 
 gen/include:
 	mkdir -p gen/include
 	cp eta/include/HsVersions.h gen/include
+	patch -s gen/include/HsVersions.h patches/include/HsVersions.h.patch
 
 gen/src:
 	./tools/generate-sources
@@ -36,9 +37,6 @@ clean-hpack:
 
 hpack:
 	./tools/hpack
-
-deps: hpack
-	etlas install --dependencies-only
 
 build: hpack
 	etlas build

@@ -2,17 +2,17 @@
 < module ETA.BasicTypes.Name (
 ---
 > module Language.Eta.BasicTypes.Name (
-73c73
+74c74
 <         module ETA.BasicTypes.OccName
 ---
 >         module Language.Eta.BasicTypes.OccName
-76,77c76,77
+77,78c77,78
 < import {-# SOURCE #-} ETA.Types.TypeRep( TyThing )
 < import {-# SOURCE #-} ETA.Prelude.PrelNames( liftedTypeKindTyConKey )
 ---
 > import {-# SOURCE #-} Language.Eta.Types.TypeRep( TyThing )
 > import {-# SOURCE #-} Language.Eta.Prelude.PrelNames( liftedTypeKindTyConKey )
-79,88c79,88
+80,89c80,89
 < import ETA.BasicTypes.OccName
 < import ETA.BasicTypes.Module
 < import ETA.BasicTypes.SrcLoc

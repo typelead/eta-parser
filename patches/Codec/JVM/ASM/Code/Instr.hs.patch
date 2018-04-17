@@ -1,0 +1,4 @@
+11c11
+< import GHC.Base
+---
+> import GHC.Base hiding (obj)

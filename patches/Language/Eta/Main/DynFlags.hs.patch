@@ -4,21 +4,21 @@
 < module ETA.Main.DynFlags (
 ---
 > module Language.Eta.Main.DynFlags (
-74c75
+75c76
 <         pgm_L, pgm_P, pgm_F, pgm_c, pgm_s, pgm_a, pgm_l, pgm_dll,
 ---
 >         pgm_LL, pgm_P, pgm_F, pgm_c, pgm_s, pgm_a, pgm_l, pgm_dll,
-77c78
+78c79
 <         opt_L, opt_P, opt_F, opt_c, opt_a, opt_l,
 ---
 >         opt_LL, opt_P, opt_F, opt_c, opt_a, opt_l,
-153,154c154,155
+154,155c155,156
 <         addJarInputs,
 <         compressionMethod
 ---
 >         addJarInputs -- ,
 >         -- compressionMethod
-159,178c160,179
+160,180c161,181
 < import ETA.Utils.Platform
 < import ETA.Utils.Metrics
 < import ETA.BasicTypes.Module
@@ -39,6 +39,7 @@
 < import ETA.Utils.FastString
 < import ETA.Utils.Outputable
 < import ETA.Utils.JAR
+< import qualified ETA.Utils.PprColor as Col
 ---
 > import Language.Eta.Utils.Platform
 > import Language.Eta.Utils.Metrics
@@ -60,57 +61,62 @@
 > import Language.Eta.Utils.FastString
 > import Language.Eta.Utils.Outputable
 > -- import Language.Eta.Utils.JAR
-183c184
-< import {-# SOURCE #-} ETA.Main.ErrUtils ( Severity(..), MsgDoc, mkLocMessage )
+> import qualified Language.Eta.Utils.PprColor as Col
+185c186
+< import {-# SOURCE #-} ETA.Main.ErrUtils ( Severity(..), MsgDoc, mkLocMessageAnn,
 ---
-> import {-# SOURCE #-} Language.Eta.Main.ErrUtils ( Severity(..), MsgDoc, mkLocMessage )
-954c955,956
+> import {-# SOURCE #-} Language.Eta.Main.ErrUtils ( Severity(..), MsgDoc, mkLocMessageAnn,
+212c213
+< import ETA.SysTools.Terminal
+---
+> import Language.Eta.SysTools.Terminal
+962c963,964
 <   sPgm_L                 :: String,
 ---
 >   -- Changed from sPgm_L to sPgm_LL so it differs from sPgm_l in more than case.
 >   sPgm_LL                :: String,
-970c972,973
+978c980,981
 <   sOpt_L                 :: [String],
 ---
 >   -- Changed from sOpt_L to sOpt_LL so it differs from sOpt_l in more than case.
 >   sOpt_LL                :: [String],
-1002,1003c1005,1006
+1010,1011c1013,1014
 < pgm_L                 :: DynFlags -> String
 < pgm_L dflags = sPgm_L (settings dflags)
 ---
 > pgm_LL                 :: DynFlags -> String
 > pgm_LL dflags = sPgm_LL (settings dflags)
-1033,1034c1036,1038
+1041,1042c1044,1046
 < opt_L                 :: DynFlags -> [String]
 < opt_L dflags = sOpt_L (settings dflags)
 ---
 > -- Changed from opt_L to opt_LL to make it differ from opt_l in more than case.
 > opt_LL                 :: DynFlags -> [String]
 > opt_LL dflags = sOpt_LL (settings dflags)
-2391c2395
+2419c2423
 <       (hasArg (\f -> alterSettings (\s -> s { sPgm_L   = f})))
 ---
 >       (hasArg (\f -> alterSettings (\s -> s { sPgm_LL   = f})))
-2421c2425
+2449c2453
 <       (hasArg (\f -> alterSettings (\s -> s { sOpt_L   = f : sOpt_L s})))
 ---
 >       (hasArg (\f -> alterSettings (\s -> s { sOpt_LL  = f : sOpt_LL s})))
-3941c3945
+3978c3982
 <       mvar <- liftMaybeT $ try $ getEnv "ETA_ENVIRONMENT"
 ---
 >       mvar <- liftMaybeT $ try $ getEnv "Language.Eta_ENVIRONMENT"
-3985c3989
+4022c4026
 <       ++ " (specified in ETA_ENVIRONMENT) not found"
 ---
 >       ++ " (specified in Language.Eta_ENVIRONMENT) not found"
-4268c4272,4275
+4305c4309,4312
 < GLOBAL_VAR(v_unsafeGlobalDynFlags, panic "v_unsafeGlobalDynFlags: not initialised", DynFlags)
 ---
 > -- GLOBAL_VAR(v_unsafeGlobalDynFlags, panic "v_unsafeGlobalDynFlags: not initialised", DynFlags)
 > 
 > v_unsafeGlobalDynFlags :: IORef DynFlags
 > v_unsafeGlobalDynFlags = error "v_unsafeGlobalDynFlags: not initialized"
-4353,4360c4360,4372
+4390,4397c4397,4409
 < foreign import ccall unsafe "setHeapSize"       setHeapSize       :: Int -> IO ()
 < foreign import ccall unsafe "enableTimingStats" enableTimingStats :: IO ()
 < 

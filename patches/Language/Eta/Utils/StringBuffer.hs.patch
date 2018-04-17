@@ -2,7 +2,7 @@
 < module ETA.Utils.StringBuffer
 ---
 > module Language.Eta.Utils.StringBuffer
-46,51c46,51
+47,52c47,52
 < import ETA.Utils.Encoding
 < import ETA.Utils.FastString
 < import ETA.Utils.FastTypes
@@ -16,7 +16,7 @@
 > import Language.Eta.Utils.FastFunctions
 > import Language.Eta.Utils.Outputable
 > import Language.Eta.Utils.Util
-134c134
+135c135
 <       ASSERTM( hGetEncoding h >>= return . isNothing )
 ---
 >       -- ASSERTM( hGetEncoding h >>= return . isNothing )
