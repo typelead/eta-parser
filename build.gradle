@@ -1,0 +1,88 @@
+plugins {
+    id 'com.typelead.eta' version '0.5.6'
+}
+
+apply plugin: 'eta'
+
+version "0.0.1.0"
+
+eta {
+  useSystemEta   = true
+  useSystemEtlas = true
+}
+
+sourceSets {
+  main {
+    eta {
+      srcDir 'gen/src'
+    }
+  }
+}
+
+dependencies {
+  // eta deps
+  compile eta('base:[4.7,5[')
+  compile eta('array:0.5.2.+')
+  compile eta('bytestring:0.10.8.+')
+  compile eta('containers:0.5.10.+')
+  compile eta('deepseq:1.4.3.+')
+  compile eta('directory:1.3.1.+')
+  compile eta('filepath:1.4.1.+')
+  compile eta('text:1.2.2.+')
+  compile eta('time:1.8.0.+')
+  compile eta('transformers:0.5.5.+')
+  // codec-jvm deps
+  compile eta('binary:0.8.5.+')
+  compile eta('mtl:2.2.2.+')
+  compile eta('stringsearch:0.3.6.+')
+}
+
+task genInclude(type: Exec) {
+  commandLine 'bash', '-c', """
+    mkdir -p gen/include
+    cp eta/include/HsVersions.h gen/include
+    patch -s gen/include/HsVersions.h patches/include/HsVersions.h.patch
+  """
+
+  outputs.dir('gen/include')
+}
+
+task genSrc(type: Exec) {
+  commandLine './tools/generate-sources'
+  outputs.dir('gen/src')
+}
+
+task genLexer(type: Exec) {
+  commandLine 'bash', '-c', """
+    ./tools/generate-lexer
+    stack runghc -- \
+      ./tools/post-process-alex-tables.hs \
+      gen/src/Language/Eta/Parser/Lexer.hs
+  """
+  outputs.dir('gen/lexer')
+}
+
+compileEta {
+  options {
+    extensions {
+      RecordWildCards
+    }
+
+    cpp = ['-DETA_PARSER']
+
+    // Working dir is build/eta/main
+    includeDirs = ['../../../gen/include']
+
+    installIncludes = ['HsVersions.h']
+  }
+
+  dependsOn genInclude, genSrc, genLexer
+}
+
+/* TODO: gradle-eta needs to support tests; from package.yaml -
+tests:
+  test:
+    main: test/Test.hs
+    dependencies:
+      - eta-parser
+*/
