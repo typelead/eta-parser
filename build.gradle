@@ -42,6 +42,14 @@ dependencies {
   compile eta('stringsearch:0.3.6.+')
 }
 
+task cleanDistAndGen(type: Exec) {
+  commandLine 'bash', '-c', """
+    rm -rf dist gen
+  """
+}
+
+clean.dependsOn(cleanDistAndGen)
+
 task genInclude(type: Exec) {
   commandLine 'bash', '-c', """
     mkdir -p gen/include
