@@ -5,8 +5,8 @@ set -e
 # Start in project root
 cd $(dirname "$0")/..
 
-if ! alex --version | grep '^Alex version 3.2.3,' >/dev/null; then
-  >&2 echo "alex version 3.2.3 is required"
+if ! alex --version | egrep '^Alex version 3\.2\.' >/dev/null; then
+  >&2 echo "alex version 3.2 is required"
   exit 1
 fi
 
