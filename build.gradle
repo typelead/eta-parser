@@ -1,5 +1,5 @@
 plugins {
-    id 'com.typelead.eta' version '0.5.6'
+    id 'com.typelead.eta' version '0.5.7'
 }
 
 apply plugin: 'eta'
@@ -15,6 +15,11 @@ sourceSets {
   main {
     eta {
       srcDir 'gen/src'
+    }
+  }
+  test {
+    eta {
+      srcDir 'test'
     }
   }
 }
@@ -71,7 +76,7 @@ compileEta {
     cpp = ['-DETA_PARSER']
 
     // Working dir is build/eta/main
-    includeDirs = ['../../../gen/include']
+    includeDirs = ['gen/include']
 
     installIncludes = ['HsVersions.h']
   }
@@ -79,10 +84,6 @@ compileEta {
   dependsOn genInclude, genSrc, genLexer
 }
 
-/* TODO: gradle-eta needs to support tests; from package.yaml -
-tests:
-  test:
-    main: test/Test.hs
-    dependencies:
-      - eta-parser
-*/
+test {
+  useEtaTest()
+}
