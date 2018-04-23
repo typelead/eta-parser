@@ -5,7 +5,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath 'gradle.plugin.com.typelead:gradle-eta:0.5.9'
+    classpath 'gradle.plugin.com.typelead:gradle-eta:0.6.0'
   }
 }
 
