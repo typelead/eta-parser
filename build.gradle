@@ -53,40 +53,44 @@ dependencies {
   compile eta('stringsearch:0.3.6.+')
 }
 
-task cleanDistAndGen(type: Exec) {
-  commandLine 'bash', '-c', """
-    rm -rf dist gen
-  """
-}
-
-clean.dependsOn(cleanDistAndGen)
-
-task genInclude(type: Exec) {
-  commandLine 'bash', '-c', """
-    mkdir -p gen/include
-    cp eta/include/HsVersions.h gen/include
-    patch -s gen/include/HsVersions.h patches/include/HsVersions.h.patch
-  """
-
-  outputs.dir('gen/include')
-}
-
-task genSrc(type: Exec) {
-  commandLine './tools/generate-sources'
-  outputs.dir('gen/src')
-}
-
-task genLexer(type: Exec) {
-  commandLine 'bash', '-c', """
-    ./tools/generate-lexer
-    stack runghc -- \
-      ./tools/post-process-alex-tables.hs \
-      gen/src/Language/Eta/Parser/Lexer.hs
-  """
-  outputs.dir('gen/lexer')
-}
-
-installDependenciesEta.dependsOn genInclude, genSrc, genLexer
+////////////////////////////////////////////////////////////////////////////////////////////
+// Commenting this out since we are adding the gen files to the repo for build simplicity //
+////////////////////////////////////////////////////////////////////////////////////////////
+//
+// task cleanDistAndGen(type: Exec) {
+//   commandLine 'bash', '-c', """
+//     rm -rf dist gen
+//   """
+// }
+//
+// clean.dependsOn(cleanDistAndGen)
+//
+// task genInclude(type: Exec) {
+//   commandLine 'bash', '-c', """
+//     mkdir -p gen/include
+//     cp eta/include/HsVersions.h gen/include
+//     patch -s gen/include/HsVersions.h patches/include/HsVersions.h.patch
+//   """
+//
+//   outputs.dir('gen/include')
+// }
+//
+// task genSrc(type: Exec) {
+//   commandLine './tools/generate-sources'
+//   outputs.dir('gen/src')
+// }
+//
+// task genLexer(type: Exec) {
+//   commandLine 'bash', '-c', """
+//     ./tools/generate-lexer
+//     stack runghc -- \
+//       ./tools/post-process-alex-tables.hs \
+//       gen/src/Language/Eta/Parser/Lexer.hs
+//   """
+//   outputs.dir('gen/lexer')
+// }
+//
+// installDependenciesEta.dependsOn genInclude, genSrc, genLexer
 
 compileEta {
   options {

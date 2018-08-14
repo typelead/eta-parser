@@ -2,7 +2,6 @@
 *.iml
 bin/
 dist/
-gen/
 resources/lexers/*.patched.x
 etlas
 build/
