@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+cd $(dirname $0)/..
+
+msg="GEN: Add gen sources to repo"
+
+head_msg=$(git log --oneline | head -n1 | cut -d ' ' -f 2-)
+
+if [ "$msg" != "$head_msg" ]; then
+  >&2 echo "Unexpected HEAD comment message: $head_msg"
+  >&2 echo "Expected: $msg"
+  >&2 echo "Aborting!"
+  exit 1
+fi
+
+echo "Checking for dirty working tree..."
+if [ $(git diff | wc -l) -ne 0 ]; then
+  >&2 echo "Uncommitted changes detected, please resolve and re-run this script"
+  exit 1
+fi
+
+echo "Resetting to previous commit..."
+git reset HEAD^
+
+echo "Rebasing against the 'intellij' branch..."
+git fetch origin
+git rebase intellij
+
+echo "Generating sources..."
+./tools/generate-sources
+
+echo "Committing generated sources..."
+git add gen/
+git commit -m "$msg"
+
+echo "Rebase complete!"
